@@ -1,0 +1,85 @@
+c:\users\mim\documents\visual studio 2010\Projects\CollageManagementApplication\CollageManagementApplication\bin\Debug\CollageManagementApplication.exe
+c:\users\mim\documents\visual studio 2010\Projects\CollageManagementApplication\CollageManagementApplication\bin\Debug\CollageManagementApplication.pdb
+c:\users\mim\documents\visual studio 2010\Projects\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.Properties.Resources.resources
+c:\users\mim\documents\visual studio 2010\Projects\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.csproj.GenerateResource.Cache
+c:\users\mim\documents\visual studio 2010\Projects\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.exe
+c:\users\mim\documents\visual studio 2010\Projects\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.pdb
+c:\users\mim\documents\visual studio 2010\Projects\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.MainDashboard.resources
+C:\Users\MIM\documents\visual studio 2010\Projects\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.StudentForm.resources
+C:\Users\MIM\documents\visual studio 2010\Projects\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.CourseManagement.resources
+C:\Users\MIM\documents\visual studio 2010\Projects\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.AttendanceManagement.resources
+C:\Users\MIM\documents\visual studio 2010\Projects\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.ResultManagement.resources
+C:\Users\MIM\documents\visual studio 2010\Projects\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.FeeManagement.resources
+C:\Users\MIM\documents\visual studio 2010\Projects\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.Faculty.resources
+C:\Users\MIM\documents\visual studio 2010\Projects\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.Dashboard.resources
+C:\Users\MIM\documents\visual studio 2010\Projects\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.MarkAttendanceForm.resources
+C:\Users\MIM\documents\visual studio 2010\Projects\CollageManagementApplication\CollageManagementApplication\bin\Debug\CollageManagementApplication.exe.config
+C:\Users\MIM\documents\visual studio 2010\Projects\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.Login.resources
+C:\Users\MIM\documents\visual studio 2010\Projects\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.AddStudentForm.resources
+C:\Users\MIM\documents\visual studio 2010\Projects\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.EditStudetForm.resources
+C:\Users\MIM\documents\visual studio 2010\Projects\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.AddCourseForm.resources
+C:\Users\MIM\documents\visual studio 2010\Projects\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.EditCourseForm.resources
+C:\Users\MIM\documents\visual studio 2010\Projects\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.AddFaculty.resources
+C:\Users\MIM\documents\visual studio 2010\Projects\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.EditFaculty.resources
+C:\Users\MIM\documents\visual studio 2010\Projects\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.csprojResolveAssemblyReference.cache
+C:\Users\MIM\documents\visual studio 2010\Projects\CollageManagementApplication\CollageManagementApplication\bin\Debug\BusinessLogicLayer.dll
+C:\Users\MIM\documents\visual studio 2010\Projects\CollageManagementApplication\CollageManagementApplication\bin\Debug\BusinessLogicLayer.pdb
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementApplication\CollageManagementApplication\bin\Debug\CollageManagementApplication.exe.config
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementApplication\CollageManagementApplication\bin\Debug\CollageManagementApplication.exe
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementApplication\CollageManagementApplication\bin\Debug\CollageManagementApplication.pdb
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementApplication\CollageManagementApplication\bin\Debug\LogicLayer.dll
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementApplication\CollageManagementApplication\bin\Debug\LogicLayer.pdb
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementApplication\CollageManagementApplication\bin\Debug\LogicLayer.dll.config
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.csproj.AssemblyReference.cache
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.AddCourseForm.resources
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.AddFaculty.resources
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.AddStudentForm.resources
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.AttendanceManagement.resources
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.CourseManagement.resources
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.Dashboard.resources
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.EditCourseForm.resources
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.EditFaculty.resources
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.EnrollForm.resources
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.Faculty.resources
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.FeeManagement.resources
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.Login.resources
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.MainDashboard.resources
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.MarkAttendanceForm.resources
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.Properties.Resources.resources
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.ResultManagement.resources
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.StudentForm.resources
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.csproj.GenerateResource.cache
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.csproj.CoreCompileInputs.cache
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageM.BC3E463F.Up2Date
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.exe
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementApplication\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.pdb
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\bin\Debug\CollageManagementApplication.exe.config
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\bin\Debug\CollageManagementApplication.exe
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\bin\Debug\CollageManagementApplication.pdb
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\bin\Debug\LogicLayer.dll
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\bin\Debug\LogicLayer.pdb
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\bin\Debug\LogicLayer.dll.config
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.csproj.AssemblyReference.cache
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.exe.config
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.AddCourseForm.resources
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.AddFaculty.resources
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.AddStudentForm.resources
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.AttendanceManagement.resources
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.CourseManagement.resources
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.Dashboard.resources
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.EditCourseForm.resources
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.EditFaculty.resources
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.EnrollForm.resources
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.Faculty.resources
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.FeeManagement.resources
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.Login.resources
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.MainDashboard.resources
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.MarkAttendanceForm.resources
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.Properties.Resources.resources
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.ResultManagement.resources
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.StudentForm.resources
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.csproj.GenerateResource.cache
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.csproj.CoreCompileInputs.cache
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageM.BC3E463F.Up2Date
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.exe
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.pdb

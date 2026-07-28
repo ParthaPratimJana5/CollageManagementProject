@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.8.12021.73 stable
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollageManagementApplication", "CollageManagementApplication\CollageManagementApplication.csproj", "{90C4ADF0-225B-4ED4-8352-DAB4339FADB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicLayer", "LogicLayer\LogicLayer.csproj", "{CD4BED6F-839F-4C6F-95DE-B5327511A3A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90C4ADF0-225B-4ED4-8352-DAB4339FADB9}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{90C4ADF0-225B-4ED4-8352-DAB4339FADB9}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{90C4ADF0-225B-4ED4-8352-DAB4339FADB9}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{90C4ADF0-225B-4ED4-8352-DAB4339FADB9}.Debug|x86.ActiveCfg = Debug|x86
+		{90C4ADF0-225B-4ED4-8352-DAB4339FADB9}.Debug|x86.Build.0 = Debug|x86
+		{90C4ADF0-225B-4ED4-8352-DAB4339FADB9}.Release|Any CPU.ActiveCfg = Release|x86
+		{90C4ADF0-225B-4ED4-8352-DAB4339FADB9}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{90C4ADF0-225B-4ED4-8352-DAB4339FADB9}.Release|Mixed Platforms.Build.0 = Release|x86
+		{90C4ADF0-225B-4ED4-8352-DAB4339FADB9}.Release|x86.ActiveCfg = Release|x86
+		{90C4ADF0-225B-4ED4-8352-DAB4339FADB9}.Release|x86.Build.0 = Release|x86
+		{CD4BED6F-839F-4C6F-95DE-B5327511A3A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD4BED6F-839F-4C6F-95DE-B5327511A3A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD4BED6F-839F-4C6F-95DE-B5327511A3A3}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{CD4BED6F-839F-4C6F-95DE-B5327511A3A3}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{CD4BED6F-839F-4C6F-95DE-B5327511A3A3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CD4BED6F-839F-4C6F-95DE-B5327511A3A3}.Debug|x86.Build.0 = Debug|Any CPU
+		{CD4BED6F-839F-4C6F-95DE-B5327511A3A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD4BED6F-839F-4C6F-95DE-B5327511A3A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD4BED6F-839F-4C6F-95DE-B5327511A3A3}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{CD4BED6F-839F-4C6F-95DE-B5327511A3A3}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{CD4BED6F-839F-4C6F-95DE-B5327511A3A3}.Release|x86.ActiveCfg = Release|Any CPU
+		{CD4BED6F-839F-4C6F-95DE-B5327511A3A3}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {73467906-26C9-4E68-B265-259C1F3BA0B4}
+	EndGlobalSection
+EndGlobal
