@@ -67,6 +67,16 @@ namespace CollageManagementApplication
                 }
             }
 
+            stuff.GetBloodGroup();
+            if (stuff.BloodGroups != null)
+            {
+
+                foreach (string Namee in stuff.BloodGroups)
+                {
+                    comboBoxBloodGroup.Items.Add(Namee);
+                }
+            }
+
         }
         private void btnSave_Click(object sender, EventArgs e)
         {

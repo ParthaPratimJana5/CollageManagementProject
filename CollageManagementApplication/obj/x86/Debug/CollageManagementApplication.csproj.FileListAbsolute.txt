@@ -60,7 +60,6 @@ C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\Co
 C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\bin\Debug\LogicLayer.pdb
 C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\bin\Debug\LogicLayer.dll.config
 C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.csproj.AssemblyReference.cache
-C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.exe.config
 C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.AddCourseForm.resources
 C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.AddFaculty.resources
 C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.AddStudentForm.resources

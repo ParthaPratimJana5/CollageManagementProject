@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace LogicLayer
 {
-    public class Course 
+    public class Course : BloodGroup
     {
         public List<String> CourseList {  get; set; }
         public string CourseName { get; set; }

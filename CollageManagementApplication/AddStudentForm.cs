@@ -127,6 +127,16 @@ namespace CollageManagementApplication
                 }
             }
 
+            student.GetBloodGroup();
+            if (student.BloodGroups != null)
+            {
+
+                foreach (string Namee in student.BloodGroups)
+                {
+                    cmbBloodgroup.Items.Add(Namee);
+                }
+            }
+
 
         }
        

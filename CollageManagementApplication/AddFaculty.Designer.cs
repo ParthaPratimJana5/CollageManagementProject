@@ -329,7 +329,7 @@
             // txtCareOf
             // 
             this.txtCareOf.Location = new System.Drawing.Point(153, 53);
-            this.txtCareOf.MaxLength = 6;
+            this.txtCareOf.MaxLength = 100;
             this.txtCareOf.Multiline = true;
             this.txtCareOf.Name = "txtCareOf";
             this.txtCareOf.Size = new System.Drawing.Size(276, 25);
@@ -338,7 +338,7 @@
             // txtPostOffice
             // 
             this.txtPostOffice.Location = new System.Drawing.Point(153, 89);
-            this.txtPostOffice.MaxLength = 6;
+            this.txtPostOffice.MaxLength = 100;
             this.txtPostOffice.Multiline = true;
             this.txtPostOffice.Name = "txtPostOffice";
             this.txtPostOffice.Size = new System.Drawing.Size(276, 25);
@@ -480,15 +480,6 @@
             // 
             this.comboBoxBloodGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.comboBoxBloodGroup.FormattingEnabled = true;
-            this.comboBoxBloodGroup.Items.AddRange(new object[] {
-            "A+",
-            "A-",
-            "B+",
-            "B-",
-            "AB+",
-            "AB-",
-            "O+",
-            "O-"});
             this.comboBoxBloodGroup.Location = new System.Drawing.Point(167, 298);
             this.comboBoxBloodGroup.Name = "comboBoxBloodGroup";
             this.comboBoxBloodGroup.Size = new System.Drawing.Size(276, 24);

@@ -5,3 +5,10 @@ C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementApplicatio
 C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementApplication\LogicLayer\obj\Debug\LogicLayer.csproj.CoreCompileInputs.cache
 C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementApplication\LogicLayer\obj\Debug\LogicLayer.dll
 C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementApplication\LogicLayer\obj\Debug\LogicLayer.pdb
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\LogicLayer\bin\Debug\LogicLayer.dll.config
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\LogicLayer\bin\Debug\LogicLayer.dll
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\LogicLayer\bin\Debug\LogicLayer.pdb
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\LogicLayer\obj\Debug\LogicLayer.csproj.AssemblyReference.cache
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\LogicLayer\obj\Debug\LogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\LogicLayer\obj\Debug\LogicLayer.dll
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\LogicLayer\obj\Debug\LogicLayer.pdb

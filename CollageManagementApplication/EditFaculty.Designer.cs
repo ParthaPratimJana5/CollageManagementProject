@@ -305,15 +305,6 @@
             // 
             this.comboBoxBloodGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.comboBoxBloodGroup.FormattingEnabled = true;
-            this.comboBoxBloodGroup.Items.AddRange(new object[] {
-            "A+",
-            "A-",
-            "B+",
-            "B-",
-            "AB+",
-            "AB-",
-            "O+",
-            "O-"});
             this.comboBoxBloodGroup.Location = new System.Drawing.Point(167, 298);
             this.comboBoxBloodGroup.Name = "comboBoxBloodGroup";
             this.comboBoxBloodGroup.Size = new System.Drawing.Size(276, 24);

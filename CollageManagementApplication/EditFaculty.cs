@@ -67,6 +67,16 @@ namespace CollageManagementApplication
                     comboBoxDepartment.Items.Add(Name);
                 }
             }
+
+            stuff.GetBloodGroup();
+            if (stuff.BloodGroups != null)
+            {
+
+                foreach (string Namee in stuff.BloodGroups)
+                {
+                    comboBoxBloodGroup.Items.Add(Namee);
+                }
+            }
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -137,6 +147,7 @@ namespace CollageManagementApplication
             staff1.StGendrId = GenderID;
 
             CheckPoint += staff1.UpdateStaff();
+            
 
             if (checkBoxHOD.Checked)
             {

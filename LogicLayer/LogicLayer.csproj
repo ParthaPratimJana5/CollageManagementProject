@@ -46,6 +46,7 @@
     <Compile Include="Attandance.cs" />
     <Compile Include="Bank.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="BloodGroup.cs" />
     <Compile Include="Course.cs" />
     <Compile Include="Department.cs" />
     <Compile Include="Designation.cs" />

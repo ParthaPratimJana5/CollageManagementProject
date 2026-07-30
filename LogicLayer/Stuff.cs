@@ -84,7 +84,7 @@ namespace LogicLayer
                 SqlCommand cmd = new SqlCommand("spUpdateStaffInfo", connection);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@StaffName", this.StaffID);
+                cmd.Parameters.AddWithValue("@StaffId", this.StaffID);
                 cmd.Parameters.AddWithValue("@StaffName", this.StaffName);
                 cmd.Parameters.AddWithValue("@DateOfJoinning", this.DateOfJoinning);
                 cmd.Parameters.AddWithValue("@GenderId ", Convert.ToInt16(StGendrId));
