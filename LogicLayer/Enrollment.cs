@@ -14,7 +14,7 @@ namespace LogicLayer
         public string EnrollmentID { get; set; }
         public DateTime DateOfAdmition {  get; set; }
         public string EnrollmentStudentID { get; set; }
-        public string EnrollmentCourseID { get; set; }
+        //public string EnrollmentCourseID { get; set; }
 
         
         public void InsertEnrollment ()
@@ -30,8 +30,8 @@ namespace LogicLayer
                 cmd.CommandType = CommandType.StoredProcedure;
 
 
-                cmd.Parameters.AddWithValue("@StudentId", EnrollmentStudentID);
-                cmd.Parameters.AddWithValue("@CourseId", EnrollmentStudentID);
+                cmd.Parameters.AddWithValue("@StudentId", Convert.ToInt32( EnrollmentStudentID));
+                cmd.Parameters.AddWithValue("@CourseId", Convert.ToInt32( CourseId));
                 cmd.Parameters.AddWithValue("@AdmissionDate", DateOfAdmition );
                 
 
@@ -58,7 +58,45 @@ namespace LogicLayer
         }
 
 
+        public void UpdateEnrollment()
+        {
 
+            string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+            SqlConnection connection = null;
+
+            try
+            {
+                connection = new SqlConnection(cs);
+                SqlCommand cmd = new SqlCommand("spUpdateEnrollment", connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+
+                cmd.Parameters.AddWithValue("@EnrollmentId", Convert.ToInt32(EnrollmentID));
+                cmd.Parameters.AddWithValue("@CourseId", Convert.ToInt32(CourseId));
+                cmd.Parameters.AddWithValue("@AdmissionDate", DateOfAdmition);
+
+
+
+                connection.Open();
+                EnrollmentID = Convert.ToString(cmd.ExecuteScalar());
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+
+            }
+            finally
+            {
+                if (connection != null)
+                {
+                    connection.Close();
+                }
+            }
+
+        }
 
     }
 }

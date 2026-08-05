@@ -13,6 +13,7 @@ namespace LogicLayer
     {
         public List <string> GenderList {  get; set; }
         public string GenderID { get; set; }
+        public string GenderName { get; set; }
 
 
 

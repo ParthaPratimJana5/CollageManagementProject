@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
-using System.Configuration;
+using System.Xml.Linq;
 
 namespace LogicLayer
 {
@@ -22,6 +24,7 @@ namespace LogicLayer
         public string SGenderID { get; set; }
 
         public string StudentID { get; set; }
+        
         
         
 
@@ -106,6 +109,7 @@ namespace LogicLayer
                 cmd.Parameters.AddWithValue("@Phone", this.Phone);
                 cmd.Parameters.AddWithValue("@AddressId", Convert.ToInt16(SAddressID));
                 cmd.Parameters.AddWithValue("@PhotoId", Convert.ToInt16(SphotoID));
+                cmd.Parameters.AddWithValue("@BloodGroup", BloodGroup);
                
 
 
@@ -159,6 +163,145 @@ namespace LogicLayer
             }
         }
 
+        public List<string> SearchStudentBesicInfo(string Name)
+        {
+            string CS = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+            SqlConnection connection = null;
+            List<string> list = null;
+
+
+
+            try
+            {
+                connection = new SqlConnection(CS);
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("spSearchStudentBesicInfoByName", connection);
+                sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+
+                sqlDataAdapter.SelectCommand.Parameters.AddWithValue("@StudentName", Name);
+                DataSet dataSet = new DataSet();
+                sqlDataAdapter.Fill(dataSet);
+
+                DataTable dataTable = dataSet.Tables[0];
+
+                DataRowCollection dataRowCollection = dataTable.Rows;
+                list = new List<string>();
+
+                foreach (DataRow row in dataRowCollection)
+                {
+
+                    string data = row["StudentId"].ToString();
+                    data += " , ";
+                    data += row["StudentName"].ToString();
+                    data += " , ";
+                    data += row["CourseName"].ToString();
+                    data += " , ";
+                    data += row["Guardian"].ToString();
+                    list.Add(data);
+                }
+
+                return list;
+
+
+            }
+            catch (Exception ex)
+            {
+                return list;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        public void UpdateStudent()
+
+        {
+            string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+            SqlConnection connection = null;
+
+            try
+            {
+                connection = new SqlConnection(cs);
+                SqlCommand cmd = new SqlCommand("spUpdateStudent", connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@StudentId", Convert.ToInt16(StudentID));
+
+                cmd.Parameters.AddWithValue("@StudentName", this.StudentName);
+                cmd.Parameters.AddWithValue("@DateOfBirth", this.DateOfBirth);
+                cmd.Parameters.AddWithValue("@GenderId ", Convert.ToInt16(SGenderID));
+                cmd.Parameters.AddWithValue("@Email", this.Email);
+                cmd.Parameters.AddWithValue("@Phone", this.Phone);
+                cmd.Parameters.AddWithValue("@BloodGroup", BloodGroup);
+
+
+
+                connection.Open();
+                cmd.ExecuteScalar();
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+
+            }
+            finally
+            {
+                if (connection != null)
+                {
+                    connection.Close();
+                }
+            }
+        }
+
+        public void GetFullStudentInfo()
+        {
+            string CS = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(CS))
+                {
+                    SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("spGetStudentFullInformationById", connection);
+                    sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    sqlDataAdapter.SelectCommand.Parameters.AddWithValue("@StudentId", Convert.ToInt32(StudentID));
+
+                    DataSet dataSet = new DataSet();
+                    sqlDataAdapter.Fill(dataSet);
+
+                    if (dataSet.Tables.Count > 0 && dataSet.Tables[0].Rows.Count > 0)
+                    {
+                        DataRow row = dataSet.Tables[0].Rows[0];
+
+                        StudentID = row["StudentId"].ToString();
+                        StudentName = row["StudentName"].ToString();
+                        DateOfBirth = Convert.ToDateTime(row["DateOfBirth"]);
+                        GenderName = row["GenderName"].ToString();
+                        Email = row["Email"].ToString();
+                        Phone = row["Phone"].ToString();
+
+                        CareOf = row["Guardian"].ToString();
+                        BloodGroup = row["BloodGroup"].ToString();
+                        Village = row["Village"].ToString();
+                        Post = row["Post"].ToString();
+                        PhoneNumber = row["PhoneNumber"].ToString();
+                        CourseName = row["CourseName"].ToString();
+                        GurdianEmail = row["GuardianEmail"].ToString();
+                        GurdianPhone = row["GuardianPhone"].ToString();
+                        Pin = row["Pin"].ToString();
+                        Aadhaar = row["Aadhaar"].ToString();
+                        Photobyte = row["Photo"] as byte[];
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
 
     }
 }

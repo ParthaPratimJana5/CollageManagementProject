@@ -4,17 +4,20 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace LogicLayer
 {
-    public class Course : BloodGroup
+    public class Course : BloodGrouP
     {
         public List<String> CourseList {  get; set; }
         public string CourseName { get; set; }
         public string TotalCource { get; set; }
-        //Total Course
+        public string CourseId { get; set; }
+         //Total Course
         public void GetTotalCourse()
         {
             string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
@@ -84,6 +87,39 @@ namespace LogicLayer
                 {
                     connection.Close();
                 }
+            }
+        }
+
+        public void GetCourseIdByName()
+        {
+            string CS = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(CS))
+                {
+                    SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("spGetCourseIdByName", connection);
+                    sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    sqlDataAdapter.SelectCommand.Parameters.AddWithValue("@CourseName", CourseName);
+
+                    DataSet dataSet = new DataSet();
+                    sqlDataAdapter.Fill(dataSet);
+
+                    
+                        DataRow row = dataSet.Tables[0].Rows[0];
+
+                          CourseId = row["CourseId"].ToString();
+                        
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+
             }
         }
     }

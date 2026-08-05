@@ -82,3 +82,4 @@ C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\Co
 C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageM.BC3E463F.Up2Date
 C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.exe
 C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.pdb
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.EditStudent.resources

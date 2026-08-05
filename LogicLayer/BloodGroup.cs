@@ -9,9 +9,11 @@ using System.Threading.Tasks;
 
 namespace LogicLayer
 {
-    public class BloodGroup
+    public class BloodGrouP
     {
         public List <string> BloodGroups { get; set; }
+        public string BloodGroup { get; set; }
+
         public void GetBloodGroup()
         {
             string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;

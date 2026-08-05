@@ -79,7 +79,7 @@ namespace CollageManagementApplication
 
             if (dashboard != null)
             {
-                //dashboard.Loadfrom(new EditStudetForm());
+                dashboard.Loadfrom(new EditStudent());
             }
         }
     }

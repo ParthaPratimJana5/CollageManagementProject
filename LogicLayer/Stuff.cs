@@ -19,7 +19,6 @@ namespace LogicLayer
         public string StuffEmail { get; set; }
         public DateTime DateOfJoinning { get; set; }
         public string Salary { get; set; }
-        public string BloodGroup { get; set; }
 
         public string StAddressId { get; set; }
         public string StPhotoID { get; set; }

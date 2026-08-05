@@ -61,9 +61,9 @@ namespace CollageManagementApplication
                 cmd.Parameters.AddWithValue("@BloodGroup", cmbBloodgroup.Text);
                 cmd.Parameters.AddWithValue("@Phone", txtPhoneNumber.Text);
                 cmd.Parameters.AddWithValue("@Aadhaar", txtAadhaar.Text);
-                cmd.Parameters.AddWithValue("@Email", txtEmailAddress.Text);
-                cmd.Parameters.AddWithValue("@AccountNo", txtAccount.Text);
-                cmd.Parameters.AddWithValue("@Ifsc", txtIFSCCode.Text);
+                cmd.Parameters.AddWithValue("@Email", txtGuardianEmail.Text);
+                //cmd.Parameters.AddWithValue("@AccountNo", txtAccount.Text);
+                //cmd.Parameters.AddWithValue("@Ifsc", txtIFSCCode.Text);
                 cmd.Parameters.AddWithValue("@PinCode", txtPinCode.Text);
                 cmd.Parameters.AddWithValue("@Address", txtAddress.Text);
 
@@ -123,7 +123,7 @@ namespace CollageManagementApplication
 
                 foreach (string Namee in student.CourseList)
                 {
-                    combCourse.Items.Add(Namee);
+                    cmbCourse.Items.Add(Namee);
                 }
             }
 
@@ -136,6 +136,7 @@ namespace CollageManagementApplication
                     cmbBloodgroup.Items.Add(Namee);
                 }
             }
+                                                      
 
 
         }
@@ -228,11 +229,18 @@ namespace CollageManagementApplication
             student.SphotoID = photoID;
             student.SGenderID = Genderid;
             student.SAddressID = AddressID;
+            student.BloodGroup = cmbBloodgroup.Text;
             
 
             student.SetStudent();
-
+            student.EnrollmentStudentID =student.StudentID;
+            student.CourseName= cmbCourse.Text;
+            student.GetCourseIdByName();
+            
             student.DateOfAdmition= dtpAdmission.Value;
+            student.InsertEnrollment();
+
+            
 
             
 
@@ -242,6 +250,18 @@ namespace CollageManagementApplication
 
         private void btnReset_Click(object sender, EventArgs e)
         {
+            txtAadhaar.Text = "";
+            
+            txtAddress.Text = "";
+            txtEmailAddress.Text = "";
+            txtFullNme.Text = "";
+            txtGuardianEmail.Text = "";
+            txtGuardianName.Text = "";
+            txtGuardianPhone.Text = "";
+            txtPhoneNumber.Text = "";
+            txtPinCode.Text = "";
+            txtPostOffice.Text = "";
+            txtUrl.Text = "";
             
         }
 
