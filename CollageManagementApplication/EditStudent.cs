@@ -72,7 +72,8 @@ namespace CollageManagementApplication
         {
             Student student = new Student();
             string Genderid = student.GetGenderID(comboBoxGender.Text);
-
+            student.StudentID = txtStudentId.Text;
+            student.GetStudentRelatedId();
             student.CareOf = txtGuardianName.Text;
             student.Village = txtAddress.Text;
             student.Post = txtPostOffice.Text;

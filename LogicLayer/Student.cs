@@ -303,5 +303,39 @@ namespace LogicLayer
             }
         }
 
+        public void GetStudentRelatedId()
+        {
+            string CS = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(CS))
+                {
+                    SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("spGetStudentRelatedIds", connection);
+                    sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    sqlDataAdapter.SelectCommand.Parameters.AddWithValue("@StudentId", Convert.ToInt32(StudentID));
+
+                    DataSet dataSet = new DataSet();
+                    sqlDataAdapter.Fill(dataSet);
+
+                    if (dataSet.Tables.Count > 0 && dataSet.Tables[0].Rows.Count > 0)
+                    {
+                        DataRow row = dataSet.Tables[0].Rows[0];
+
+                        
+                        AddressID = row["AddressId"].ToString();
+                        PhotoID = row["PhotoId"].ToString();
+                        EnrollmentID = row["EnrollmentId"].ToString();
+
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+        }
     }
 }
