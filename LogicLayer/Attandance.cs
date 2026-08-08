@@ -52,38 +52,38 @@ namespace LogicLayer
         }
 
 
-        public int AttandancheckNonDuplicate(DateTime date, string course, string SubjectId )
-        {
-            {
-                int count=0;
-                string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+        //public int AttandancheckNonDuplicate(DateTime date, string course, string SubjectId )
+        //{
+        //    {
+        //        int count=0;
+        //        string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
 
-                using (SqlConnection conn = new SqlConnection(cs))
-                {
+        //        using (SqlConnection conn = new SqlConnection(cs))
+        //        {
                     
-                    try
-                    {
-                        conn.Open();
+        //            try
+        //            {
+        //                conn.Open();
 
-                        // Duplicate Check
-                        SqlCommand checkCmd = new SqlCommand("spCheckAttendance", conn);
-                        checkCmd.CommandType = CommandType.StoredProcedure;
+        //                // Duplicate Check
+        //                SqlCommand checkCmd = new SqlCommand("spCheckAttendance", conn);
+        //                checkCmd.CommandType = CommandType.StoredProcedure;
 
-                        checkCmd.Parameters.AddWithValue("@AttendanceDate", date);
-                        checkCmd.Parameters.AddWithValue("@CourseId", Convert.ToInt32(course));
-                        checkCmd.Parameters.AddWithValue("@SubjectId", Convert.ToInt32(SubjectId));
+        //                checkCmd.Parameters.AddWithValue("@AttendanceDate", date);
+        //                checkCmd.Parameters.AddWithValue("@CourseId", Convert.ToInt32(course));
+        //                checkCmd.Parameters.AddWithValue("@SubjectId", Convert.ToInt32(SubjectId));
 
-                        count = Convert.ToInt32(checkCmd.ExecuteScalar());
+        //                count = Convert.ToInt32(checkCmd.ExecuteScalar());
 
-                        return count;
-                    }
-                    catch (SqlException ex)
-                    {
-                        return count;
-                    }
-                }
-            }
-        }
+        //                return count;
+        //            }
+        //            catch (SqlException ex)
+        //            {
+        //                return count;
+        //            }
+        //        }
+        //    }
+        //}
 
         public string AddAttendance()
         {
@@ -106,36 +106,36 @@ namespace LogicLayer
         }
 
 
-        public void SaveAttendance()
-        {
-            string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+        //public void SaveAttendance()
+        //{
+        //    string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
 
-            using (SqlConnection conn = new SqlConnection(cs))
-            {
-                conn.Open();
+        //    using (SqlConnection conn = new SqlConnection(cs))
+        //    {
+        //        conn.Open();
 
                 
 
                
 
-                    SqlCommand cmd = new SqlCommand("spAddAttendance", conn);
-                    cmd.CommandType = CommandType.StoredProcedure;
+        //            SqlCommand cmd = new SqlCommand("spAddAttendance", conn);
+        //            cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@StudentId", AttandanceStudentID );
+        //        cmd.Parameters.AddWithValue("@StudentId", AttandanceStudentID );
 
-                    cmd.Parameters.AddWithValue("@SubjectId", AttandanceSubjectID);
+        //            cmd.Parameters.AddWithValue("@SubjectId", AttandanceSubjectID);
 
-                    cmd.Parameters.AddWithValue("@AttendanceDate", AttandanceDate);
+        //            cmd.Parameters.AddWithValue("@AttendanceDate", AttandanceDate);
 
                     
 
-                    cmd.Parameters.AddWithValue("@AttendanceStatus", Present);
+        //            cmd.Parameters.AddWithValue("@AttendanceStatus", Present);
 
-                    cmd.ExecuteNonQuery();
+        //            cmd.ExecuteNonQuery();
                 
 
                
-            }
-        }
+        //    }
+        //}
     }
 }

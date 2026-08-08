@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtbDateTime = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,10 +42,8 @@
             this.dtpAttandanceDate = new System.Windows.Forms.DateTimePicker();
             this.cmbAttendanceSubject = new System.Windows.Forms.ComboBox();
             this.cmbAttendanceCourse = new System.Windows.Forms.ComboBox();
-            this.txtAttendanceID = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbBatch = new System.Windows.Forms.ComboBox();
@@ -110,22 +108,22 @@
             // dgvAttendance
             // 
             this.dgvAttendance.BackgroundColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAttendance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAttendance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAttendance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAttendance.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colStudentID,
             this.colStudentname,
             this.colPresent});
-            this.dgvAttendance.Location = new System.Drawing.Point(24, 346);
+            this.dgvAttendance.Location = new System.Drawing.Point(24, 262);
             this.dgvAttendance.Name = "dgvAttendance";
-            this.dgvAttendance.Size = new System.Drawing.Size(1003, 282);
+            this.dgvAttendance.Size = new System.Drawing.Size(1003, 366);
             this.dgvAttendance.TabIndex = 6;
             // 
             // colStudentID
@@ -153,15 +151,13 @@
             this.panel2.Controls.Add(this.cmbBatch);
             this.panel2.Controls.Add(this.cmbAttendanceSubject);
             this.panel2.Controls.Add(this.cmbAttendanceCourse);
-            this.panel2.Controls.Add(this.txtAttendanceID);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(24, 60);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1003, 256);
+            this.panel2.Size = new System.Drawing.Size(1003, 181);
             this.panel2.TabIndex = 5;
             // 
             // dtpAttandanceDate
@@ -174,7 +170,7 @@
             // cmbAttendanceSubject
             // 
             this.cmbAttendanceSubject.FormattingEnabled = true;
-            this.cmbAttendanceSubject.Location = new System.Drawing.Point(179, 167);
+            this.cmbAttendanceSubject.Location = new System.Drawing.Point(181, 132);
             this.cmbAttendanceSubject.Name = "cmbAttendanceSubject";
             this.cmbAttendanceSubject.Size = new System.Drawing.Size(194, 21);
             this.cmbAttendanceSubject.TabIndex = 3;
@@ -184,26 +180,18 @@
             // cmbAttendanceCourse
             // 
             this.cmbAttendanceCourse.FormattingEnabled = true;
-            this.cmbAttendanceCourse.Location = new System.Drawing.Point(181, 76);
+            this.cmbAttendanceCourse.Location = new System.Drawing.Point(183, 41);
             this.cmbAttendanceCourse.Name = "cmbAttendanceCourse";
             this.cmbAttendanceCourse.Size = new System.Drawing.Size(194, 21);
             this.cmbAttendanceCourse.TabIndex = 3;
             this.cmbAttendanceCourse.Text = "Select Course";
             this.cmbAttendanceCourse.SelectedIndexChanged += new System.EventHandler(this.cmbAttendanceCourse_SelectedIndexChanged);
             // 
-            // txtAttendanceID
-            // 
-            this.txtAttendanceID.Location = new System.Drawing.Point(181, 35);
-            this.txtAttendanceID.Multiline = true;
-            this.txtAttendanceID.Name = "txtAttendanceID";
-            this.txtAttendanceID.Size = new System.Drawing.Size(194, 24);
-            this.txtAttendanceID.TabIndex = 2;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.label4.Location = new System.Drawing.Point(15, 167);
+            this.label4.Location = new System.Drawing.Point(17, 132);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 24);
             this.label4.TabIndex = 1;
@@ -219,21 +207,11 @@
             this.label6.TabIndex = 1;
             this.label6.Text = "Date :";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.label2.Location = new System.Drawing.Point(17, 38);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 24);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Attendance ID :";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.label3.Location = new System.Drawing.Point(17, 74);
+            this.label3.Location = new System.Drawing.Point(19, 39);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 24);
             this.label3.TabIndex = 1;
@@ -243,7 +221,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.label5.Location = new System.Drawing.Point(17, 122);
+            this.label5.Location = new System.Drawing.Point(19, 87);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(133, 24);
             this.label5.TabIndex = 1;
@@ -252,7 +230,7 @@
             // cmbBatch
             // 
             this.cmbBatch.FormattingEnabled = true;
-            this.cmbBatch.Location = new System.Drawing.Point(181, 122);
+            this.cmbBatch.Location = new System.Drawing.Point(183, 87);
             this.cmbBatch.Name = "cmbBatch";
             this.cmbBatch.Size = new System.Drawing.Size(194, 21);
             this.cmbBatch.TabIndex = 3;
@@ -300,10 +278,8 @@
         private System.Windows.Forms.DateTimePicker dtpAttandanceDate;
         private System.Windows.Forms.ComboBox cmbAttendanceSubject;
         private System.Windows.Forms.ComboBox cmbAttendanceCourse;
-        private System.Windows.Forms.TextBox txtAttendanceID;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbBatch;
         private System.Windows.Forms.Label label5;
