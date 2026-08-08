@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LogicLayer
 {
-    public abstract class CommonFilds: Photos
+    public abstract class CommonFilds : Subject
         // it has Gender Addres bank photo
 
     {

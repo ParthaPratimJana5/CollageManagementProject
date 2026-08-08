@@ -98,5 +98,47 @@ namespace LogicLayer
 
         }
 
+        public DataTable GetBatch()
+        {
+
+            string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+            SqlConnection connection = null;
+
+
+
+            try
+            {
+                connection = new SqlConnection(cs);
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("spGetAdmissionYears", connection);
+                sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+                
+
+
+                DataSet dataSet = new DataSet();
+                sqlDataAdapter.Fill(dataSet);
+
+                DataTable dataTable = dataSet.Tables[0];
+
+                //DataRowCollection dataRowCollection = dataTable.Rows;
+
+
+
+
+                return dataTable;
+
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            finally
+            {
+                if (connection != null)
+                {
+                    connection.Close();
+                }
+            }
+        }
+
     }
 }

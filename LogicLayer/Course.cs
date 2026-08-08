@@ -47,7 +47,7 @@ namespace LogicLayer
             }
         }
 
-        public void GetCourse()
+        public DataTable GetCourse()
         {
             string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
             SqlConnection connection = null;
@@ -75,11 +75,12 @@ namespace LogicLayer
                     CourseList.Add(data);
                 }
 
-
+                return dataTable;
 
             }
             catch (Exception ex)
             {
+                return null;
             }
             finally
             {
