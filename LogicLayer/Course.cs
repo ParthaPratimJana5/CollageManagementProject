@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Net;
 using System.Net.NetworkInformation;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,6 +18,7 @@ namespace LogicLayer
         public string CourseName { get; set; }
         public string TotalCource { get; set; }
         public string CourseId { get; set; }
+        public string CourseDuration { get; set; }
          //Total Course
         public void GetTotalCourse()
         {
@@ -121,6 +123,70 @@ namespace LogicLayer
             finally
             {
 
+            }
+        }
+
+        public string GetMaxCourseID()
+        {
+
+            string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+            SqlConnection sqlConnection = null;
+
+            try
+            {
+                sqlConnection = new SqlConnection(cs);
+
+                SqlCommand cmd = new SqlCommand("spGetMaxCourseId", sqlConnection);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                sqlConnection.Open();
+
+              string Cource = Convert.ToString(cmd.ExecuteScalar());
+                return Cource;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            finally
+            {
+                if (sqlConnection != null)
+                {
+                    sqlConnection.Close();
+                }
+            }
+        }
+        public String AddCourse(string DepartmentId)
+        {
+            string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+            SqlConnection connection = null;
+
+            try
+            {
+                connection = new SqlConnection(cs);
+                SqlCommand cmd = new SqlCommand("spAddCourse", connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+
+                cmd.Parameters.AddWithValue("@CourseName", CourseName);
+                cmd.Parameters.AddWithValue("@Duration", CourseDuration);
+                cmd.Parameters.AddWithValue("@DepartmentId", Convert.ToInt16(DepartmentId));
+
+                connection.Open();
+
+                return (cmd.ExecuteNonQuery().ToString());
+                
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            finally
+            {
+                if (connection != null)
+                {
+                    connection.Close();
+                }
             }
         }
     }

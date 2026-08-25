@@ -14,7 +14,7 @@ namespace LogicLayer
         public List <string> DepartmemtList {  get; set; }
         public string DepartmemtID { get; set; }
 
-        public void GetDepartmemt()
+        public DataTable GetDepartmemt()
         {
             string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
             SqlConnection connection = null;
@@ -42,12 +42,12 @@ namespace LogicLayer
                     DepartmemtList.Add(data);
                 }
 
-                
+                return dataTable;
 
             }
             catch (Exception ex)
             {
-                
+                return null;
             }
             finally
             {

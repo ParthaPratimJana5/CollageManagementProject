@@ -183,7 +183,7 @@ namespace CollageManagementApplication
                     continue;
 
                 Student student = new Student();
-                student.AttandanceStudentID = cmbAttendanceCourse.SelectedValue.ToString();
+                student.AttandanceStudentID = row.Cells["colStudentID"].Value.ToString();
                 student.AttandanceSubjectID = cmbAttendanceSubject.SelectedValue.ToString();
                 student.AttandanceDate = dtpAttandanceDate.Value.Date;
                 student.Present = Convert.ToBoolean(row.Cells["colPresent"].Value);

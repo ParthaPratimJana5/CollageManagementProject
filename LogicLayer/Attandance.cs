@@ -87,24 +87,72 @@ namespace LogicLayer
 
         public string AddAttendance()
         {
-            string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
-            using (SqlConnection conn = new SqlConnection(cs))
-            using (SqlCommand cmd = new SqlCommand("spAddAttendance", conn))
+             
             {
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@StudentId", AttandanceStudentID);
-                cmd.Parameters.AddWithValue("@SubjectId", AttandanceSubjectID);
-                cmd.Parameters.AddWithValue("@AttendanceDate", AttandanceDate);
-                cmd.Parameters.AddWithValue("@Status", Present);
+                string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+                using (SqlConnection conn = new SqlConnection(cs))
+                using (SqlCommand cmd = new SqlCommand("spAddAttendance", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@StudentId", Convert.ToInt32( AttandanceStudentID));
+                    cmd.Parameters.AddWithValue("@SubjectId", Convert.ToInt32( AttandanceSubjectID));
+                    cmd.Parameters.AddWithValue("@AttendanceDate", AttandanceDate);
+                    cmd.Parameters.AddWithValue("@Status", Present);
 
-                conn.Open();
-                object result = cmd.ExecuteScalar();
-                conn.Close();
+                    conn.Open();
+                    object result = cmd.ExecuteScalar().ToString();
+                    conn.Close();
 
-                return result?.ToString();
+                    return result?.ToString();
+                }
             }
+            
+
+
         }
 
+        public DataTable GetAttendanceReport(string filterType, DateTime? startDate, DateTime? endDate, int? courseId)
+        {
+            string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+            SqlConnection sqlConnection = null;
+            DataTable dt = new DataTable();
+
+            try
+            {
+                sqlConnection = new SqlConnection(cs);
+
+                SqlCommand cmd = new SqlCommand("spGetAttendanceReport", sqlConnection);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@filterType",filterType.ToLower());
+                cmd.Parameters.AddWithValue("@startDate", startDate);
+                cmd.Parameters.AddWithValue("@endDate", endDate);
+                if (courseId > -1)
+                {
+                    cmd.Parameters.AddWithValue("@courseId", courseId);
+                }
+                else { cmd.Parameters.AddWithValue("@courseId", null); }
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                sqlConnection.Open();
+                da.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                // you can log or show error
+                //throw new Exception("Error fetching attendance report: " + ex.Message);
+            }
+            finally
+            {
+                if (sqlConnection != null)
+                {
+                    sqlConnection.Close();
+                }
+            }
+
+            return dt;
+        }
 
         //public void SaveAttendance()
         //{
@@ -114,9 +162,9 @@ namespace LogicLayer
         //    {
         //        conn.Open();
 
-                
 
-               
+
+
 
         //            SqlCommand cmd = new SqlCommand("spAddAttendance", conn);
         //            cmd.CommandType = CommandType.StoredProcedure;
@@ -127,14 +175,14 @@ namespace LogicLayer
 
         //            cmd.Parameters.AddWithValue("@AttendanceDate", AttandanceDate);
 
-                    
+
 
         //            cmd.Parameters.AddWithValue("@AttendanceStatus", Present);
 
         //            cmd.ExecuteNonQuery();
-                
 
-               
+
+
         //    }
         //}
     }

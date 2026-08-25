@@ -142,11 +142,7 @@ namespace CollageManagementApplication
 
         }
 
-        private void btnEnrollment_Click_1(object sender, EventArgs e)
-        {
-
-            Loadfrom(new EnrollForm());
-        }
+        
 
         private void btnLogout_Click_1(object sender, EventArgs e)
         {

@@ -329,6 +329,40 @@ namespace LogicLayer
             }
         }
 
+        public DataTable GetStaff()
+        {
+            string CS = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+            SqlConnection connection = null;
+            
+
+
+
+            try
+            {
+                connection = new SqlConnection(CS);
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("spGetStaffs", connection);
+                sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+
+                DataSet dataSet = new DataSet();
+                sqlDataAdapter.Fill(dataSet);
+
+                DataTable dataTable = dataSet.Tables[0];
+
+
+                return dataTable;
+
+
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
     }
 
 }

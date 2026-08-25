@@ -22,12 +22,21 @@ namespace CollageManagementApplication
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dbCollageManagementSyatemDataSet.tblCourse' table. You can move, or remove it, as needed.
+            this.tblCourseTableAdapter.Fill(this.dbCollageManagementSyatemDataSet.tblCourse);
             txtbDateTime.Text = DateTime.Now.ToString("dddd, dd-MMMM-yyyy hh:mm tt");
             //GetTotalStudent();
             //GetTotalFaculty();
             //GetTotalCourse(); 
             LoadData();
-            
+            dtpEndDate.Hide();
+            dtpStartDate.Hide();
+            cmbCourse.Hide();
+            lblFrom.Hide();
+            lblTo.Hide();
+
+
+
 
 
 
@@ -52,15 +61,37 @@ namespace CollageManagementApplication
             course.GetTotalCourse();
             txtTotalCourse.Text = course.TotalCource;
 
+            DataTable dt= course.GetCourse();
+            
+            cmbCourse.DataSource = dt;
+            cmbCourse.DisplayMember = "CourseName";
+            cmbCourse.ValueMember = "CourseId";
+            cmbCourse.SelectedIndex = -1;
+            cmbCourse.Text = "Select Course";
+
+
         }
-        
-        
+
+        public class ComboItem
+        {
+            public int Value { get; set; }
+            public string Text { get; set; }
+
+            // This ensures the ComboBox shows the Text property
+            public override string ToString()
+            {
+                return Text;
+            }
+        }
+
+
+
 
         //Total Faculty
-        
 
 
-        
+
+
 
         ////Get Notice
         //private void LoadNotice()
@@ -118,7 +149,44 @@ namespace CollageManagementApplication
 
         private void btnGenerateReports_Click(object sender, EventArgs e)
         {
-            LoadData();
+           // LoadData();
+            LoadReport();
+
+
+        }
+
+        private void cmbFilterType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbCourse.Show();
+            cmbCourse.SelectedIndex = -1;
+            cmbCourse.Text = "Select Course";
+            if (cmbFilterType.Text=="Today" || cmbFilterType.Text == "This Month")
+            {
+                LoadReport();
+                dtpEndDate.Hide();
+                dtpStartDate.Hide();
+                lblFrom.Hide();
+                lblTo.Hide();
+            }            
+            else
+            {
+                dtpEndDate.Show();
+                dtpStartDate.Show();
+                lblFrom.Show(); lblTo.Show();
+            }
+            
+
+        }
+
+        private void LoadReport()
+        {
+            Attandance attandance = new Attandance();
+            if (cmbCourse.SelectedIndex == -1)
+                dgvAttendanceReport.DataSource = attandance.GetAttendanceReport(cmbFilterType.Text.ToLower(), dtpStartDate.Value, dtpEndDate.Value, null);
+
+            else
+                dgvAttendanceReport.DataSource = attandance.GetAttendanceReport(cmbFilterType.Text, dtpStartDate.Value, dtpEndDate.Value, Convert.ToInt16(cmbCourse.SelectedValue));
+
         }
     }
 }

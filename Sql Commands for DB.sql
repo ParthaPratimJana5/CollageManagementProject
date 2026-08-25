@@ -1129,7 +1129,7 @@ begin
 end;
 go
 
--- =========================
+select * from tblSubjects-- =========================
 -- Get PaymentPurpose (tblPaymentPurpose)
 -- =========================
 create procedure spGetPaymentPurpose
@@ -1656,6 +1656,310 @@ begin
 end
 
 
+-- Procedure to get Subjects by CourseId
+create procedure spGetSubjectsByCourseId
+    @CourseId int
+as
+begin
+    select 
+        sub.SubjectId,
+        sub.SubjectName,
+        sub.StaffId,
+        st.StaffName,
+        c.CourseName,
+        d.DepartmentName
+    from tblSubjects sub
+    join tblCourse c on sub.CourseId = c.CourseId
+    join tblStaff st on sub.StaffId = st.StaffId
+    join tblDepartment d on c.DepartmentId = d.DepartmentId
+    where sub.CourseId = @CourseId
+    order by sub.SubjectName;
+end
+
+
+
+
+
+-- Procedure to search Students by CourseId and Admission Year
+create procedure spSearchStudentsByCourseAndYear
+    @CourseId int,
+    @AdmissionYear int
+as
+begin
+    select 
+        s.StudentId,
+        s.StudentName,
+        g.GenderName,
+        s.BloodGroup,
+        s.Email,
+        s.Phone,
+        a.CareOf as Guardian,
+        c.CourseId,
+        c.CourseName,
+        e.AdmissionDate,
+        year(e.AdmissionDate) as AdmissionYear
+    from tblEnrollment e
+    join tblStudents s on e.StudentId = s.StudentId
+    join tblCourse c on e.CourseId = c.CourseId
+    join tblGender g on s.GenderId = g.GenderId
+    join tblAddress a on s.AddressId = a.AddressId
+    where e.CourseId = @CourseId
+      and year(e.AdmissionDate) = @AdmissionYear
+    order by s.StudentName;
+end
+
+-- Procedure to get distinct Admission Years from Enrollment
+create procedure spGetAdmissionYears
+as
+begin
+    select distinct year(AdmissionDate) as AdmissionYear
+    from tblEnrollment
+    order by AdmissionYear desc;
+end
+
+
+---- Procedure to check total attendance count for a subject on a given date
+--create procedure spCheckAttendance
+--    @SubjectId int,
+--    @AttendanceDate date
+--as
+--begin
+--    select 
+--        count(*) as TotalAttendanceMarked
+--    from tblAttendance
+--    where SubjectId = @SubjectId
+--      and AttendanceDate = @AttendanceDate;
+--end
+
+-- Mark Attendance With checkpint
+create procedure spAddAttendance
+    @StudentId int,
+    @SubjectId int,
+    @AttendanceDate date,
+    @Status varchar(20)
+as
+begin
+    set nocount on;
+
+    if exists (
+        select 1 
+        from tblAttendance
+        where StudentId = @StudentId
+          and SubjectId = @SubjectId
+          and AttendanceDate = @AttendanceDate
+    )
+    begin
+        -- Return duplicate message
+        select 'Attendance already marked for this student, subject, and date.' as Message;
+        return;
+    end
+
+    insert into tblAttendance (StudentId, SubjectId, AttendanceDate, Status)
+    values (@StudentId, @SubjectId, @AttendanceDate, @Status);
+
+    -- Return success message
+    select 'Attendance successfully added.' as Message;
+end
+
+
+-- Procedure to get the maximum CourseId
+create procedure spGetMaxCourseId
+as
+begin
+    select max(CourseId) as MaxCourseId
+    from tblCourse;
+end
+
+-- Procedure to add Course
+create procedure spAddCourse
+    @CourseName varchar(max),
+    @Duration varchar(max),
+    @DepartmentId int
+as
+begin
+    insert into tblCourse (CourseName, Duration, DepartmentId)
+    values (@CourseName, @Duration, @DepartmentId);
+end
+
+
+-- Procedure to get all Staffs with details
+create procedure spGetStaffs
+as
+begin
+    select 
+        st.StaffId,
+        st.StaffName,
+        st.Email,
+        st.DateOfJoinning,
+        st.Salary,
+        st.BloodGroup,
+        g.GenderName,
+        dsg.DesignationName,
+        dept.DepartmentName,
+        b.BankName,
+        b.BranchName,
+        b.IFSC,
+        b.AccountNumber,
+        addr.CareOf,
+        addr.Village,
+        addr.Post,
+        addr.Pin,
+        addr.Aadhaar,
+        addr.PhoneNumber,
+        addr.GuardianPhone,
+        addr.GuardianEmail
+    from tblStaff st
+    join tblGender g on st.GenderId = g.GenderId
+    join tblDesignation dsg on st.DesignationId = dsg.DesignationId
+    join tblDepartment dept on st.DepartmentId = dept.DepartmentId
+    join tblBank b on st.BankId = b.BankId
+    join tblAddress addr on st.AddressId = addr.AddressId;
+end
+
+
+-- Procedure to add a new Subject if not already exists
+Create procedure spAddSubject
+    @SubjectName varchar(100),
+    @CourseId int,
+    @StaffId int
+as
+begin
+    set nocount on;
+
+    if exists (
+        select 1 
+        from tblSubjects
+        where SubjectName = @SubjectName
+          and CourseId = @CourseId
+          and StaffId = @StaffId
+    )
+    begin
+        select 'Subject already exists for this course and staff.' as Message;
+        return;
+    end
+
+    insert into tblSubjects (SubjectName, CourseId, StaffId)
+    values (@SubjectName, @CourseId, @StaffId);
+
+    select 'Subject successfully added.' as Message;
+end
+
+-- Procedure to get Students with combined name and CareOf, plus DepartmentId
+-- Procedure to get Students with combined name and CareOf, plus CourseId
+create procedure spGetStudentBesicssByCourse
+    @CourseId int = null
+as
+begin
+    select 
+        s.StudentId,
+        (s.StudentName + ' C/O- ' + addr.CareOf) as StudentWithCareOf,
+        e.CourseId
+    from tblStudents s
+    join tblAddress addr on s.AddressId = addr.AddressId
+    join tblEnrollment e on s.StudentId = e.StudentId
+    join tblCourse c on e.CourseId = c.CourseId
+    where (@CourseId is null or c.CourseId = @CourseId);
+end
+
+
+
+
+select * from tblSubjects
+select * from tblStaff
+
+
+
+-- Procedure to add a Payment
+create procedure spMakePayment
+    @StudentId int,
+    @PayTypeId int,
+    @Amount bigint,
+    @PaymentPurposeId int,
+    @DateOfPayment date,
+    @Description varchar(max) = null
+as
+begin
+    insert into tblPayment (StudentId, PayTypeId, Amount, PaymentPurposeId, DateOfPayment, Description)
+    values (@StudentId, @PayTypeId, @Amount, @PaymentPurposeId, @DateOfPayment, @Description);
+end
+
+
+
+select * from tblPayment
+
+
+exec sp_helptext spGetStudentBesicssByCourse
+
+
+
+
+-- Attendance Filter
+
+alter procedure spGetAttendanceReport
+    @filterType varchar(20),   -- 'today', 'month', 'range'
+    @startDate date = null,
+    @endDate date = null,
+    @courseId int = null       -- optional filter
+as
+begin
+    declare @fromDate date, @toDate date;
+
+    if @filterType = 'today'
+    begin
+        set @fromDate = cast(getdate() as date);
+        set @toDate = cast(getdate() as date);
+    end
+    else if @filterType = 'this month'
+    begin
+        set @fromDate = datefromparts(year(getdate()), month(getdate()), 1);
+        set @toDate = eomonth(getdate());
+    end
+    else if @filterType = 'date range'
+    begin
+        set @fromDate = @startDate;
+        set @toDate = @endDate;
+    end
+
+    ;with ActiveStudents as (
+        select 
+            e.StudentId,
+            s.StudentName,
+            e.CourseId,
+            c.CourseName,
+            e.AdmissionDate,
+            c.Duration
+        from tblEnrollment e
+        inner join tblStudents s on e.StudentId = s.StudentId
+        inner join tblCourse c on e.CourseId = c.CourseId
+        where (@courseId is null or c.CourseId = @courseId)
+    ),
+    AttendanceSummary as (
+        select 
+            a.StudentId,
+            sum(case when a.Status = 1 then 1 else 0 end) as PresentCount,
+            sum(case when a.Status = 0 then 1 else 0 end) as AbsentCount,
+            count(*) as TotalClasses
+        from tblAttendance a
+        inner join tblSubjects sub on a.SubjectId = sub.SubjectId
+        inner join tblCourse c on sub.CourseId = c.CourseId
+        where a.AttendanceDate between @fromDate and @toDate
+          and (@courseId is null or c.CourseId = @courseId)
+        group by a.StudentId
+    )
+    select 
+       
+        s.StudentName,
+        s.CourseName,
+        isnull(a.PresentCount,0) as PresentCount,
+        isnull(a.AbsentCount,0) as AbsentCount,
+        isnull(a.TotalClasses,0) as TotalClasses,
+        case when isnull(a.TotalClasses,0) = 0 then 0
+             else cast(isnull(a.PresentCount,0) * 100.0 / a.TotalClasses as decimal(5,2))
+        end as PresentPercentage
+    from ActiveStudents s
+    left join AttendanceSummary a on s.StudentId = a.StudentId
+    order by s.StudentName;
+end
 
 
 
@@ -1663,9 +1967,19 @@ end
 
 
 
+select * from tblCourse
+select * from tblAttendance
+select * from tblEnrollment
 
+exec spGetAttendanceReport 
+    @filterType = 'this month',
+    @startDate = null,
+    @endDate = null,
+    @courseId = null;
 
+    update tblCourse set Duration = 3 where Duration = '3 years';
 
+    update tblAttendance set Status = 0 where Status = 'Absent';
 
 
 
