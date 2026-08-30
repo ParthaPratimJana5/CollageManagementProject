@@ -31,6 +31,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtEmailAddress = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.comboBoxGender = new System.Windows.Forms.ComboBox();
             this.cmbBloodgroup = new System.Windows.Forms.ComboBox();
             this.dtpDateOfBirth = new System.Windows.Forms.DateTimePicker();
@@ -73,8 +75,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.cmbCourse = new System.Windows.Forms.ComboBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.txtEmailAddress = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -85,7 +85,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(151)))), ((int)(((byte)(171)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(70)))), ((int)(((byte)(138)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -135,6 +135,26 @@
             this.panel2.Size = new System.Drawing.Size(423, 595);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // txtEmailAddress
+            // 
+            this.txtEmailAddress.Location = new System.Drawing.Point(159, 293);
+            this.txtEmailAddress.Multiline = true;
+            this.txtEmailAddress.Name = "txtEmailAddress";
+            this.txtEmailAddress.Size = new System.Drawing.Size(219, 25);
+            this.txtEmailAddress.TabIndex = 11;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.Black;
+            this.label19.Location = new System.Drawing.Point(13, 293);
+            this.label19.Name = "label19";
+            this.label19.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label19.Size = new System.Drawing.Size(132, 24);
+            this.label19.TabIndex = 10;
+            this.label19.Text = "Email Address";
             // 
             // comboBoxGender
             // 
@@ -579,26 +599,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(445, 157);
             this.panel4.TabIndex = 3;
-            // 
-            // txtEmailAddress
-            // 
-            this.txtEmailAddress.Location = new System.Drawing.Point(159, 293);
-            this.txtEmailAddress.Multiline = true;
-            this.txtEmailAddress.Name = "txtEmailAddress";
-            this.txtEmailAddress.Size = new System.Drawing.Size(219, 25);
-            this.txtEmailAddress.TabIndex = 11;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(13, 293);
-            this.label19.Name = "label19";
-            this.label19.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label19.Size = new System.Drawing.Size(132, 24);
-            this.label19.TabIndex = 10;
-            this.label19.Text = "Email Address";
             // 
             // AddStudentForm
             // 

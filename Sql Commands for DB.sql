@@ -1963,6 +1963,31 @@ end
 
 
 
+-- Procedure to get student details by StudentId
+create procedure spGetStudentDetailsWithPaymentById 5
+    @StudentId int
+as
+begin
+    select 
+        s.StudentId,
+        s.StudentName,
+        addr.CareOf as GuardianName,
+        c.CourseName,
+        d.DepartmentName,
+        year(e.AdmissionDate) as AdmissionYear,
+        c.Duration as CourseDuration,
+        p.Photo,
+        isnull(sum(pay.Amount),0) as TotalPaidAmount
+    from tblStudents s
+    join tblAddress addr on s.AddressId = addr.AddressId
+    join tblEnrollment e on s.StudentId = e.StudentId
+    join tblCourse c on e.CourseId = c.CourseId
+    join tblDepartment d on c.DepartmentId = d.DepartmentId
+    join tblPhotos p on s.PhotoId = p.PhotoId
+    left join tblPayment pay on s.StudentId = pay.StudentId
+    where s.StudentId = @StudentId
+    group by s.StudentId, s.StudentName, addr.CareOf, c.CourseName, d.DepartmentName, e.AdmissionDate, c.Duration, p.Photo;
+end
 
 
 
@@ -1970,6 +1995,8 @@ end
 select * from tblCourse
 select * from tblAttendance
 select * from tblEnrollment
+select * from tblPayment
+
 
 exec spGetAttendanceReport 
     @filterType = 'this month',

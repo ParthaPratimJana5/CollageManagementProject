@@ -66,10 +66,11 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(70)))), ((int)(((byte)(138)))));
             this.panel1.Controls.Add(this.txtbDateTime);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1051, 43);
@@ -151,11 +152,12 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(70)))), ((int)(((byte)(138)))));
             this.panel3.Controls.Add(this.btnNext);
             this.panel3.Controls.Add(this.btnPreview);
             this.panel3.Controls.Add(this.txtTotalRecords);
             this.panel3.Controls.Add(this.label2);
+            this.panel3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel3.Location = new System.Drawing.Point(25, 675);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1017, 42);

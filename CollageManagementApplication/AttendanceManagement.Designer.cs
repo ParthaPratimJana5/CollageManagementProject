@@ -40,13 +40,13 @@
             this.colPresent = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dtpAttandanceDate = new System.Windows.Forms.DateTimePicker();
+            this.cmbBatch = new System.Windows.Forms.ComboBox();
             this.cmbAttendanceSubject = new System.Windows.Forms.ComboBox();
             this.cmbAttendanceCourse = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cmbBatch = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAttendance)).BeginInit();
             this.panel2.SuspendLayout();
@@ -54,10 +54,11 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(70)))), ((int)(((byte)(138)))));
             this.panel1.Controls.Add(this.txtbDateTime);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1051, 44);
@@ -167,6 +168,15 @@
             this.dtpAttandanceDate.Size = new System.Drawing.Size(200, 20);
             this.dtpAttandanceDate.TabIndex = 4;
             // 
+            // cmbBatch
+            // 
+            this.cmbBatch.FormattingEnabled = true;
+            this.cmbBatch.Location = new System.Drawing.Point(183, 87);
+            this.cmbBatch.Name = "cmbBatch";
+            this.cmbBatch.Size = new System.Drawing.Size(194, 21);
+            this.cmbBatch.TabIndex = 3;
+            this.cmbBatch.Text = "Select Batch or Year";
+            // 
             // cmbAttendanceSubject
             // 
             this.cmbAttendanceSubject.FormattingEnabled = true;
@@ -186,6 +196,16 @@
             this.cmbAttendanceCourse.TabIndex = 3;
             this.cmbAttendanceCourse.Text = "Select Course";
             this.cmbAttendanceCourse.SelectedIndexChanged += new System.EventHandler(this.cmbAttendanceCourse_SelectedIndexChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.label5.Location = new System.Drawing.Point(19, 87);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(133, 24);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Batch or Year :";
             // 
             // label4
             // 
@@ -216,25 +236,6 @@
             this.label3.Size = new System.Drawing.Size(81, 24);
             this.label3.TabIndex = 1;
             this.label3.Text = "Course :";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.label5.Location = new System.Drawing.Point(19, 87);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(133, 24);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Batch or Year :";
-            // 
-            // cmbBatch
-            // 
-            this.cmbBatch.FormattingEnabled = true;
-            this.cmbBatch.Location = new System.Drawing.Point(183, 87);
-            this.cmbBatch.Name = "cmbBatch";
-            this.cmbBatch.Size = new System.Drawing.Size(194, 21);
-            this.cmbBatch.TabIndex = 3;
-            this.cmbBatch.Text = "Select Batch or Year";
             // 
             // AttendanceManagement
             // 
