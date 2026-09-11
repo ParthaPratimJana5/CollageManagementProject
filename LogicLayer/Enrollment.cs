@@ -140,5 +140,50 @@ namespace LogicLayer
             }
         }
 
+        public (int Semester, string Status) CalculateSemesterAndStatus(
+    DateTime admissionDate, int courseDurationYears)
+        {
+            try { 
+            int totalSemesters = courseDurationYears * 2;
+
+            DateTime academicStart;
+
+            // Academic year starts in July
+            if (admissionDate.Month >= 7)
+            {
+                academicStart = new DateTime(admissionDate.Year, 7, 1);
+            }
+            else
+            {
+                academicStart = new DateTime(admissionDate.Year - 1, 7, 1);
+            }
+
+            DateTime today = DateTime.Today;
+
+            int monthsPassed =
+                (today.Year - academicStart.Year) * 12
+                + (today.Month - academicStart.Month);
+
+            int semester = (monthsPassed / 6) + 1;
+
+            string status;
+
+            if (semester <= totalSemesters)
+            {
+                status = "Active";
+            }
+            else
+            {
+                semester = totalSemesters;
+                status = "Completed";
+            }
+
+            return (semester, status);
+            }
+            catch(Exception ex)
+            {
+                return (0 , "error");
+            }
+        }
     }
 }

@@ -116,7 +116,7 @@ namespace CollageManagementApplication
             student.GetStudentID();
             txtStudentId.Text = student.StudentID;
 
-            student.GetCourse();
+            student.GetCourse(null);
 
             if (student.CourseList != null)
             {

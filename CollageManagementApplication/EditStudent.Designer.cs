@@ -623,7 +623,7 @@
             this.cmbSearchName.Name = "cmbSearchName";
             this.cmbSearchName.Size = new System.Drawing.Size(285, 28);
             this.cmbSearchName.TabIndex = 21;
-            this.cmbSearchName.Text = "Select Staff";
+            this.cmbSearchName.Text = "Select Student";
             this.cmbSearchName.SelectedIndexChanged += new System.EventHandler(this.cmbSearchName_SelectedIndexChanged);
             // 
             // btnSearch

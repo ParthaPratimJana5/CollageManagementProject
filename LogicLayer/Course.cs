@@ -49,7 +49,7 @@ namespace LogicLayer
             }
         }
 
-        public DataTable GetCourse()
+        public DataTable GetCourse(string id)
         {
             string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
             SqlConnection connection = null;
@@ -61,6 +61,8 @@ namespace LogicLayer
                 connection = new SqlConnection(cs);
                 SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("spGetCourse", connection);
                 sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+                sqlDataAdapter.SelectCommand.Parameters.AddWithValue("@CourseId", id);
+                
 
 
                 DataSet dataSet = new DataSet();
@@ -179,6 +181,86 @@ namespace LogicLayer
             }
             catch (Exception ex)
             {
+                return null;
+            }
+            finally
+            {
+                if (connection != null)
+                {
+                    connection.Close();
+                }
+            }
+        }
+
+
+
+        public DataTable GetCourseInfoBySearch(string input)
+        {
+            string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+            SqlConnection connection = null;
+
+
+
+            try
+            {
+                connection = new SqlConnection(cs);
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("spSearchCourseInformation", connection);
+                sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+
+
+                sqlDataAdapter.SelectCommand.Parameters.AddWithValue("@SearchTerm", input);
+
+                DataSet dataSet = new DataSet();
+                sqlDataAdapter.Fill(dataSet);
+
+                DataTable dataTable = dataSet.Tables[0];
+
+                //DataRowCollection dataRowCollection = dataTable.Rows;
+
+
+
+                return dataTable;
+
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            finally
+            {
+                if (connection != null)
+                {
+                    connection.Close();
+                }
+            }
+        }
+
+
+
+        public string EditCourse(/*int courseId, string courseName, string duration, */string departmentId)
+        {
+            string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+            SqlConnection connection = null;
+
+            try
+            {
+                connection = new SqlConnection(cs);
+                SqlCommand cmd = new SqlCommand("spEditCourse", connection);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@CourseId", Convert.ToInt32(CourseId));
+                cmd.Parameters.AddWithValue("@CourseName", CourseName);
+                cmd.Parameters.AddWithValue("@Duration", Convert.ToInt32(CourseDuration));
+                cmd.Parameters.AddWithValue("@DepartmentId", Convert.ToInt32(departmentId));
+
+                connection.Open();
+
+                // return rows affected as string
+                return (cmd.ExecuteNonQuery().ToString());
+            }
+            catch (Exception ex)
+            {
+                // log ex.Message if needed
                 return null;
             }
             finally

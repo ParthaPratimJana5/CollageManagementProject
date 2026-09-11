@@ -80,7 +80,7 @@ namespace CollageManagementApplication
             
             
 
-            DataTable dt2 = payment.GetCourse();
+            DataTable dt2 = payment.GetCourse(null);
             cmbCourse.DataSource= dt2;
             cmbCourse.DisplayMember = "CourseName";
             cmbCourse.ValueMember = "CourseId";

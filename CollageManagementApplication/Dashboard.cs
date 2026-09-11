@@ -61,7 +61,7 @@ namespace CollageManagementApplication
             course.GetTotalCourse();
             txtTotalCourse.Text = course.TotalCource;
 
-            DataTable dt= course.GetCourse();
+            DataTable dt= course.GetCourse(null);
             
             cmbCourse.DataSource = dt;
             cmbCourse.DisplayMember = "CourseName";

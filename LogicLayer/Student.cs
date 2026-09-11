@@ -259,6 +259,7 @@ namespace LogicLayer
         public void GetFullStudentInfo()
         {
             string CS = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+            
 
             try
             {
@@ -266,10 +267,18 @@ namespace LogicLayer
                 {
                     SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("spGetStudentFullInformationById", connection);
                     sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+
+                    if(StudentID==null)
+                    {
+                        sqlDataAdapter.SelectCommand.Parameters.AddWithValue("@StudentId", null);
+                    }
+                    else { 
                     sqlDataAdapter.SelectCommand.Parameters.AddWithValue("@StudentId", Convert.ToInt32(StudentID));
+                    }
 
                     DataSet dataSet = new DataSet();
                     sqlDataAdapter.Fill(dataSet);
+                   
 
                     if (dataSet.Tables.Count > 0 && dataSet.Tables[0].Rows.Count > 0)
                     {
@@ -282,7 +291,7 @@ namespace LogicLayer
                         Email = row["Email"].ToString();
                         Phone = row["Phone"].ToString();
 
-                        CareOf = row["Guardian"].ToString();
+                        CareOf = row["CareOf"].ToString();
                         BloodGroup = row["BloodGroup"].ToString();
                         Village = row["Village"].ToString();
                         Post = row["Post"].ToString();
@@ -293,13 +302,17 @@ namespace LogicLayer
                         Pin = row["Pin"].ToString();
                         Aadhaar = row["Aadhaar"].ToString();
                         Photobyte = row["Photo"] as byte[];
+                        DateOfAdmition = Convert.ToDateTime(row["AdmissionDate"]);
+                        CourseDuration = row["Duration"].ToString();
+                         
 
                     }
+
+                    
                 }
             }
             catch (Exception ex)
             {
-
             }
         }
 
@@ -378,7 +391,46 @@ namespace LogicLayer
             }
         }
 
+        public DataTable GetStudentInfoBySearch( string input)
+        {
+            string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+            SqlConnection connection = null;
 
+
+
+            try
+            {
+                connection = new SqlConnection(cs);
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("spGetAllStudentInformation", connection);
+                sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+
+
+                sqlDataAdapter.SelectCommand.Parameters.AddWithValue("@SearchTerm", input);
+
+                DataSet dataSet = new DataSet();
+                sqlDataAdapter.Fill(dataSet);
+
+                DataTable dataTable = dataSet.Tables[0];
+
+                //DataRowCollection dataRowCollection = dataTable.Rows;
+
+
+
+                return dataTable;
+
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            finally
+            {
+                if (connection != null)
+                {
+                    connection.Close();
+                }
+            }
+        }
 
 
 

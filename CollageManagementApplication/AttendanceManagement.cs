@@ -116,7 +116,7 @@ namespace CollageManagementApplication
         public void LoadCourse()
         {
             Student student = new Student();
-            DataTable dtCourse= student.GetCourse();
+            DataTable dtCourse= student.GetCourse(null);
             cmbAttendanceCourse.DataSource = dtCourse;
             cmbAttendanceCourse.DisplayMember = "CourseName";
             cmbAttendanceCourse.ValueMember = "CourseId";

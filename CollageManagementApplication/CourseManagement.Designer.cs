@@ -28,17 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtbDateTime = new System.Windows.Forms.TextBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dgvCourse = new System.Windows.Forms.DataGridView();
-            this.CourseIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CourseNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DepartmentColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DurationColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DescriptionColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnPreview = new System.Windows.Forms.Button();
@@ -92,63 +87,26 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(226, 33);
             this.txtSearch.TabIndex = 3;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // dgvCourse
             // 
             this.dgvCourse.AllowUserToAddRows = false;
             this.dgvCourse.AllowUserToOrderColumns = true;
             this.dgvCourse.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCourse.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCourse.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCourse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCourse.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CourseIdColumn,
-            this.CourseNameColumn,
-            this.DepartmentColumn,
-            this.DurationColumn,
-            this.DescriptionColumn});
             this.dgvCourse.Location = new System.Drawing.Point(25, 184);
             this.dgvCourse.Name = "dgvCourse";
-            this.dgvCourse.Size = new System.Drawing.Size(1017, 458);
+            this.dgvCourse.Size = new System.Drawing.Size(540, 458);
             this.dgvCourse.TabIndex = 5;
-            this.dgvCourse.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // CourseIdColumn
-            // 
-            this.CourseIdColumn.HeaderText = "Course ID";
-            this.CourseIdColumn.Name = "CourseIdColumn";
-            this.CourseIdColumn.Width = 200;
-            // 
-            // CourseNameColumn
-            // 
-            this.CourseNameColumn.HeaderText = "Course Name";
-            this.CourseNameColumn.Name = "CourseNameColumn";
-            this.CourseNameColumn.Width = 200;
-            // 
-            // DepartmentColumn
-            // 
-            this.DepartmentColumn.HeaderText = "Department";
-            this.DepartmentColumn.Name = "DepartmentColumn";
-            this.DepartmentColumn.Width = 200;
-            // 
-            // DurationColumn
-            // 
-            this.DurationColumn.HeaderText = "Duration";
-            this.DurationColumn.Name = "DurationColumn";
-            this.DurationColumn.Width = 200;
-            // 
-            // DescriptionColumn
-            // 
-            this.DescriptionColumn.HeaderText = "Description";
-            this.DescriptionColumn.Name = "DescriptionColumn";
-            this.DescriptionColumn.ReadOnly = true;
-            this.DescriptionColumn.Width = 200;
             // 
             // panel3
             // 
@@ -307,11 +265,6 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgvCourse;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CourseIdColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CourseNameColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DepartmentColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DurationColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DescriptionColumn;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Button btnPreview;

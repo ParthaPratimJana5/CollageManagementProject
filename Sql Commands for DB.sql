@@ -1,4 +1,4 @@
- -- create database
+-- create database
 create database dbCollageManagementSyatem;
 
 
@@ -22,7 +22,7 @@ create table tblDesignation (
 );
 
 -- =========================
--- department table
+-- department table 
 -- =========================
 create table tblDepartment (
     DepartmentId int primary key identity(1,1),
@@ -543,15 +543,28 @@ create procedure spInsertDesignation
 
 
 -- Procedure for tblDepartment
-create procedure spInsertDepartment
+create procedure spAddDepartment
     @DepartmentName varchar(max)
 as
 begin
-    insert into tblDepartment (DepartmentName)
-    values (@DepartmentName);
+    if not exists (
+        select 1 
+        from tblDepartment 
+        where lower(DepartmentName) = lower(@DepartmentName)
+    )
+    begin
+        insert into tblDepartment (DepartmentName)
+        values (@DepartmentName);
 
-    select scope_identity() as DepartmentId;
-end
+        print 'Department successfully added.';
+    end
+    else
+    begin
+        print 'Department already exists.';
+    end
+end;
+go
+
 
 
 -- Procedure for tblPaymentPurpose
@@ -1100,34 +1113,45 @@ go
 -- Get Course (tblCourse with department)
 -- =========================
 create procedure spGetCourse
+    @CourseId varchar(max) = null
 as
 begin
     select 
         c.CourseId,
         c.CourseName,
         c.Duration,
-        d.DepartmentName
+        d.DepartmentName,
+        c.DepartmentId
     from tblCourse c
-    join tblDepartment d on c.DepartmentId = d.DepartmentId;
-end
+    join tblDepartment d on c.DepartmentId = d.DepartmentId
+    where 
+        @CourseId is null
+        or c.CourseId = try_cast(@CourseId as int)
+    order by c.CourseName;
+end;
+
 
 
 -- =========================
 -- Get Subject (tblSubjects with course + staff)
 -- =========================
-create procedure spGetSubject
+create procedure spGetSubject 
+    @SubjectId varchar(max) = null
 as
 begin
     select 
         sub.SubjectId,
         sub.SubjectName,
-        c.CourseName,
-        st.StaffName
+        c.CourseId,
+        st.StaffId
     from tblSubjects sub
     join tblCourse c on sub.CourseId = c.CourseId
-    join tblStaff st on sub.StaffId = st.StaffId;
-end;
-go
+    join tblStaff st on sub.StaffId = st.StaffId
+    where 
+        @SubjectId is null
+        or sub.SubjectId = try_cast(@SubjectId as int);
+end
+
 
 select * from tblSubjects-- =========================
 -- Get PaymentPurpose (tblPaymentPurpose)
@@ -1314,37 +1338,44 @@ go
 
 
 -- Procedure to get full information of all students
-create procedure spGetAllStudentInformation
+alter procedure spGetAllStudentInformation
+    @SearchTerm varchar(max) = null
 as
 begin
     select 
-        s.StudentId,
-        s.StudentName,
-        s.DateOfBirth,
-        g.GenderName,
+        s.StudentName as [Student Name],
+        s.DateOfBirth as [Date of Birth],
+        g.GenderName as Gender,
         s.Email,
         s.Phone,
-        a.CareOf,
-        a.Village,
-        a.Post,
-        a.Pin,
+        a.CareOf as Parent,
+        (a.Village + ' ' + a.Post + ' ' + a.Pin) as Address,
         a.Aadhaar,
-        a.PhoneNumber,
-        c.CourseName,
+        a.PhoneNumber as [Phone Number],
+        c.CourseName as Course,
         c.Duration,
-        d.DepartmentName,
-        e.AdmissionDate
-        
-        
+        d.DepartmentName as Department,
+        e.AdmissionDate as [Admission Date],
+        s.StudentId as [Id]   -- keep Id in output
     from tblStudents s
     join tblGender g on s.GenderId = g.GenderId
     join tblAddress a on s.AddressId = a.AddressId
     join tblEnrollment e on s.StudentId = e.StudentId
     join tblCourse c on e.CourseId = c.CourseId
     join tblDepartment d on c.DepartmentId = d.DepartmentId
-    
-    order by s.StudentName;
-end
+    where 
+        @SearchTerm is null
+        or (
+            isnumeric(@SearchTerm) = 1 
+            and s.StudentId = try_cast(@SearchTerm as int)   -- safe cast
+        )
+        or (
+            isnumeric(@SearchTerm) = 0 
+            and s.StudentName like '%' + @SearchTerm + '%'
+        )
+    order by e.AdmissionDate desc;
+end;
+
 
 --================================================================================================================================
 -- New StoreProcedures For Update 06/07/2026
@@ -1604,19 +1635,19 @@ end
 
 
 -- Procedure to get full Student information by Id (including Photo)
-create procedure spGetStudentFullInformationById 6
-    @StudentId int
+alter procedure spGetStudentFullInformationById
+    @StudentId int null 
 as
 begin
     select 
-        s.StudentId,
+        
         s.StudentName,
         s.DateOfBirth,
         g.GenderName,
         s.Email,
         s.Phone,
         s.BloodGroup,
-        a.CareOf as Guardian,
+        a.CareOf,
         a.Village,
         a.Post,
         a.Pin,
@@ -1627,6 +1658,8 @@ begin
         c.CourseName,
         c.Duration,
         d.DepartmentName,
+        e.AdmissionDate,
+        s.StudentId,
         ph.Photo   -- binary photo data
     from tblStudents s
     join tblGender g on s.GenderId = g.GenderId
@@ -1895,7 +1928,7 @@ exec sp_helptext spGetStudentBesicssByCourse
 
 -- Attendance Filter
 
-alter procedure spGetAttendanceReport
+create procedure spGetAttendanceReport
     @filterType varchar(20),   -- 'today', 'month', 'range'
     @startDate date = null,
     @endDate date = null,
@@ -1988,6 +2021,105 @@ begin
     where s.StudentId = @StudentId
     group by s.StudentId, s.StudentName, addr.CareOf, c.CourseName, d.DepartmentName, e.AdmissionDate, c.Duration, p.Photo;
 end
+
+
+-- Procedure to get Payment History for a Student
+create procedure spGetPaymentHistory
+    @StudentId int = null
+as
+begin
+    select 
+        p.PaymentId as [Payment ID],
+        s.StudentId as [Student ID],
+        s.StudentName as [Student Name],
+        pt.PayType as [Payment Type],
+        pp.PaymentPurpose as [Payment Purpose],
+        p.Amount as [Amount Paid],
+        p.DateOfPayment as [Date of Payment],
+        p.Description as [Description]
+    from tblPayment p
+    join tblStudents s on p.StudentId = s.StudentId
+    join tblPaymentType pt on p.PayTypeId = pt.PayTypeId
+    join tblPaymentPurpose pp on p.PaymentPurposeId = pp.PaymentPurposeId
+    where s.StudentId = @StudentId
+    order by p.DateOfPayment desc;
+end
+
+
+--Course information with the details
+create procedure spSearchCourseInformation
+    @SearchTerm varchar(max) = null
+as
+begin
+    select 
+        c.CourseId as [Course ID],
+        c.CourseName as [Course Name],
+        d.DepartmentName as [Department],
+        c.Duration as [Course Duration],
+        st.StaffName as [HOD Name]
+    from tblCourse c
+    join tblDepartment d on c.DepartmentId = d.DepartmentId
+    left join tblHOD h on c.DepartmentId = h.DepartmentId
+    left join tblStaff st on h.StaffId = st.StaffId
+    where 
+        @SearchTerm is null
+        or (
+            isnumeric(@SearchTerm) = 1 
+            and c.CourseId = try_cast(@SearchTerm as int)   -- safe cast
+        )
+        or (
+            isnumeric(@SearchTerm) = 0 
+            and c.CourseName like '%' + @SearchTerm + '%'
+        )
+    order by c.CourseName;
+end;
+
+-- Procedure to edit Course details
+create procedure spEditCourse
+    @CourseId int,
+    @CourseName varchar(max),
+    @Duration varchar(max),
+    @DepartmentId int
+as
+begin
+    update tblCourse
+    set CourseName = @CourseName,
+        Duration = @Duration,
+        DepartmentId = @DepartmentId
+    where CourseId = @CourseId;
+end
+
+
+-- Procedure to edit Subject details
+create procedure spEditSubject
+    @SubjectId int,
+    @SubjectName varchar(max),
+    @CourseId int,
+    @StaffId int
+as
+begin
+    update tblSubjects
+    set SubjectName = @SubjectName,
+        CourseId = @CourseId,
+        StaffId = @StaffId
+    where SubjectId = @SubjectId;
+end
+
+
+
+-- Procedure to edit Department name by DepartmentId
+create procedure spEditDepartment
+    @DepartmentId int,
+    @DepartmentName varchar(max)
+as
+begin
+    update tblDepartment
+    set DepartmentName = @DepartmentName
+    where DepartmentId = @DepartmentId;
+end;
+
+
+
 
 
 

@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtbDateTime = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtbSearch = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -40,27 +39,39 @@
             this.txtbTotalRecords = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.pictureBoxStudent = new System.Windows.Forms.PictureBox();
+            this.lblPhone = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblCourse = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblStatus = new System.Windows.Forms.Label();
+            this.lblSem = new System.Windows.Forms.Label();
+            this.lblDob = new System.Windows.Forms.Label();
+            this.lblGuardian = new System.Windows.Forms.Label();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnStudentRefresh = new System.Windows.Forms.Button();
             this.btnStudentView = new System.Windows.Forms.Button();
             this.btnStudentEdit = new System.Windows.Forms.Button();
             this.btnStudentDelete = new System.Windows.Forms.Button();
             this.btnStudentAddnew = new System.Windows.Forms.Button();
+            this.txtSearchBox = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStudent)).BeginInit();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,30 +104,22 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Student Management";
             // 
-            // txtbSearch
-            // 
-            this.txtbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbSearch.Location = new System.Drawing.Point(839, 95);
-            this.txtbSearch.Multiline = true;
-            this.txtbSearch.Name = "txtbSearch";
-            this.txtbSearch.Size = new System.Drawing.Size(144, 33);
-            this.txtbSearch.TabIndex = 3;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(103, 149);
             this.dataGridView1.Name = "dataGridView1";
@@ -124,6 +127,7 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(844, 323);
             this.dataGridView1.TabIndex = 5;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button6
             // 
@@ -177,11 +181,15 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel4.Controls.Add(this.panel6);
+            this.panel4.Controls.Add(this.pictureBoxStudent);
+            this.panel4.Controls.Add(this.lblPhone);
+            this.panel4.Controls.Add(this.lblEmail);
+            this.panel4.Controls.Add(this.lblName);
+            this.panel4.Controls.Add(this.lblCourse);
             this.panel4.Controls.Add(this.label7);
+            this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.label5);
-            this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Location = new System.Drawing.Point(58, 543);
             this.panel4.Name = "panel4";
@@ -189,14 +197,54 @@
             this.panel4.TabIndex = 8;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
-            // panel6
+            // pictureBoxStudent
             // 
-            this.panel6.BackgroundImage = global::CollageManagementApplication.Properties.Resources.User_Icon_Vector_Illustration_In;
-            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel6.Location = new System.Drawing.Point(3, 57);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(98, 95);
-            this.panel6.TabIndex = 1;
+            this.pictureBoxStudent.Location = new System.Drawing.Point(3, 50);
+            this.pictureBoxStudent.Name = "pictureBoxStudent";
+            this.pictureBoxStudent.Size = new System.Drawing.Size(100, 114);
+            this.pictureBoxStudent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxStudent.TabIndex = 3;
+            this.pictureBoxStudent.TabStop = false;
+            // 
+            // lblPhone
+            // 
+            this.lblPhone.AutoSize = true;
+            this.lblPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lblPhone.Location = new System.Drawing.Point(181, 136);
+            this.lblPhone.Name = "lblPhone";
+            this.lblPhone.Size = new System.Drawing.Size(48, 15);
+            this.lblPhone.TabIndex = 2;
+            this.lblPhone.Text = "label12";
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lblEmail.Location = new System.Drawing.Point(181, 110);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(48, 15);
+            this.lblEmail.TabIndex = 2;
+            this.lblEmail.Text = "label12";
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lblName.Location = new System.Drawing.Point(181, 59);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(48, 15);
+            this.lblName.TabIndex = 2;
+            this.lblName.Text = "label12";
+            // 
+            // lblCourse
+            // 
+            this.lblCourse.AutoSize = true;
+            this.lblCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lblCourse.Location = new System.Drawing.Point(181, 84);
+            this.lblCourse.Name = "lblCourse";
+            this.lblCourse.Size = new System.Drawing.Size(48, 15);
+            this.lblCourse.TabIndex = 2;
+            this.lblCourse.Text = "label12";
             // 
             // label7
             // 
@@ -208,11 +256,21 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Phone:";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(107, 85);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(58, 15);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Course:";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(107, 112);
+            this.label6.Location = new System.Drawing.Point(107, 111);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(48, 15);
             this.label6.TabIndex = 0;
@@ -222,21 +280,12 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(107, 85);
+            this.label5.Location = new System.Drawing.Point(107, 59);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 15);
             this.label5.TabIndex = 0;
             this.label5.Text = "Name:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(107, 57);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 15);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Roll No:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label3
             // 
@@ -248,13 +297,29 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Student Details";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(45, 57);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(71, 15);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Guardian:";
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel5.Controls.Add(this.label11);
             this.panel5.Controls.Add(this.label10);
             this.panel5.Controls.Add(this.label9);
-            this.panel5.Controls.Add(this.label8);
+            this.panel5.Controls.Add(this.lblStatus);
+            this.panel5.Controls.Add(this.lblSem);
+            this.panel5.Controls.Add(this.lblDob);
+            this.panel5.Controls.Add(this.lblGuardian);
+            this.panel5.Controls.Add(this.lblAddress);
+            this.panel5.Controls.Add(this.label16);
+            this.panel5.Controls.Add(this.label4);
             this.panel5.Location = new System.Drawing.Point(543, 543);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(465, 183);
@@ -264,7 +329,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(45, 137);
+            this.label11.Location = new System.Drawing.Point(63, 136);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(53, 15);
             this.label11.TabIndex = 0;
@@ -274,7 +339,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(45, 112);
+            this.label10.Location = new System.Drawing.Point(76, 84);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(40, 15);
             this.label10.TabIndex = 0;
@@ -284,21 +349,72 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(45, 85);
+            this.label9.Location = new System.Drawing.Point(42, 110);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(74, 15);
             this.label9.TabIndex = 0;
             this.label9.Text = "Semester:";
             // 
-            // label8
+            // lblStatus
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(45, 50);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 15);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Program:";
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lblStatus.Location = new System.Drawing.Point(122, 137);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(48, 15);
+            this.lblStatus.TabIndex = 2;
+            this.lblStatus.Text = "label12";
+            // 
+            // lblSem
+            // 
+            this.lblSem.AutoSize = true;
+            this.lblSem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lblSem.Location = new System.Drawing.Point(122, 109);
+            this.lblSem.Name = "lblSem";
+            this.lblSem.Size = new System.Drawing.Size(48, 15);
+            this.lblSem.TabIndex = 2;
+            this.lblSem.Text = "label12";
+            // 
+            // lblDob
+            // 
+            this.lblDob.AutoSize = true;
+            this.lblDob.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lblDob.Location = new System.Drawing.Point(122, 83);
+            this.lblDob.Name = "lblDob";
+            this.lblDob.Size = new System.Drawing.Size(48, 15);
+            this.lblDob.TabIndex = 2;
+            this.lblDob.Text = "label12";
+            // 
+            // lblGuardian
+            // 
+            this.lblGuardian.AutoSize = true;
+            this.lblGuardian.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lblGuardian.Location = new System.Drawing.Point(122, 56);
+            this.lblGuardian.Name = "lblGuardian";
+            this.lblGuardian.Size = new System.Drawing.Size(48, 15);
+            this.lblGuardian.TabIndex = 2;
+            this.lblGuardian.Text = "label12";
+            // 
+            // lblAddress
+            // 
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lblAddress.Location = new System.Drawing.Point(122, 31);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(48, 15);
+            this.lblAddress.TabIndex = 2;
+            this.lblAddress.Text = "label12";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(52, 31);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(64, 15);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Address:";
+            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // panel1
             // 
@@ -370,17 +486,26 @@
             this.btnStudentAddnew.UseVisualStyleBackColor = true;
             this.btnStudentAddnew.Click += new System.EventHandler(this.btnStudentAddnew_Click);
             // 
+            // txtSearchBox
+            // 
+            this.txtSearchBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtSearchBox.Location = new System.Drawing.Point(816, 105);
+            this.txtSearchBox.Name = "txtSearchBox";
+            this.txtSearchBox.Size = new System.Drawing.Size(167, 23);
+            this.txtSearchBox.TabIndex = 9;
+            this.txtSearchBox.TextChanged += new System.EventHandler(this.txtSearchBox_TextChanged);
+            // 
             // StudentForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1051, 758);
+            this.Controls.Add(this.txtSearchBox);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.txtbSearch);
             this.Controls.Add(this.btnStudentRefresh);
             this.Controls.Add(this.btnStudentView);
             this.Controls.Add(this.btnStudentEdit);
@@ -400,6 +525,7 @@
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStudent)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.ResumeLayout(false);
@@ -417,7 +543,6 @@
         private System.Windows.Forms.Button btnStudentDelete;
         private System.Windows.Forms.Button btnStudentView;
         private System.Windows.Forms.Button btnStudentRefresh;
-        private System.Windows.Forms.TextBox txtbSearch;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button6;
@@ -426,7 +551,6 @@
         private System.Windows.Forms.TextBox txtbTotalRecords;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label7;
@@ -437,5 +561,17 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblAddress;
+        private System.Windows.Forms.Label lblPhone;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblCourse;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.Label lblSem;
+        private System.Windows.Forms.Label lblDob;
+        private System.Windows.Forms.Label lblGuardian;
+        private System.Windows.Forms.PictureBox pictureBoxStudent;
+        private System.Windows.Forms.TextBox txtSearchBox;
     }
 }

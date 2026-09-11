@@ -52,10 +52,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.txtDepartment = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.btnSaveDepartment = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -83,7 +89,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::CollageManagementApplication.Properties.Resources.Matangini_Institute_Logo_Redesign_png_tuxpi;
-            this.pictureBox1.Location = new System.Drawing.Point(442, 42);
+            this.pictureBox1.Location = new System.Drawing.Point(855, 56);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(188, 183);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -101,16 +107,16 @@
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.label11);
-            this.panel3.Location = new System.Drawing.Point(573, 298);
+            this.panel3.Location = new System.Drawing.Point(573, 343);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(457, 336);
+            this.panel3.Size = new System.Drawing.Size(457, 283);
             this.panel3.TabIndex = 8;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // btnAddSubject
             // 
             this.btnAddSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.btnAddSubject.Location = new System.Drawing.Point(150, 275);
+            this.btnAddSubject.Location = new System.Drawing.Point(158, 230);
             this.btnAddSubject.Name = "btnAddSubject";
             this.btnAddSubject.Size = new System.Drawing.Size(175, 33);
             this.btnAddSubject.TabIndex = 4;
@@ -215,9 +221,9 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Location = new System.Drawing.Point(30, 298);
+            this.panel2.Location = new System.Drawing.Point(26, 343);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(506, 336);
+            this.panel2.Size = new System.Drawing.Size(506, 274);
             this.panel2.TabIndex = 9;
             // 
             // cmbDepartment
@@ -232,7 +238,7 @@
             // btnSaveCourse
             // 
             this.btnSaveCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveCourse.Location = new System.Drawing.Point(165, 275);
+            this.btnSaveCourse.Location = new System.Drawing.Point(165, 230);
             this.btnSaveCourse.Name = "btnSaveCourse";
             this.btnSaveCourse.Size = new System.Drawing.Size(175, 33);
             this.btnSaveCourse.TabIndex = 2;
@@ -324,6 +330,60 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "Course Information";
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panel4.Controls.Add(this.btnSaveDepartment);
+            this.panel4.Controls.Add(this.txtDepartment);
+            this.panel4.Controls.Add(this.label12);
+            this.panel4.Controls.Add(this.label17);
+            this.panel4.Location = new System.Drawing.Point(26, 63);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(506, 176);
+            this.panel4.TabIndex = 9;
+            // 
+            // txtDepartment
+            // 
+            this.txtDepartment.Location = new System.Drawing.Point(213, 71);
+            this.txtDepartment.Multiline = true;
+            this.txtDepartment.Name = "txtDepartment";
+            this.txtDepartment.Size = new System.Drawing.Size(246, 24);
+            this.txtDepartment.TabIndex = 2;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(23, 71);
+            this.label12.Name = "label12";
+            this.label12.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label12.Size = new System.Drawing.Size(163, 24);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Department Name";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label17.Location = new System.Drawing.Point(147, 12);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(167, 25);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "Add Department";
+            // 
+            // btnSaveDepartment
+            // 
+            this.btnSaveDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.btnSaveDepartment.Location = new System.Drawing.Point(182, 128);
+            this.btnSaveDepartment.Name = "btnSaveDepartment";
+            this.btnSaveDepartment.Size = new System.Drawing.Size(175, 33);
+            this.btnSaveDepartment.TabIndex = 3;
+            this.btnSaveDepartment.Text = "Save";
+            this.btnSaveDepartment.UseVisualStyleBackColor = true;
+            this.btnSaveDepartment.Click += new System.EventHandler(this.btnSaveDepartment_Click);
+            // 
             // AddCourseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -333,6 +393,7 @@
             this.ClientSize = new System.Drawing.Size(1065, 728);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
@@ -346,6 +407,8 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -376,5 +439,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TextBox txtDepartment;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button btnSaveDepartment;
     }
 }

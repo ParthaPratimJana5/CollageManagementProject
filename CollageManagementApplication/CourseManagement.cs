@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LogicLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,13 +19,19 @@ namespace CollageManagementApplication
 
         private void CourseManagement_Load(object sender, EventArgs e)
         {
+            LoadCourse(null);
             txtbDateTime.Text = DateTime.Now.ToString("dddd, dd-MMMM-yyyy hh:mm tt");
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void LoadCourse(string DATA)
         {
+            Course course = new Course();
+            DataTable dt= course.GetCourseInfoBySearch(DATA);
+            dgvCourse.DataSource = dt;
 
         }
+
+        
 
         private void btnAddCourse_Click(object sender, EventArgs e)
         {
@@ -44,6 +51,11 @@ namespace CollageManagementApplication
             {
                 dashboard.Loadfrom(new EditCourseForm());
             }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            LoadCourse(txtSearch.Text);
         }
     }
 }
