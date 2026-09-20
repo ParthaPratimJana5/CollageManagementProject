@@ -83,25 +83,38 @@ namespace CollageManagementApplication
         {
             if (Validation())
             {
+                // Confirmation popup
+                DialogResult confirm = MessageBox.Show(
+                    "Are you sure you want to save this record?",
+                    "Confirm Save",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
 
-                if (DataInsert() != null)
+                if (confirm == DialogResult.Yes)
                 {
-                    //Redirect to Parent Form
-                    MainDashboard dashboard = (MainDashboard)this.ParentForm;
-
-                    if (dashboard != null)
+                    if (DataInsert() != null)
                     {
-                        dashboard.Loadfrom(new Faculty());
-                    }
+                        // Redirect to Parent Form
+                        MainDashboard dashboard = (MainDashboard)this.ParentForm;
 
+                        if (dashboard != null)
+                        {
+                            dashboard.Loadfrom(new Faculty());
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Unable to Insert");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Unable to Insert");
+                    MessageBox.Show("Save operation cancelled.");
                 }
-
             }
         }
+
 
         public string DataInsert()
         {

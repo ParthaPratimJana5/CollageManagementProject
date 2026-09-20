@@ -243,6 +243,12 @@
     <Compile Include="EditFaculty.Designer.cs">
       <DependentUpon>EditFaculty.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditStaffStatusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditStaffStatusForm.Designer.cs">
+      <DependentUpon>EditStaffStatusForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditStudent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -331,6 +337,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditFaculty.resx">
       <DependentUpon>EditFaculty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditStaffStatusForm.resx">
+      <DependentUpon>EditStaffStatusForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditStudent.resx">
       <DependentUpon>EditStudent.cs</DependentUpon>

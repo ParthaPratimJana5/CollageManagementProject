@@ -36,13 +36,19 @@
             this.btnAddPaymentPurpose = new System.Windows.Forms.Button();
             this.btnMakePayment = new System.Windows.Forms.Button();
             this.btnAddPaymentMode = new System.Windows.Forms.Button();
-            this.pnlWorkingArea = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnAddDesignationForm = new System.Windows.Forms.Button();
             this.btnAddFaculty = new System.Windows.Forms.Button();
             this.btnEditFaculty = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.pnlWorkingArea = new System.Windows.Forms.Panel();
+            this.EditStaffStatus = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnStudentEdit = new System.Windows.Forms.Button();
+            this.btnStudentAddnew = new System.Windows.Forms.Button();
+            this.btnMarkAttendance = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -129,17 +135,6 @@
             this.btnAddPaymentMode.UseVisualStyleBackColor = true;
             this.btnAddPaymentMode.Click += new System.EventHandler(this.btnAddPaymentMode_Click);
             // 
-            // pnlWorkingArea
-            // 
-            this.pnlWorkingArea.BackColor = System.Drawing.Color.Transparent;
-            this.pnlWorkingArea.BackgroundImage = global::CollageManagementApplication.Properties.Resources.Matangini_Institute_Logo_Redesign_png_tuxpi;
-            this.pnlWorkingArea.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pnlWorkingArea.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlWorkingArea.Location = new System.Drawing.Point(682, 95);
-            this.pnlWorkingArea.Name = "pnlWorkingArea";
-            this.pnlWorkingArea.Size = new System.Drawing.Size(369, 408);
-            this.pnlWorkingArea.TabIndex = 4;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -204,12 +199,98 @@
             this.button5.Text = "button1";
             this.button5.UseVisualStyleBackColor = true;
             // 
+            // pnlWorkingArea
+            // 
+            this.pnlWorkingArea.BackColor = System.Drawing.Color.Transparent;
+            this.pnlWorkingArea.BackgroundImage = global::CollageManagementApplication.Properties.Resources.Matangini_Institute_Logo_Redesign_png_tuxpi;
+            this.pnlWorkingArea.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pnlWorkingArea.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlWorkingArea.Location = new System.Drawing.Point(682, 95);
+            this.pnlWorkingArea.Name = "pnlWorkingArea";
+            this.pnlWorkingArea.Size = new System.Drawing.Size(369, 408);
+            this.pnlWorkingArea.TabIndex = 4;
+            // 
+            // EditStaffStatus
+            // 
+            this.EditStaffStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.EditStaffStatus.Location = new System.Drawing.Point(449, 216);
+            this.EditStaffStatus.Name = "EditStaffStatus";
+            this.EditStaffStatus.Size = new System.Drawing.Size(147, 25);
+            this.EditStaffStatus.TabIndex = 8;
+            this.EditStaffStatus.Text = "Edit Faculty Status";
+            this.EditStaffStatus.UseVisualStyleBackColor = true;
+            this.EditStaffStatus.Click += new System.EventHandler(this.EditStaffStatus_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.label6.Location = new System.Drawing.Point(4, 292);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(86, 25);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Student";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(-3, 307);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(1129, 13);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "_________________________________________________________________________________" +
+    "________________________________________________________________________________" +
+    "__________________________";
+            // 
+            // btnStudentEdit
+            // 
+            this.btnStudentEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnStudentEdit.Image = global::CollageManagementApplication.Properties.Resources.app_icon_jfif__1_;
+            this.btnStudentEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStudentEdit.Location = new System.Drawing.Point(159, 337);
+            this.btnStudentEdit.Name = "btnStudentEdit";
+            this.btnStudentEdit.Size = new System.Drawing.Size(144, 33);
+            this.btnStudentEdit.TabIndex = 9;
+            this.btnStudentEdit.Text = "Edit";
+            this.btnStudentEdit.UseVisualStyleBackColor = true;
+            this.btnStudentEdit.Click += new System.EventHandler(this.btnStudentEdit_Click);
+            // 
+            // btnStudentAddnew
+            // 
+            this.btnStudentAddnew.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStudentAddnew.Image = global::CollageManagementApplication.Properties.Resources.download__5__Photoroom__1_;
+            this.btnStudentAddnew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStudentAddnew.Location = new System.Drawing.Point(9, 337);
+            this.btnStudentAddnew.Name = "btnStudentAddnew";
+            this.btnStudentAddnew.Size = new System.Drawing.Size(144, 33);
+            this.btnStudentAddnew.TabIndex = 10;
+            this.btnStudentAddnew.Text = "Add New ";
+            this.btnStudentAddnew.UseVisualStyleBackColor = true;
+            this.btnStudentAddnew.Click += new System.EventHandler(this.btnStudentAddnew_Click);
+            // 
+            // btnMarkAttendance
+            // 
+            this.btnMarkAttendance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnMarkAttendance.Image = global::CollageManagementApplication.Properties.Resources.attandance_Photoroom__1_;
+            this.btnMarkAttendance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMarkAttendance.Location = new System.Drawing.Point(309, 337);
+            this.btnMarkAttendance.Name = "btnMarkAttendance";
+            this.btnMarkAttendance.Size = new System.Drawing.Size(179, 33);
+            this.btnMarkAttendance.TabIndex = 11;
+            this.btnMarkAttendance.Text = "Mark Attendance";
+            this.btnMarkAttendance.UseVisualStyleBackColor = true;
+            this.btnMarkAttendance.Click += new System.EventHandler(this.btnMarkAttendance_Click);
+            // 
             // AdminPanelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1051, 758);
+            this.Controls.Add(this.btnMarkAttendance);
+            this.Controls.Add(this.btnStudentEdit);
+            this.Controls.Add(this.btnStudentAddnew);
+            this.Controls.Add(this.EditStaffStatus);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.btnEditFaculty);
             this.Controls.Add(this.btnAddFaculty);
@@ -218,8 +299,10 @@
             this.Controls.Add(this.btnAddPaymentMode);
             this.Controls.Add(this.btnMakePayment);
             this.Controls.Add(this.btnAddPaymentPurpose);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
@@ -252,5 +335,11 @@
         private System.Windows.Forms.Button btnAddFaculty;
         private System.Windows.Forms.Button btnEditFaculty;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button EditStaffStatus;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnStudentEdit;
+        private System.Windows.Forms.Button btnStudentAddnew;
+        private System.Windows.Forms.Button btnMarkAttendance;
     }
 }

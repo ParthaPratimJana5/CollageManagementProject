@@ -191,5 +191,15 @@ namespace CollageManagementApplication
                 dgvAttendanceReport.DataSource = attandance.GetAttendanceReport(cmbFilterType.Text, dtpStartDate.Value, dtpEndDate.Value, Convert.ToInt16(cmbCourse.SelectedValue));
 
         }
+
+        private void btnAddCourse_Click(object sender, EventArgs e)
+        {
+            MainDashboard dashboard = (MainDashboard)this.ParentForm;
+
+            if (dashboard != null)
+            {
+                dashboard.Loadfrom(new AddCourseForm());
+            }
+        }
     }
 }

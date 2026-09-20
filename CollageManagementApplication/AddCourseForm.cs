@@ -67,20 +67,35 @@ namespace CollageManagementApplication
 
         private void btnSaveCourse_Click(object sender, EventArgs e)
         {
-            if (AddCourses() != null)
+            DialogResult confirm = MessageBox.Show(
+                "Are you sure you want to add this course?",
+                "Confirm Save",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (confirm == DialogResult.Yes)
             {
-                MessageBox.Show("Course added Successfully");
+                if (AddCourses() != null)
+                {
+                    MessageBox.Show("Course added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Course Add Failed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                cmbDepartment.SelectedIndex = -1;
+                cmbDepartment.Text = "Select Department";
+                txtCourseName.Text = "";
+                txtCourseDuration.Text = "";
             }
             else
             {
-                MessageBox.Show("Course Add Failed");
+                MessageBox.Show("Course add operation cancelled.", "Cancelled", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            cmbDepartment.SelectedIndex = -1;
-            cmbDepartment.Text = "Select Department";
-            txtCourseName.Text = "";
-            txtCourseDuration.Text = "";
-
         }
+
 
 
         public void AddSubject()
@@ -94,14 +109,38 @@ namespace CollageManagementApplication
         }
         private void btnAddSubject_Click(object sender, EventArgs e)
         {
-            AddSubject();
+            if (string.IsNullOrEmpty(txtSubjectName.Text.Trim()))
+            {
+                MessageBox.Show("Please Enter Subject Name");
+            }
+            else
+            {
+                DialogResult confirm = MessageBox.Show(
+                    "Are you sure you want to add this subject?",
+                    "Confirm Add",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
 
-            txtSubjectName.Text = "";
-            cmbAddSubjectCourse.SelectedIndex = -1;
-            cmbAddSubjectStaff.SelectedIndex = -1;
-            cmbAddSubjectCourse.Text = "Select Course";
-            cmbAddSubjectStaff.Text = "Select Stuff to Be Assigned";
+                if (confirm == DialogResult.Yes)
+                {
+                    AddSubject();
+
+                    txtSubjectName.Text = "";
+                    cmbAddSubjectCourse.SelectedIndex = -1;
+                    cmbAddSubjectStaff.SelectedIndex = -1;
+                    cmbAddSubjectCourse.Text = "Select Course";
+                    cmbAddSubjectStaff.Text = "Select Staff to Be Assigned";
+
+                    MessageBox.Show("Subject added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Add subject operation cancelled.", "Cancelled", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
+
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
@@ -144,9 +183,24 @@ namespace CollageManagementApplication
 
         private void btnSaveDepartment_Click(object sender, EventArgs e)
         {
-            AddDepartment();
-            
+            DialogResult confirm = MessageBox.Show(
+                "Are you sure you want to add this department?",
+                "Confirm Save",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (confirm == DialogResult.Yes)
+            {
+                AddDepartment();
+                MessageBox.Show("Department added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Add department operation cancelled.", "Cancelled", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
+
 
 
         private void HideDepartment()

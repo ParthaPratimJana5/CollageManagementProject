@@ -21,30 +21,39 @@ namespace CollageManagementApplication
             InitializeComponent();
         }
 
-     
+
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            // InsertStudentDetails();
-            // InsertImageintoStudentTable(txtUrl.Text);
-            //MessageBox.Show("Are you sure close this from??");
-            //this.Close();
-
-            if(Validation())
-            { 
-            DataEntry();
-
-            //Redirect to Parent Form
-            MainDashboard dashboard = (MainDashboard)this.ParentForm;
-
-            if (dashboard != null)
+            if (Validation())
             {
-                dashboard.Loadfrom(new StudentForm());
-            }
+                // Confirmation popup
+                DialogResult confirm = MessageBox.Show(
+                    "Are you sure you want to save this Student?",
+                    "Confirm Save",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
 
-            }
+                if (confirm == DialogResult.Yes)
+                {
+                    DataEntry();
 
+                    // Redirect to Parent Form
+                    MainDashboard dashboard = (MainDashboard)this.ParentForm;
+
+                    if (dashboard != null)
+                    {
+                        dashboard.Loadfrom(new StudentForm());
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Save operation cancelled.");
+                }
+            }
         }
+
 
         //InsertStudentDetails
         //private void InsertStudentDetails()

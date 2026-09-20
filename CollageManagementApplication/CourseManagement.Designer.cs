@@ -150,7 +150,7 @@
             this.btnRefreshCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnRefreshCourse.Image = global::CollageManagementApplication.Properties.Resources.Reset_icon_in_Ice_Cream_Style_Ph;
             this.btnRefreshCourse.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRefreshCourse.Location = new System.Drawing.Point(522, 95);
+            this.btnRefreshCourse.Location = new System.Drawing.Point(349, 96);
             this.btnRefreshCourse.Name = "btnRefreshCourse";
             this.btnRefreshCourse.Size = new System.Drawing.Size(144, 33);
             this.btnRefreshCourse.TabIndex = 2;
@@ -163,7 +163,7 @@
             this.btnDeleteCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnDeleteCourse.Image = global::CollageManagementApplication.Properties.Resources.Delete_free_icons_designed_by_IY;
             this.btnDeleteCourse.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeleteCourse.Location = new System.Drawing.Point(353, 95);
+            this.btnDeleteCourse.Location = new System.Drawing.Point(519, 96);
             this.btnDeleteCourse.Name = "btnDeleteCourse";
             this.btnDeleteCourse.Size = new System.Drawing.Size(144, 33);
             this.btnDeleteCourse.TabIndex = 2;

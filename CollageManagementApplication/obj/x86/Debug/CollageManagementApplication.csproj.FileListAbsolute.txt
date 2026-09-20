@@ -159,3 +159,4 @@ C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\Co
 C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.AddPaymentModeForm.resources
 C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.AddPaymentPurposeForm.resources
 C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.AdminPanelForm.resources
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.EditStaffStatusForm.resources

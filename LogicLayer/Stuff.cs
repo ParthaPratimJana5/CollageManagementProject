@@ -31,6 +31,7 @@ namespace LogicLayer
         public string StGenderName { get; set; }
         public string StDesignationName { get; set; }
         public string StDepartmentName { get; set; }
+        public string StatusId { get; set; }
 
 
         public void getStaffRelatedIds()
@@ -314,8 +315,10 @@ namespace LogicLayer
                         IFSC = row["IFSC"].ToString();
                         Pin = row["Pin"].ToString();
                         Aadhaar = row["Aadhaar"].ToString();
+                        StatusId = row["StatusId"].ToString();
                         Photobyte = row["Photo"] as byte[];
                         CVbyte = row["CV"] as byte[];
+
                     }
                 }
             }
@@ -362,6 +365,73 @@ namespace LogicLayer
                 connection.Close();
             }
         }
+
+
+
+        public DataTable GetAllStaffStatus()
+        {
+            string CS = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+            SqlConnection connection = null;
+
+            try
+            {
+                connection = new SqlConnection(CS);
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("spGetAllStaffStatus", connection);
+                sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+
+                DataSet dataSet = new DataSet();
+                sqlDataAdapter.Fill(dataSet);
+
+                DataTable dataTable = dataSet.Tables[0];
+
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            finally
+            {
+                if (connection != null)
+                {
+                    connection.Close();
+                }
+            }
+        }
+
+
+        public bool UpdateStaffStatus(int staffId, int statusId)
+        {
+            string CS = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+            SqlConnection connection = null;
+
+            try
+            {
+                connection = new SqlConnection(CS);
+                SqlCommand cmd = new SqlCommand("spUpdateStaffStatus", connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@StaffId", staffId);
+                cmd.Parameters.AddWithValue("@StatusId", statusId);
+
+                connection.Open();
+                int rowsAffected = cmd.ExecuteNonQuery();
+
+                return rowsAffected > 0;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            finally
+            {
+                if (connection != null)
+                {
+                    connection.Close();
+                }
+            }
+        }
+
 
     }
 

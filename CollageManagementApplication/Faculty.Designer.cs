@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.txtSearchFaculty = new System.Windows.Forms.TextBox();
@@ -36,9 +36,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtTotalRecords = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.btnRefreshFaculty = new System.Windows.Forms.Button();
-            this.btnDeleteFaculty = new System.Windows.Forms.Button();
+            this.btnEditStatus = new System.Windows.Forms.Button();
             this.btnEditFacuty = new System.Windows.Forms.Button();
             this.btnAddFaculty = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -69,7 +68,7 @@
             // 
             // txtSearchFaculty
             // 
-            this.txtSearchFaculty.Location = new System.Drawing.Point(721, 95);
+            this.txtSearchFaculty.Location = new System.Drawing.Point(775, 95);
             this.txtSearchFaculty.Multiline = true;
             this.txtSearchFaculty.Name = "txtSearchFaculty";
             this.txtSearchFaculty.Size = new System.Drawing.Size(264, 33);
@@ -78,24 +77,25 @@
             // dgvFaculty
             // 
             this.dgvFaculty.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFaculty.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFaculty.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvFaculty.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFaculty.Location = new System.Drawing.Point(12, 183);
+            this.dgvFaculty.Location = new System.Drawing.Point(2, 189);
             this.dgvFaculty.Name = "dgvFaculty";
             this.dgvFaculty.RowHeadersWidth = 51;
             this.dgvFaculty.Size = new System.Drawing.Size(1037, 468);
             this.dgvFaculty.TabIndex = 4;
+            this.dgvFaculty.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFaculty_CellContentClick);
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(70)))), ((int)(((byte)(138)))));
             this.panel3.Controls.Add(this.txtTotalRecords);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -106,32 +106,27 @@
             // 
             // txtTotalRecords
             // 
-            this.txtTotalRecords.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtTotalRecords.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(70)))), ((int)(((byte)(138)))));
             this.txtTotalRecords.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTotalRecords.Location = new System.Drawing.Point(209, 10);
+            this.txtTotalRecords.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.txtTotalRecords.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtTotalRecords.Location = new System.Drawing.Point(209, 13);
             this.txtTotalRecords.Multiline = true;
             this.txtTotalRecords.Name = "txtTotalRecords";
             this.txtTotalRecords.Size = new System.Drawing.Size(226, 31);
             this.txtTotalRecords.TabIndex = 1;
+            this.txtTotalRecords.TextChanged += new System.EventHandler(this.txtTotalRecords_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Location = new System.Drawing.Point(32, 14);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(173, 25);
             this.label2.TabIndex = 0;
             this.label2.Text = "Total Records :";
-            // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = global::CollageManagementApplication.Properties.Resources.download__6__Photoroom__1_;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel2.Location = new System.Drawing.Point(985, 95);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(31, 33);
-            this.panel2.TabIndex = 3;
             // 
             // btnRefreshFaculty
             // 
@@ -147,18 +142,19 @@
             this.btnRefreshFaculty.UseVisualStyleBackColor = false;
             this.btnRefreshFaculty.Click += new System.EventHandler(this.btnRefreshFaculty_Click);
             // 
-            // btnDeleteFaculty
+            // btnEditStatus
             // 
-            this.btnDeleteFaculty.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnDeleteFaculty.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnDeleteFaculty.Image = global::CollageManagementApplication.Properties.Resources.Delete_free_icons_designed_by_IY;
-            this.btnDeleteFaculty.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeleteFaculty.Location = new System.Drawing.Point(480, 95);
-            this.btnDeleteFaculty.Name = "btnDeleteFaculty";
-            this.btnDeleteFaculty.Size = new System.Drawing.Size(144, 33);
-            this.btnDeleteFaculty.TabIndex = 1;
-            this.btnDeleteFaculty.Text = "Delete";
-            this.btnDeleteFaculty.UseVisualStyleBackColor = false;
+            this.btnEditStatus.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnEditStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnEditStatus.Image = global::CollageManagementApplication.Properties.Resources.Delete_free_icons_designed_by_IY;
+            this.btnEditStatus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditStatus.Location = new System.Drawing.Point(480, 95);
+            this.btnEditStatus.Name = "btnEditStatus";
+            this.btnEditStatus.Size = new System.Drawing.Size(144, 33);
+            this.btnEditStatus.TabIndex = 1;
+            this.btnEditStatus.Text = "Edit Status";
+            this.btnEditStatus.UseVisualStyleBackColor = false;
+            this.btnEditStatus.Click += new System.EventHandler(this.btnEditStatus_Click);
             // 
             // btnEditFacuty
             // 
@@ -197,10 +193,9 @@
             this.ClientSize = new System.Drawing.Size(1051, 758);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.dgvFaculty);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.txtSearchFaculty);
             this.Controls.Add(this.btnRefreshFaculty);
-            this.Controls.Add(this.btnDeleteFaculty);
+            this.Controls.Add(this.btnEditStatus);
             this.Controls.Add(this.btnEditFacuty);
             this.Controls.Add(this.btnAddFaculty);
             this.Controls.Add(this.panel1);
@@ -226,10 +221,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAddFaculty;
         private System.Windows.Forms.Button btnEditFacuty;
-        private System.Windows.Forms.Button btnDeleteFaculty;
+        private System.Windows.Forms.Button btnEditStatus;
         private System.Windows.Forms.Button btnRefreshFaculty;
         private System.Windows.Forms.TextBox txtSearchFaculty;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgvFaculty;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtTotalRecords;

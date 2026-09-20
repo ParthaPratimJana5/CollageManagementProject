@@ -81,5 +81,44 @@ namespace CollageManagementApplication
                 dashboard.Loadfrom(new EditFaculty());
             }
         }
+
+        private void EditStaffStatus_Click(object sender, EventArgs e)
+        {
+            MainDashboard dashboard = (MainDashboard)this.ParentForm;
+
+            if (dashboard != null)
+            {
+                dashboard.Loadfrom(new Faculty());
+            }
+        }
+
+        private void btnStudentAddnew_Click(object sender, EventArgs e)
+        {
+            MainDashboard dashboard = (MainDashboard)this.ParentForm;
+
+            if (dashboard != null)
+            {
+                dashboard.Loadfrom(new AddStudentForm());
+            }
+        }
+
+        private void btnStudentEdit_Click(object sender, EventArgs e)
+        {
+            MainDashboard dashboard = (MainDashboard)this.ParentForm;
+
+            if (dashboard != null)
+            {
+                dashboard.Loadfrom(new EditStudent());
+            }
+        }
+
+        private void btnMarkAttendance_Click(object sender, EventArgs e)
+        {
+            MainDashboard dashboard = (MainDashboard)this.ParentForm;
+            if (dashboard != null)
+            {
+                dashboard.Loadfrom(new AttendanceManagement());
+            }
+        }
     }
 }

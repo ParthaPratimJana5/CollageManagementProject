@@ -82,7 +82,7 @@ namespace CollageManagementApplication
         private void Faculty_Load(object sender, EventArgs e)
         {
             ShowStaffs();
-            btnDeleteFaculty.Hide();
+            //btnEditFacuty.Hide();
 
             Stuff stuff = new Stuff();
             stuff.GetTotalFaculty();
@@ -98,7 +98,42 @@ namespace CollageManagementApplication
 
         }
 
-       
+        private void dgvFaculty_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dgvFaculty.CurrentRow.Cells["StaffId"].Value.ToString();
+        }
+
+        private void btnEditStatus_Click(object sender, EventArgs e)
+        {
+           
+            if (dgvFaculty.CurrentRow != null && dgvFaculty.CurrentRow.Index >= 0)
+            {
+               string selectedStaffId =dgvFaculty.CurrentRow.Cells["StaffId"].Value.ToString();
+
+                using (EditStaffStatusForm form = new EditStaffStatusForm())
+                {
+                    form.StaffID = selectedStaffId;
+
+                    if (form.ShowDialog() == DialogResult.OK)
+                    {
+                        
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a faculty member first.", "Selection Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        
+
+        }
+
+        private void txtTotalRecords_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
 
 
 

@@ -19,6 +19,7 @@ namespace CollageManagementApplication
 
         private void CourseManagement_Load(object sender, EventArgs e)
         {
+            btnDeleteCourse.Hide();
             LoadCourse(null);
             txtbDateTime.Text = DateTime.Now.ToString("dddd, dd-MMMM-yyyy hh:mm tt");
             Course course = new Course();
@@ -60,5 +61,7 @@ namespace CollageManagementApplication
         {
             LoadCourse(txtSearch.Text);
         }
+
+        
     }
 }

@@ -209,8 +209,24 @@ namespace CollageManagementApplication
 
         private void btnSaveAttendance_Click(object sender, EventArgs e)
         {
-            MarkAttandance();
+            DialogResult confirm = MessageBox.Show(
+                "Are you sure you want to mark attendance?",
+                "Confirm Attendance",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (confirm == DialogResult.Yes)
+            {
+                MarkAttandance();
+                MessageBox.Show("Attendance marked successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Attendance marking cancelled.", "Cancelled", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
+
 
         private void btnAddanother_Click(object sender, EventArgs e)
         {
