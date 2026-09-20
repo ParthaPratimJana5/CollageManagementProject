@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtUrl = new System.Windows.Forms.TextBox();
             this.btnBrowseImage = new System.Windows.Forms.Button();
             this.comboBoxGender = new System.Windows.Forms.ComboBox();
@@ -81,12 +82,14 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.txtSearchBox = new System.Windows.Forms.TextBox();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // txtUrl
@@ -288,6 +291,7 @@
             this.btnReset.TabIndex = 2;
             this.btnReset.Text = "RESET";
             this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // txtStudentId
             // 
@@ -671,6 +675,11 @@
             this.txtSearchBox.TabIndex = 19;
             this.txtSearchBox.TextChanged += new System.EventHandler(this.txtSearchBox_TextChanged);
             // 
+            // errorProvider
+            // 
+            this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider.ContainerControl = this;
+            // 
             // EditStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -703,6 +712,7 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -763,5 +773,6 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.TextBox txtSearchBox;
         private System.Windows.Forms.CheckBox chkUpdateAcadamyicInfo;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

@@ -47,6 +47,10 @@ namespace CollageManagementApplication
                 Student student = new Student();
                 DataTable dt= student.GetStudentInfoBySearch(Data);
                 dataGridView1.DataSource = dt;
+
+                
+                student.GetTotalStudent();
+                txtbTotalRecords.Text = student.TotalStudents;
             }
             catch (Exception ex)
             {

@@ -93,19 +93,20 @@ namespace CollageManagementApplication
             cmbCourseFilter.SelectedIndex = -1;
             cmbCourseFilter.Text = "Select Course";
 
-            DataTable dt3 = payment.getPaymentPourpose();
+            DataTable dt3 = payment.getPaymentMode();
             
             cmbPayMode.DataSource = dt3;
-            cmbPayMode.DisplayMember = "PaymentPurpose";
-            cmbPayMode.ValueMember = "PaymentPurposeId";
+            cmbPayMode.DisplayMember = "PayType";
+            cmbPayMode.ValueMember = "PayTypeId";
             cmbPayMode.SelectedIndex = -1;
             cmbPayMode.Text = "Select Mode Of Payment";
 
-            DataTable dt4 = payment.getPaymentMode();
+            DataTable dt4 = payment.getPaymentPourpose();
             cmbPaymentPurpose.DataSource = dt4;
-            cmbPaymentPurpose.DisplayMember = "PayType";
-            cmbPaymentPurpose.ValueMember = "PayTypeId";
+            cmbPaymentPurpose.DisplayMember = "PaymentPurpose";
+            cmbPaymentPurpose.ValueMember = "PaymentPurposeId";
             cmbPaymentPurpose.SelectedIndex = -1;
+            cmbPaymentPurpose.Text = "Select Payment Purpose";
             dtpPayment.Value = DateTime.Today;
 
 

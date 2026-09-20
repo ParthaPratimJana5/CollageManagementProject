@@ -51,7 +51,7 @@
             // 
             // pnlMenu
             // 
-            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(151)))), ((int)(((byte)(171)))));
+            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(70)))), ((int)(((byte)(138)))));
             this.pnlMenu.Controls.Add(this.btnLogout);
             this.pnlMenu.Controls.Add(this.btnExam);
             this.pnlMenu.Controls.Add(this.btnFaculty);
@@ -73,7 +73,7 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(151)))), ((int)(((byte)(171)))));
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(70)))), ((int)(((byte)(138)))));
             this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnLogout.FlatAppearance.BorderSize = 0;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -81,7 +81,7 @@
             this.btnLogout.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnLogout.Image = global::CollageManagementApplication.Properties.Resources.icons8_logout_24;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLogout.Location = new System.Drawing.Point(1, 510);
+            this.btnLogout.Location = new System.Drawing.Point(1, 482);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(198, 40);
             this.btnLogout.TabIndex = 9;
@@ -92,7 +92,7 @@
             // 
             // btnExam
             // 
-            this.btnExam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(151)))), ((int)(((byte)(171)))));
+            this.btnExam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(70)))), ((int)(((byte)(138)))));
             this.btnExam.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnExam.FlatAppearance.BorderSize = 0;
             this.btnExam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -100,7 +100,7 @@
             this.btnExam.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnExam.Image = global::CollageManagementApplication.Properties.Resources.icons8_test_results_24;
             this.btnExam.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExam.Location = new System.Drawing.Point(1, 470);
+            this.btnExam.Location = new System.Drawing.Point(-1, 528);
             this.btnExam.Name = "btnExam";
             this.btnExam.Size = new System.Drawing.Size(198, 40);
             this.btnExam.TabIndex = 8;
@@ -111,7 +111,7 @@
             // 
             // btnFaculty
             // 
-            this.btnFaculty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(151)))), ((int)(((byte)(171)))));
+            this.btnFaculty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(70)))), ((int)(((byte)(138)))));
             this.btnFaculty.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnFaculty.FlatAppearance.BorderSize = 0;
             this.btnFaculty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -130,7 +130,7 @@
             // 
             // btnFees
             // 
-            this.btnFees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(151)))), ((int)(((byte)(171)))));
+            this.btnFees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(70)))), ((int)(((byte)(138)))));
             this.btnFees.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnFees.FlatAppearance.BorderSize = 0;
             this.btnFees.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -138,7 +138,7 @@
             this.btnFees.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnFees.Image = global::CollageManagementApplication.Properties.Resources.account_balance_wallet_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24;
             this.btnFees.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnFees.Location = new System.Drawing.Point(2, 430);
+            this.btnFees.Location = new System.Drawing.Point(0, 396);
             this.btnFees.Name = "btnFees";
             this.btnFees.Size = new System.Drawing.Size(198, 40);
             this.btnFees.TabIndex = 7;
@@ -149,7 +149,7 @@
             // 
             // btnCourse
             // 
-            this.btnCourse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(151)))), ((int)(((byte)(171)))));
+            this.btnCourse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(70)))), ((int)(((byte)(138)))));
             this.btnCourse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnCourse.FlatAppearance.BorderSize = 0;
             this.btnCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -168,7 +168,7 @@
             // 
             // btnResult
             // 
-            this.btnResult.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(151)))), ((int)(((byte)(171)))));
+            this.btnResult.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(70)))), ((int)(((byte)(138)))));
             this.btnResult.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnResult.FlatAppearance.BorderSize = 0;
             this.btnResult.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -176,18 +176,18 @@
             this.btnResult.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnResult.Image = global::CollageManagementApplication.Properties.Resources.assignment_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24;
             this.btnResult.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnResult.Location = new System.Drawing.Point(1, 390);
+            this.btnResult.Location = new System.Drawing.Point(1, 436);
             this.btnResult.Name = "btnResult";
             this.btnResult.Size = new System.Drawing.Size(198, 40);
             this.btnResult.TabIndex = 6;
-            this.btnResult.Text = "Results";
+            this.btnResult.Text = "Admin";
             this.btnResult.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnResult.UseVisualStyleBackColor = false;
             this.btnResult.Click += new System.EventHandler(this.btnResult_Click);
             // 
             // btnAttendance
             // 
-            this.btnAttendance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(151)))), ((int)(((byte)(171)))));
+            this.btnAttendance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(70)))), ((int)(((byte)(138)))));
             this.btnAttendance.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnAttendance.FlatAppearance.BorderSize = 0;
             this.btnAttendance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -206,7 +206,7 @@
             // 
             // btnStudents
             // 
-            this.btnStudents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(151)))), ((int)(((byte)(171)))));
+            this.btnStudents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(70)))), ((int)(((byte)(138)))));
             this.btnStudents.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnStudents.FlatAppearance.BorderSize = 0;
             this.btnStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -225,7 +225,7 @@
             // 
             // btnDashboard
             // 
-            this.btnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(151)))), ((int)(((byte)(171)))));
+            this.btnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(70)))), ((int)(((byte)(138)))));
             this.btnDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnDashboard.FlatAppearance.BorderSize = 0;
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -266,7 +266,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackgroundImage = global::CollageManagementApplication.Properties.Resources.Matangini_Institute_Logo_Redesign_png;
+            this.panel2.BackgroundImage = global::CollageManagementApplication.Properties.Resources.MIM_Transparent_with_white_stock_logo;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel2.Location = new System.Drawing.Point(-2, 17);
             this.panel2.Name = "panel2";
@@ -289,7 +289,7 @@
             // 
             this.pictureBox1.BackgroundImage = global::CollageManagementApplication.Properties.Resources.Matangini_Institute_Logo_Redesign_png_tuxpi;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Location = new System.Drawing.Point(244, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(277, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(514, 473);
             this.pictureBox1.TabIndex = 1;

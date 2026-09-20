@@ -50,6 +50,8 @@ namespace CollageManagementApplication
 
             // Default Dashboard Load
             //Loadfrom(new Dashboard());
+
+            btnExam.Hide();
         }
 
 
@@ -62,7 +64,7 @@ namespace CollageManagementApplication
             Button btn = (Button)sender;
 
             // Hover Color
-            btn.BackColor = Color.FromArgb(141, 151, 171);
+            btn.BackColor = Color.FromArgb(30, 70, 143);
             btn.ForeColor = Color.White;
         }
 
@@ -71,7 +73,7 @@ namespace CollageManagementApplication
             Button btn = (Button)sender;
 
             // Default Sidebar Color
-            btn.BackColor = Color.FromArgb(141, 151, 171);
+            btn.BackColor = Color.FromArgb(30, 70, 138);
             btn.ForeColor = Color.White;
         }
 
@@ -117,7 +119,7 @@ namespace CollageManagementApplication
 
         private void btnResult_Click(object sender, EventArgs e)
         {
-            Loadfrom(new ResultManagement());
+            Loadfrom(new AdminPanelForm());
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
@@ -89,6 +90,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.checkBoxHOD = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnAddDesignation = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAddFaculty)).BeginInit();
@@ -97,6 +101,7 @@
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -127,7 +132,7 @@
             this.btnSave.Location = new System.Drawing.Point(848, 709);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(175, 33);
-            this.btnSave.TabIndex = 2;
+            this.btnSave.TabIndex = 23;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -139,7 +144,7 @@
             this.txtPinCode.Multiline = true;
             this.txtPinCode.Name = "txtPinCode";
             this.txtPinCode.Size = new System.Drawing.Size(276, 25);
-            this.txtPinCode.TabIndex = 8;
+            this.txtPinCode.TabIndex = 18;
             // 
             // label10
             // 
@@ -159,7 +164,7 @@
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(276, 81);
-            this.txtAddress.TabIndex = 2;
+            this.txtAddress.TabIndex = 19;
             // 
             // label26
             // 
@@ -207,7 +212,7 @@
             this.btnBrowseImage.Location = new System.Drawing.Point(21, 83);
             this.btnBrowseImage.Name = "btnBrowseImage";
             this.btnBrowseImage.Size = new System.Drawing.Size(162, 33);
-            this.btnBrowseImage.TabIndex = 2;
+            this.btnBrowseImage.TabIndex = 20;
             this.btnBrowseImage.Text = "Browse Image";
             this.btnBrowseImage.UseVisualStyleBackColor = true;
             this.btnBrowseImage.Click += new System.EventHandler(this.btnBrowseImage_Click);
@@ -258,7 +263,7 @@
             this.btnBrowseCV.Location = new System.Drawing.Point(21, 83);
             this.btnBrowseCV.Name = "btnBrowseCV";
             this.btnBrowseCV.Size = new System.Drawing.Size(162, 33);
-            this.btnBrowseCV.TabIndex = 2;
+            this.btnBrowseCV.TabIndex = 21;
             this.btnBrowseCV.Text = "Browse CV";
             this.btnBrowseCV.UseVisualStyleBackColor = true;
             this.btnBrowseCV.Click += new System.EventHandler(this.btnBrowseCV_Click);
@@ -334,7 +339,7 @@
             this.txtCareOf.Multiline = true;
             this.txtCareOf.Name = "txtCareOf";
             this.txtCareOf.Size = new System.Drawing.Size(276, 25);
-            this.txtCareOf.TabIndex = 8;
+            this.txtCareOf.TabIndex = 16;
             // 
             // txtPostOffice
             // 
@@ -343,7 +348,7 @@
             this.txtPostOffice.Multiline = true;
             this.txtPostOffice.Name = "txtPostOffice";
             this.txtPostOffice.Size = new System.Drawing.Size(276, 25);
-            this.txtPostOffice.TabIndex = 8;
+            this.txtPostOffice.TabIndex = 17;
             // 
             // panel4
             // 
@@ -391,10 +396,11 @@
             // 
             this.comboBoxGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.comboBoxGender.FormattingEnabled = true;
+            this.comboBoxGender.ItemHeight = 16;
             this.comboBoxGender.Location = new System.Drawing.Point(165, 101);
             this.comboBoxGender.Name = "comboBoxGender";
             this.comboBoxGender.Size = new System.Drawing.Size(276, 24);
-            this.comboBoxGender.TabIndex = 13;
+            this.comboBoxGender.TabIndex = 2;
             this.comboBoxGender.Text = "Select Gender";
             // 
             // label37
@@ -415,7 +421,7 @@
             this.dtpDateOfJoinning.Location = new System.Drawing.Point(167, 265);
             this.dtpDateOfJoinning.Name = "dtpDateOfJoinning";
             this.dtpDateOfJoinning.Size = new System.Drawing.Size(274, 20);
-            this.dtpDateOfJoinning.TabIndex = 11;
+            this.dtpDateOfJoinning.TabIndex = 7;
             // 
             // txtIFSCCode
             // 
@@ -423,15 +429,16 @@
             this.txtIFSCCode.Multiline = true;
             this.txtIFSCCode.Name = "txtIFSCCode";
             this.txtIFSCCode.Size = new System.Drawing.Size(276, 25);
-            this.txtIFSCCode.TabIndex = 9;
+            this.txtIFSCCode.TabIndex = 15;
             // 
             // txtConfirmAccount
             // 
             this.txtConfirmAccount.Location = new System.Drawing.Point(165, 486);
             this.txtConfirmAccount.Multiline = true;
             this.txtConfirmAccount.Name = "txtConfirmAccount";
+            this.txtConfirmAccount.PasswordChar = '*';
             this.txtConfirmAccount.Size = new System.Drawing.Size(276, 25);
-            this.txtConfirmAccount.TabIndex = 10;
+            this.txtConfirmAccount.TabIndex = 14;
             // 
             // label11
             // 
@@ -471,6 +478,7 @@
             // 
             this.ComboBoxDesignation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.ComboBoxDesignation.FormattingEnabled = true;
+            this.ComboBoxDesignation.ItemHeight = 16;
             this.ComboBoxDesignation.Location = new System.Drawing.Point(165, 133);
             this.ComboBoxDesignation.Name = "ComboBoxDesignation";
             this.ComboBoxDesignation.Size = new System.Drawing.Size(276, 24);
@@ -481,20 +489,22 @@
             // 
             this.comboBoxBloodGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.comboBoxBloodGroup.FormattingEnabled = true;
+            this.comboBoxBloodGroup.ItemHeight = 16;
             this.comboBoxBloodGroup.Location = new System.Drawing.Point(167, 298);
             this.comboBoxBloodGroup.Name = "comboBoxBloodGroup";
             this.comboBoxBloodGroup.Size = new System.Drawing.Size(276, 24);
-            this.comboBoxBloodGroup.TabIndex = 3;
+            this.comboBoxBloodGroup.TabIndex = 8;
             this.comboBoxBloodGroup.Text = "Select Blod Group";
             // 
             // comboBoxDepartment
             // 
             this.comboBoxDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.comboBoxDepartment.FormattingEnabled = true;
+            this.comboBoxDepartment.ItemHeight = 16;
             this.comboBoxDepartment.Location = new System.Drawing.Point(165, 231);
             this.comboBoxDepartment.Name = "comboBoxDepartment";
             this.comboBoxDepartment.Size = new System.Drawing.Size(276, 24);
-            this.comboBoxDepartment.TabIndex = 3;
+            this.comboBoxDepartment.TabIndex = 6;
             this.comboBoxDepartment.Text = "Select Department";
             // 
             // txtAadhaar
@@ -504,7 +514,7 @@
             this.txtAadhaar.Multiline = true;
             this.txtAadhaar.Name = "txtAadhaar";
             this.txtAadhaar.Size = new System.Drawing.Size(276, 24);
-            this.txtAadhaar.TabIndex = 2;
+            this.txtAadhaar.TabIndex = 10;
             // 
             // txtSalary
             // 
@@ -512,7 +522,7 @@
             this.txtSalary.Multiline = true;
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.Size = new System.Drawing.Size(276, 24);
-            this.txtSalary.TabIndex = 2;
+            this.txtSalary.TabIndex = 9;
             // 
             // txtStaffEmail
             // 
@@ -520,7 +530,7 @@
             this.txtStaffEmail.Multiline = true;
             this.txtStaffEmail.Name = "txtStaffEmail";
             this.txtStaffEmail.Size = new System.Drawing.Size(276, 24);
-            this.txtStaffEmail.TabIndex = 2;
+            this.txtStaffEmail.TabIndex = 5;
             // 
             // txtPhoneNumber
             // 
@@ -529,7 +539,7 @@
             this.txtPhoneNumber.Multiline = true;
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(276, 24);
-            this.txtPhoneNumber.TabIndex = 2;
+            this.txtPhoneNumber.TabIndex = 4;
             // 
             // txtBranchName
             // 
@@ -537,7 +547,7 @@
             this.txtBranchName.Multiline = true;
             this.txtBranchName.Name = "txtBranchName";
             this.txtBranchName.Size = new System.Drawing.Size(276, 24);
-            this.txtBranchName.TabIndex = 2;
+            this.txtBranchName.TabIndex = 12;
             // 
             // txtBankName
             // 
@@ -545,15 +555,16 @@
             this.txtBankName.Multiline = true;
             this.txtBankName.Name = "txtBankName";
             this.txtBankName.Size = new System.Drawing.Size(276, 24);
-            this.txtBankName.TabIndex = 2;
+            this.txtBankName.TabIndex = 11;
             // 
             // txtAccountNumber
             // 
             this.txtAccountNumber.Location = new System.Drawing.Point(165, 455);
             this.txtAccountNumber.Multiline = true;
             this.txtAccountNumber.Name = "txtAccountNumber";
+            this.txtAccountNumber.PasswordChar = '*';
             this.txtAccountNumber.Size = new System.Drawing.Size(276, 24);
-            this.txtAccountNumber.TabIndex = 2;
+            this.txtAccountNumber.TabIndex = 13;
             // 
             // txtName
             // 
@@ -561,7 +572,7 @@
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(276, 24);
-            this.txtName.TabIndex = 2;
+            this.txtName.TabIndex = 1;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // txtStuffID
@@ -757,7 +768,7 @@
             this.checkBoxHOD.Location = new System.Drawing.Point(177, 12);
             this.checkBoxHOD.Name = "checkBoxHOD";
             this.checkBoxHOD.Size = new System.Drawing.Size(139, 24);
-            this.checkBoxHOD.TabIndex = 0;
+            this.checkBoxHOD.TabIndex = 22;
             this.checkBoxHOD.Text = "Assign As HOD";
             this.checkBoxHOD.UseVisualStyleBackColor = true;
             // 
@@ -772,12 +783,40 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "HOD ";
             // 
+            // btnAddDesignation
+            // 
+            this.btnAddDesignation.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.btnAddDesignation.Location = new System.Drawing.Point(456, 709);
+            this.btnAddDesignation.Name = "btnAddDesignation";
+            this.btnAddDesignation.Size = new System.Drawing.Size(175, 33);
+            this.btnAddDesignation.TabIndex = 25;
+            this.btnAddDesignation.Text = "Add Designation";
+            this.btnAddDesignation.UseVisualStyleBackColor = true;
+            this.btnAddDesignation.Click += new System.EventHandler(this.btnAddDesignation_Click);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.btnRefresh.Location = new System.Drawing.Point(654, 709);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(174, 33);
+            this.btnRefresh.TabIndex = 24;
+            this.btnRefresh.Text = " Refresh Data";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click_1);
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
             // AddFaculty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1051, 758);
+            this.Controls.Add(this.btnRefresh);
+            this.Controls.Add(this.btnAddDesignation);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
@@ -802,6 +841,7 @@
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -869,5 +909,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.CheckBox checkBoxHOD;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnAddDesignation;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

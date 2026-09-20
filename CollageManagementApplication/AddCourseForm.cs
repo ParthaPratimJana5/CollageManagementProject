@@ -27,6 +27,7 @@ namespace CollageManagementApplication
         private void AddCourseForm_Load(object sender, EventArgs e)
         {
             LoadForm();
+            HideDepartment();
         }
 
         private void LoadForm()
@@ -135,6 +136,7 @@ namespace CollageManagementApplication
                 MessageBox.Show(message, "Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtDepartment.Clear();
                 LoadForm();
+                HideDepartment();
             }
             else
                 MessageBox.Show("An error occurred while adding department.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -144,6 +146,25 @@ namespace CollageManagementApplication
         {
             AddDepartment();
             
+        }
+
+
+        private void HideDepartment()
+        {
+            pnlAddDepartment.Hide();
+            lblAddDepartment.Hide();
+            lblDepartmentName.Hide();
+            txtDepartment.Hide();
+            btnSaveDepartment.Hide();
+        }
+
+        private void btnAddDepartment_Click(object sender, EventArgs e)
+        {
+            pnlAddDepartment.Show();
+            lblAddDepartment.Show();
+            lblDepartmentName.Show();
+            txtDepartment.Show();
+            btnSaveDepartment.Show();
         }
     }
 }

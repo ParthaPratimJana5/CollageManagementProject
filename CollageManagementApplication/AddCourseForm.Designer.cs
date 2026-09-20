@@ -52,16 +52,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.txtDepartment = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.pnlAddDepartment = new System.Windows.Forms.Panel();
             this.btnSaveDepartment = new System.Windows.Forms.Button();
+            this.txtDepartment = new System.Windows.Forms.TextBox();
+            this.lblDepartmentName = new System.Windows.Forms.Label();
+            this.lblAddDepartment = new System.Windows.Forms.Label();
+            this.btnAddDepartment = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.pnlAddDepartment.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -330,48 +331,17 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "Course Information";
             // 
-            // panel4
+            // pnlAddDepartment
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.panel4.Controls.Add(this.btnSaveDepartment);
-            this.panel4.Controls.Add(this.txtDepartment);
-            this.panel4.Controls.Add(this.label12);
-            this.panel4.Controls.Add(this.label17);
-            this.panel4.Location = new System.Drawing.Point(26, 63);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(506, 176);
-            this.panel4.TabIndex = 9;
-            // 
-            // txtDepartment
-            // 
-            this.txtDepartment.Location = new System.Drawing.Point(213, 71);
-            this.txtDepartment.Multiline = true;
-            this.txtDepartment.Name = "txtDepartment";
-            this.txtDepartment.Size = new System.Drawing.Size(246, 24);
-            this.txtDepartment.TabIndex = 2;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(23, 71);
-            this.label12.Name = "label12";
-            this.label12.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label12.Size = new System.Drawing.Size(163, 24);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "Department Name";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label17.Location = new System.Drawing.Point(147, 12);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(167, 25);
-            this.label17.TabIndex = 1;
-            this.label17.Text = "Add Department";
+            this.pnlAddDepartment.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pnlAddDepartment.Controls.Add(this.btnSaveDepartment);
+            this.pnlAddDepartment.Controls.Add(this.txtDepartment);
+            this.pnlAddDepartment.Controls.Add(this.lblDepartmentName);
+            this.pnlAddDepartment.Controls.Add(this.lblAddDepartment);
+            this.pnlAddDepartment.Location = new System.Drawing.Point(26, 63);
+            this.pnlAddDepartment.Name = "pnlAddDepartment";
+            this.pnlAddDepartment.Size = new System.Drawing.Size(506, 176);
+            this.pnlAddDepartment.TabIndex = 9;
             // 
             // btnSaveDepartment
             // 
@@ -384,6 +354,48 @@
             this.btnSaveDepartment.UseVisualStyleBackColor = true;
             this.btnSaveDepartment.Click += new System.EventHandler(this.btnSaveDepartment_Click);
             // 
+            // txtDepartment
+            // 
+            this.txtDepartment.Location = new System.Drawing.Point(213, 71);
+            this.txtDepartment.Multiline = true;
+            this.txtDepartment.Name = "txtDepartment";
+            this.txtDepartment.Size = new System.Drawing.Size(246, 24);
+            this.txtDepartment.TabIndex = 2;
+            // 
+            // lblDepartmentName
+            // 
+            this.lblDepartmentName.AutoSize = true;
+            this.lblDepartmentName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDepartmentName.ForeColor = System.Drawing.Color.Black;
+            this.lblDepartmentName.Location = new System.Drawing.Point(23, 71);
+            this.lblDepartmentName.Name = "lblDepartmentName";
+            this.lblDepartmentName.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblDepartmentName.Size = new System.Drawing.Size(163, 24);
+            this.lblDepartmentName.TabIndex = 1;
+            this.lblDepartmentName.Text = "Department Name";
+            // 
+            // lblAddDepartment
+            // 
+            this.lblAddDepartment.AutoSize = true;
+            this.lblAddDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddDepartment.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblAddDepartment.Location = new System.Drawing.Point(147, 12);
+            this.lblAddDepartment.Name = "lblAddDepartment";
+            this.lblAddDepartment.Size = new System.Drawing.Size(167, 25);
+            this.lblAddDepartment.TabIndex = 1;
+            this.lblAddDepartment.Text = "Add Department";
+            // 
+            // btnAddDepartment
+            // 
+            this.btnAddDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.btnAddDepartment.Location = new System.Drawing.Point(657, 661);
+            this.btnAddDepartment.Name = "btnAddDepartment";
+            this.btnAddDepartment.Size = new System.Drawing.Size(175, 33);
+            this.btnAddDepartment.TabIndex = 10;
+            this.btnAddDepartment.Text = "Add Department";
+            this.btnAddDepartment.UseVisualStyleBackColor = true;
+            this.btnAddDepartment.Click += new System.EventHandler(this.btnAddDepartment_Click);
+            // 
             // AddCourseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -391,9 +403,10 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1065, 728);
+            this.Controls.Add(this.btnAddDepartment);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.pnlAddDepartment);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
@@ -407,8 +420,8 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.pnlAddDepartment.ResumeLayout(false);
+            this.pnlAddDepartment.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -439,10 +452,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel pnlAddDepartment;
         private System.Windows.Forms.TextBox txtDepartment;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lblDepartmentName;
+        private System.Windows.Forms.Label lblAddDepartment;
         private System.Windows.Forms.Button btnSaveDepartment;
+        private System.Windows.Forms.Button btnAddDepartment;
     }
 }

@@ -178,11 +178,29 @@
     <Compile Include="AddCourseForm.Designer.cs">
       <DependentUpon>AddCourseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddDesignationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDesignationForm.Designer.cs">
+      <DependentUpon>AddDesignationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddFaculty.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddFaculty.Designer.cs">
       <DependentUpon>AddFaculty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddPaymentModeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPaymentModeForm.Designer.cs">
+      <DependentUpon>AddPaymentModeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddPaymentPurposeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPaymentPurposeForm.Designer.cs">
+      <DependentUpon>AddPaymentPurposeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AddStudentForm.cs">
       <SubType>Form</SubType>
@@ -284,8 +302,17 @@
     <EmbeddedResource Include="AddCourseForm.resx">
       <DependentUpon>AddCourseForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddDesignationForm.resx">
+      <DependentUpon>AddDesignationForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddFaculty.resx">
       <DependentUpon>AddFaculty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPaymentModeForm.resx">
+      <DependentUpon>AddPaymentModeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPaymentPurposeForm.resx">
+      <DependentUpon>AddPaymentPurposeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddStudentForm.resx">
       <DependentUpon>AddStudentForm.cs</DependentUpon>
@@ -525,6 +552,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MIM Transparent with white stock logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

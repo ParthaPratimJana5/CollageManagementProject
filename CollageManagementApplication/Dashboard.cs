@@ -34,6 +34,7 @@ namespace CollageManagementApplication
             cmbCourse.Hide();
             lblFrom.Hide();
             lblTo.Hide();
+            lblCourse.Hide();
 
 
 
@@ -158,6 +159,7 @@ namespace CollageManagementApplication
         private void cmbFilterType_SelectedIndexChanged(object sender, EventArgs e)
         {
             cmbCourse.Show();
+            lblCourse.Show();
             cmbCourse.SelectedIndex = -1;
             cmbCourse.Text = "Select Course";
             if (cmbFilterType.Text=="Today" || cmbFilterType.Text == "This Month")
@@ -167,12 +169,13 @@ namespace CollageManagementApplication
                 dtpStartDate.Hide();
                 lblFrom.Hide();
                 lblTo.Hide();
+                
             }            
             else
             {
                 dtpEndDate.Show();
                 dtpStartDate.Show();
-                lblFrom.Show(); lblTo.Show();
+                lblFrom.Show(); lblTo.Show(); 
             }
             
 

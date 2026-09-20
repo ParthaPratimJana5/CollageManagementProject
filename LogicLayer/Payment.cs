@@ -227,6 +227,71 @@ namespace LogicLayer
             }
         }
 
+
+        public string AddPaymentPurpose(string paymentPurpose)
+        {
+            string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+            SqlConnection connection = null;
+
+            try
+            {
+                connection = new SqlConnection(cs);
+                SqlCommand cmd = new SqlCommand("spAddPaymentPurpose", connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@PaymentPurpose", paymentPurpose);
+
+                connection.Open();
+
+                // return rows affected as string
+                return (cmd.ExecuteNonQuery().ToString());
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            finally
+            {
+                if (connection != null)
+                {
+                    connection.Close();
+                }
+            }
+        }
+
+
+        public string AddPaymentType(string payType)
+        {
+            string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+            SqlConnection connection = null;
+
+            try
+            {
+                connection = new SqlConnection(cs);
+                SqlCommand cmd = new SqlCommand("spAddPaymentType", connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@PayType", payType);
+
+                connection.Open();
+
+                // return rows affected as string
+                return (cmd.ExecuteNonQuery().ToString());
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            finally
+            {
+                if (connection != null)
+                {
+                    connection.Close();
+                }
+            }
+        }
+
+
     }
 
 }

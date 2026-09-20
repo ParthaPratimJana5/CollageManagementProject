@@ -42,7 +42,6 @@
             this.cmbPayMode = new System.Windows.Forms.ComboBox();
             this.label23 = new System.Windows.Forms.Label();
             this.cmbPaymentPurpose = new System.Windows.Forms.ComboBox();
-            this.btnCollectPayment = new System.Windows.Forms.Button();
             this.txtTotalDue = new System.Windows.Forms.TextBox();
             this.txtPayAmount = new System.Windows.Forms.TextBox();
             this.txtPaymentDiscription = new System.Windows.Forms.TextBox();
@@ -78,18 +77,19 @@
             this.txtDepartment = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.txtYear = new System.Windows.Forms.TextBox();
-            this.pictureBoxStudentInfo = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblWarning = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnCollectPayment = new System.Windows.Forms.Button();
+            this.pictureBoxStudentInfo = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPaymentHistory)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStudentInfo)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStudentInfo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -218,7 +218,7 @@
             // cmbPayMode
             // 
             this.cmbPayMode.FormattingEnabled = true;
-            this.cmbPayMode.Location = new System.Drawing.Point(181, 15);
+            this.cmbPayMode.Location = new System.Drawing.Point(185, 15);
             this.cmbPayMode.Name = "cmbPayMode";
             this.cmbPayMode.Size = new System.Drawing.Size(145, 21);
             this.cmbPayMode.TabIndex = 7;
@@ -237,27 +237,11 @@
             // cmbPaymentPurpose
             // 
             this.cmbPaymentPurpose.FormattingEnabled = true;
-            this.cmbPaymentPurpose.Location = new System.Drawing.Point(181, 55);
+            this.cmbPaymentPurpose.Location = new System.Drawing.Point(185, 50);
             this.cmbPaymentPurpose.Name = "cmbPaymentPurpose";
             this.cmbPaymentPurpose.Size = new System.Drawing.Size(145, 21);
             this.cmbPaymentPurpose.TabIndex = 5;
             this.cmbPaymentPurpose.Text = "Select Payment Purpose";
-            // 
-            // btnCollectPayment
-            // 
-            this.btnCollectPayment.BackColor = System.Drawing.Color.DarkBlue;
-            this.btnCollectPayment.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCollectPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCollectPayment.ForeColor = System.Drawing.Color.White;
-            this.btnCollectPayment.Image = global::CollageManagementApplication.Properties.Resources.result;
-            this.btnCollectPayment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCollectPayment.Location = new System.Drawing.Point(7, 272);
-            this.btnCollectPayment.Name = "btnCollectPayment";
-            this.btnCollectPayment.Size = new System.Drawing.Size(296, 42);
-            this.btnCollectPayment.TabIndex = 1;
-            this.btnCollectPayment.Text = "Collect Payment";
-            this.btnCollectPayment.UseVisualStyleBackColor = false;
-            this.btnCollectPayment.Click += new System.EventHandler(this.btnCollectPayment_Click_1);
             // 
             // txtTotalDue
             // 
@@ -617,16 +601,6 @@
             this.txtYear.Size = new System.Drawing.Size(167, 15);
             this.txtYear.TabIndex = 7;
             // 
-            // pictureBoxStudentInfo
-            // 
-            this.pictureBoxStudentInfo.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pictureBoxStudentInfo.Location = new System.Drawing.Point(343, 31);
-            this.pictureBoxStudentInfo.Name = "pictureBoxStudentInfo";
-            this.pictureBoxStudentInfo.Size = new System.Drawing.Size(118, 138);
-            this.pictureBoxStudentInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxStudentInfo.TabIndex = 9;
-            this.pictureBoxStudentInfo.TabStop = false;
-            // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -688,6 +662,32 @@
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
+            // btnCollectPayment
+            // 
+            this.btnCollectPayment.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnCollectPayment.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCollectPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCollectPayment.ForeColor = System.Drawing.Color.White;
+            this.btnCollectPayment.Image = global::CollageManagementApplication.Properties.Resources.result;
+            this.btnCollectPayment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCollectPayment.Location = new System.Drawing.Point(7, 272);
+            this.btnCollectPayment.Name = "btnCollectPayment";
+            this.btnCollectPayment.Size = new System.Drawing.Size(296, 42);
+            this.btnCollectPayment.TabIndex = 1;
+            this.btnCollectPayment.Text = "Collect Payment";
+            this.btnCollectPayment.UseVisualStyleBackColor = false;
+            this.btnCollectPayment.Click += new System.EventHandler(this.btnCollectPayment_Click_1);
+            // 
+            // pictureBoxStudentInfo
+            // 
+            this.pictureBoxStudentInfo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pictureBoxStudentInfo.Location = new System.Drawing.Point(343, 31);
+            this.pictureBoxStudentInfo.Name = "pictureBoxStudentInfo";
+            this.pictureBoxStudentInfo.Size = new System.Drawing.Size(118, 138);
+            this.pictureBoxStudentInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxStudentInfo.TabIndex = 9;
+            this.pictureBoxStudentInfo.TabStop = false;
+            // 
             // FeeManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -720,12 +720,12 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPaymentHistory)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStudentInfo)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStudentInfo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -88,5 +88,39 @@ namespace LogicLayer
                 }
             }
         }
+
+
+
+        public string AddDesignation(string designationName)
+        {
+            string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+            SqlConnection connection = null;
+
+            try
+            {
+                connection = new SqlConnection(cs);
+                SqlCommand cmd = new SqlCommand("spAddDesignation", connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@DesignationName", designationName);
+
+                connection.Open();
+
+                // return rows affected as string
+                return (cmd.ExecuteNonQuery().ToString());
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            finally
+            {
+                if (connection != null)
+                {
+                    connection.Close();
+                }
+            }
+        }
+
     }
 }

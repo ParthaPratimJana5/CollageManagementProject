@@ -28,15 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtbDateTime = new System.Windows.Forms.TextBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dgvCourse = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnNext = new System.Windows.Forms.Button();
-            this.btnPreview = new System.Windows.Forms.Button();
             this.txtTotalRecords = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -94,16 +92,16 @@
             this.dgvCourse.AllowUserToAddRows = false;
             this.dgvCourse.AllowUserToOrderColumns = true;
             this.dgvCourse.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCourse.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCourse.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvCourse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCourse.Location = new System.Drawing.Point(25, 184);
+            this.dgvCourse.Location = new System.Drawing.Point(218, 192);
             this.dgvCourse.Name = "dgvCourse";
             this.dgvCourse.Size = new System.Drawing.Size(540, 458);
             this.dgvCourse.TabIndex = 5;
@@ -111,8 +109,6 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(70)))), ((int)(((byte)(138)))));
-            this.panel3.Controls.Add(this.btnNext);
-            this.panel3.Controls.Add(this.btnPreview);
             this.panel3.Controls.Add(this.txtTotalRecords);
             this.panel3.Controls.Add(this.label2);
             this.panel3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -120,26 +116,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1017, 42);
             this.panel3.TabIndex = 6;
-            // 
-            // btnNext
-            // 
-            this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.btnNext.Location = new System.Drawing.Point(879, 10);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(75, 23);
-            this.btnNext.TabIndex = 2;
-            this.btnNext.Text = "Next";
-            this.btnNext.UseVisualStyleBackColor = true;
-            // 
-            // btnPreview
-            // 
-            this.btnPreview.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.btnPreview.Location = new System.Drawing.Point(784, 10);
-            this.btnPreview.Name = "btnPreview";
-            this.btnPreview.Size = new System.Drawing.Size(75, 23);
-            this.btnPreview.TabIndex = 2;
-            this.btnPreview.Text = "Preview";
-            this.btnPreview.UseVisualStyleBackColor = true;
             // 
             // txtTotalRecords
             // 
@@ -266,8 +242,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgvCourse;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnNext;
-        private System.Windows.Forms.Button btnPreview;
         private System.Windows.Forms.TextBox txtTotalRecords;
         private System.Windows.Forms.Label label2;
     }

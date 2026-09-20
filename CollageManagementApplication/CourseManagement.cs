@@ -21,6 +21,9 @@ namespace CollageManagementApplication
         {
             LoadCourse(null);
             txtbDateTime.Text = DateTime.Now.ToString("dddd, dd-MMMM-yyyy hh:mm tt");
+            Course course = new Course();
+            course.GetTotalCourse();
+            txtTotalRecords.Text = course.TotalCource;
         }
 
         private void LoadCourse(string DATA)

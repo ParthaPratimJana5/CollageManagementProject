@@ -60,16 +60,20 @@ create table tblBank (
 -- =========================
 create table tblPhotos (
     PhotoId int primary key identity(1,1),
-    Photo varbinary(max) not null
+    Photo varbinary(max) null
 );
+
+
+
 
 -- =========================
 -- cv table
 -- =========================
 create table tblCV (
     CVId int primary key identity(1,1),
-    CV varbinary(max) not null
+    CV varbinary(max) null
 );
+
 
 -- =========================
 -- staff table
@@ -614,6 +618,24 @@ end
 
 exec sp_helptext spInsertAddress
 -- Procedure for tblAddress
+--create procedure spInsertAddress 
+--    @CareOf varchar(max) = null,
+--    @Village varchar(max) = null,
+--    @Post varchar(max) = null,
+--    @Pin varchar(max) = null,
+--    @Aadhaar varchar(max) = null,
+--    @PhoneNumber varchar(max) = null,
+--    @GuardianPhone varchar(max) = null,
+--    @GuardianEmail varchar(max) = null
+--as
+--begin
+--    insert into tblAddress (CareOf, Village, Post, Pin, Aadhaar, PhoneNumber,GuardianPhone ,GuardianEmail )
+--    values (@CareOf, @Village, @Post, @Pin, @Aadhaar, @PhoneNumber, @GuardianPhone, @GuardianEmail);
+
+--    select scope_identity() as AddressId;
+--end             
+
+
 create procedure spInsertAddress 
     @CareOf varchar(max) = null,
     @Village varchar(max) = null,
@@ -625,16 +647,27 @@ create procedure spInsertAddress
     @GuardianEmail varchar(max) = null
 as
 begin
-    insert into tblAddress (CareOf, Village, Post, Pin, Aadhaar, PhoneNumber,GuardianPhone ,GuardianEmail )
-    values (@CareOf, @Village, @Post, @Pin, @Aadhaar, @PhoneNumber, @GuardianPhone, @GuardianEmail);
+    insert into tblAddress (
+        CareOf, Village, Post, Pin, Aadhaar, PhoneNumber, GuardianPhone, GuardianEmail
+    )
+    values (
+        nullif(@CareOf, ''), 
+        nullif(@Village, ''), 
+        nullif(@Post, ''), 
+        nullif(@Pin, ''), 
+        nullif(@Aadhaar, ''), 
+        nullif(@PhoneNumber, ''), 
+        nullif(@GuardianPhone, ''), 
+        nullif(@GuardianEmail, '')
+    );
 
     select scope_identity() as AddressId;
-end
-
+end;
+go
 
 
 -- Procedure for tblPhotos
-create procedure spInsertPhoto
+create procedure spInsertPhoto 
     @Photo varbinary(max)=null
 as
 begin
@@ -1182,6 +1215,7 @@ begin
     from tblStudents;
 end
 
+
 -- Procedure for total staff
 create procedure spTotalStaff
 as
@@ -1318,9 +1352,9 @@ begin
         a.Post,
         a.Pin,
         a.Aadhaar,
-        a.PhoneNumber,
-        ph.Photo,   -- binary photo data
-        cv.CV       -- binary CV data
+        a.PhoneNumber
+        --ph.Photo,   -- binary photo data
+        --cv.CV       -- binary CV data
     from tblStaff st
     join tblGender g on st.GenderId = g.GenderId
     join tblDesignation dg on st.DesignationId = dg.DesignationId
@@ -1338,7 +1372,7 @@ go
 
 
 -- Procedure to get full information of all students
-alter procedure spGetAllStudentInformation
+alter procedure spGetAllStudentInformation 't'
     @SearchTerm varchar(max) = null
 as
 begin
@@ -2118,6 +2152,48 @@ begin
     where DepartmentId = @DepartmentId;
 end;
 
+-- Procedure to add a new Designation
+create procedure spAddDesignation
+    @DesignationName varchar(max)
+as
+begin
+    if not exists (
+        select 1 from tblDesignation where DesignationName = @DesignationName
+    )
+    begin
+        insert into tblDesignation (DesignationName)
+        values (@DesignationName);
+    end
+end;
+
+
+-- Procedure to add a new Payment Purpose
+create procedure spAddPaymentPurpose
+    @PaymentPurpose varchar(max)
+as
+begin
+    if not exists (
+        select 1 from tblPaymentPurpose where PaymentPurpose = @PaymentPurpose
+    )
+    begin
+        insert into tblPaymentPurpose (PaymentPurpose)
+        values (@PaymentPurpose);
+    end
+end;
+
+-- Procedure to add a new Payment Type
+create procedure spAddPaymentType
+    @PayType varchar(max)
+as
+begin
+    if not exists (
+        select 1 from tblPaymentType where PayType = @PayType
+    )
+    begin
+        insert into tblPaymentType (PayType)
+        values (@PayType);
+    end
+end
 
 
 
@@ -2128,6 +2204,8 @@ select * from tblCourse
 select * from tblAttendance
 select * from tblEnrollment
 select * from tblPayment
+select * from tblStudents
+select * from tblStaff
 
 
 exec spGetAttendanceReport 

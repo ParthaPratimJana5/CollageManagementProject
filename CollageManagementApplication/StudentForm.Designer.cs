@@ -28,13 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtbDateTime = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtbTotalRecords = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -62,9 +60,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnStudentRefresh = new System.Windows.Forms.Button();
-            this.btnStudentView = new System.Windows.Forms.Button();
             this.btnStudentEdit = new System.Windows.Forms.Button();
-            this.btnStudentDelete = new System.Windows.Forms.Button();
             this.btnStudentAddnew = new System.Windows.Forms.Button();
             this.txtSearchBox = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
@@ -77,10 +73,11 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(70)))), ((int)(((byte)(138)))));
             this.panel2.Controls.Add(this.txtbDateTime);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1051, 44);
@@ -89,7 +86,7 @@
             // txtbDateTime
             // 
             this.txtbDateTime.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtbDateTime.Location = new System.Drawing.Point(745, 12);
+            this.txtbDateTime.Location = new System.Drawing.Point(770, 12);
             this.txtbDateTime.Name = "txtbDateTime";
             this.txtbDateTime.Size = new System.Drawing.Size(238, 20);
             this.txtbDateTime.TabIndex = 1;
@@ -112,14 +109,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(103, 149);
             this.dataGridView1.Name = "dataGridView1";
@@ -129,52 +126,34 @@
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(653, 7);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(79, 20);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Previous";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(749, 7);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(79, 20);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "Next";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(70)))), ((int)(((byte)(138)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.txtbTotalRecords);
-            this.panel3.Controls.Add(this.button7);
-            this.panel3.Controls.Add(this.button6);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(103, 503);
+            this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel3.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.panel3.Location = new System.Drawing.Point(58, 504);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(848, 33);
+            this.panel3.Size = new System.Drawing.Size(950, 33);
             this.panel3.TabIndex = 7;
             // 
             // txtbTotalRecords
             // 
             this.txtbTotalRecords.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtbTotalRecords.Location = new System.Drawing.Point(120, 8);
+            this.txtbTotalRecords.Location = new System.Drawing.Point(145, 6);
             this.txtbTotalRecords.Name = "txtbTotalRecords";
-            this.txtbTotalRecords.Size = new System.Drawing.Size(100, 20);
+            this.txtbTotalRecords.Size = new System.Drawing.Size(100, 22);
             this.txtbTotalRecords.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(19, 11);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(19, 7);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 13);
+            this.label2.Size = new System.Drawing.Size(120, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "Total Records :";
             // 
@@ -212,9 +191,9 @@
             this.lblPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.lblPhone.Location = new System.Drawing.Point(181, 136);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(48, 15);
+            this.lblPhone.Size = new System.Drawing.Size(10, 15);
             this.lblPhone.TabIndex = 2;
-            this.lblPhone.Text = "label12";
+            this.lblPhone.Text = ".";
             // 
             // lblEmail
             // 
@@ -222,9 +201,9 @@
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.lblEmail.Location = new System.Drawing.Point(181, 110);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(48, 15);
+            this.lblEmail.Size = new System.Drawing.Size(10, 15);
             this.lblEmail.TabIndex = 2;
-            this.lblEmail.Text = "label12";
+            this.lblEmail.Text = ".";
             // 
             // lblName
             // 
@@ -232,9 +211,9 @@
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.lblName.Location = new System.Drawing.Point(181, 59);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(48, 15);
+            this.lblName.Size = new System.Drawing.Size(10, 15);
             this.lblName.TabIndex = 2;
-            this.lblName.Text = "label12";
+            this.lblName.Text = ",";
             // 
             // lblCourse
             // 
@@ -242,9 +221,9 @@
             this.lblCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.lblCourse.Location = new System.Drawing.Point(181, 84);
             this.lblCourse.Name = "lblCourse";
-            this.lblCourse.Size = new System.Drawing.Size(48, 15);
+            this.lblCourse.Size = new System.Drawing.Size(10, 15);
             this.lblCourse.TabIndex = 2;
-            this.lblCourse.Text = "label12";
+            this.lblCourse.Text = ".";
             // 
             // label7
             // 
@@ -361,9 +340,9 @@
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.lblStatus.Location = new System.Drawing.Point(122, 137);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(48, 15);
+            this.lblStatus.Size = new System.Drawing.Size(10, 15);
             this.lblStatus.TabIndex = 2;
-            this.lblStatus.Text = "label12";
+            this.lblStatus.Text = ".";
             // 
             // lblSem
             // 
@@ -371,9 +350,9 @@
             this.lblSem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.lblSem.Location = new System.Drawing.Point(122, 109);
             this.lblSem.Name = "lblSem";
-            this.lblSem.Size = new System.Drawing.Size(48, 15);
+            this.lblSem.Size = new System.Drawing.Size(10, 15);
             this.lblSem.TabIndex = 2;
-            this.lblSem.Text = "label12";
+            this.lblSem.Text = ".";
             // 
             // lblDob
             // 
@@ -381,9 +360,9 @@
             this.lblDob.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.lblDob.Location = new System.Drawing.Point(122, 83);
             this.lblDob.Name = "lblDob";
-            this.lblDob.Size = new System.Drawing.Size(48, 15);
+            this.lblDob.Size = new System.Drawing.Size(10, 15);
             this.lblDob.TabIndex = 2;
-            this.lblDob.Text = "label12";
+            this.lblDob.Text = ".";
             // 
             // lblGuardian
             // 
@@ -391,9 +370,9 @@
             this.lblGuardian.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.lblGuardian.Location = new System.Drawing.Point(122, 56);
             this.lblGuardian.Name = "lblGuardian";
-            this.lblGuardian.Size = new System.Drawing.Size(48, 15);
+            this.lblGuardian.Size = new System.Drawing.Size(10, 15);
             this.lblGuardian.TabIndex = 2;
-            this.lblGuardian.Text = "label12";
+            this.lblGuardian.Text = ",";
             // 
             // lblAddress
             // 
@@ -401,9 +380,9 @@
             this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.lblAddress.Location = new System.Drawing.Point(122, 31);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(48, 15);
+            this.lblAddress.Size = new System.Drawing.Size(10, 15);
             this.lblAddress.TabIndex = 2;
-            this.lblAddress.Text = "label12";
+            this.lblAddress.Text = ",";
             // 
             // label16
             // 
@@ -419,10 +398,10 @@
             // panel1
             // 
             this.panel1.BackgroundImage = global::CollageManagementApplication.Properties.Resources.download__6__Photoroom__1_;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel1.Location = new System.Drawing.Point(983, 95);
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Location = new System.Drawing.Point(675, 105);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(46, 33);
+            this.panel1.Size = new System.Drawing.Size(39, 23);
             this.panel1.TabIndex = 4;
             // 
             // btnStudentRefresh
@@ -430,24 +409,12 @@
             this.btnStudentRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnStudentRefresh.Image = global::CollageManagementApplication.Properties.Resources.Reset_icon_in_Ice_Cream_Style_Ph;
             this.btnStudentRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStudentRefresh.Location = new System.Drawing.Point(616, 95);
+            this.btnStudentRefresh.Location = new System.Drawing.Point(322, 95);
             this.btnStudentRefresh.Name = "btnStudentRefresh";
             this.btnStudentRefresh.Size = new System.Drawing.Size(144, 33);
             this.btnStudentRefresh.TabIndex = 2;
             this.btnStudentRefresh.Text = "Refresh";
             this.btnStudentRefresh.UseVisualStyleBackColor = true;
-            // 
-            // btnStudentView
-            // 
-            this.btnStudentView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnStudentView.Image = global::CollageManagementApplication.Properties.Resources.download__8__Photoroom__3_;
-            this.btnStudentView.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStudentView.Location = new System.Drawing.Point(466, 95);
-            this.btnStudentView.Name = "btnStudentView";
-            this.btnStudentView.Size = new System.Drawing.Size(144, 33);
-            this.btnStudentView.TabIndex = 2;
-            this.btnStudentView.Text = "View";
-            this.btnStudentView.UseVisualStyleBackColor = true;
             // 
             // btnStudentEdit
             // 
@@ -461,17 +428,6 @@
             this.btnStudentEdit.Text = "Edit";
             this.btnStudentEdit.UseVisualStyleBackColor = true;
             this.btnStudentEdit.Click += new System.EventHandler(this.btnStudentEdit_Click);
-            // 
-            // btnStudentDelete
-            // 
-            this.btnStudentDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnStudentDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStudentDelete.Location = new System.Drawing.Point(314, 95);
-            this.btnStudentDelete.Name = "btnStudentDelete";
-            this.btnStudentDelete.Size = new System.Drawing.Size(144, 33);
-            this.btnStudentDelete.TabIndex = 2;
-            this.btnStudentDelete.Text = "Enroll Student";
-            this.btnStudentDelete.UseVisualStyleBackColor = true;
             // 
             // btnStudentAddnew
             // 
@@ -488,10 +444,10 @@
             // 
             // txtSearchBox
             // 
-            this.txtSearchBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtSearchBox.Location = new System.Drawing.Point(816, 105);
+            this.txtSearchBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.txtSearchBox.Location = new System.Drawing.Point(508, 105);
             this.txtSearchBox.Name = "txtSearchBox";
-            this.txtSearchBox.Size = new System.Drawing.Size(167, 23);
+            this.txtSearchBox.Size = new System.Drawing.Size(167, 24);
             this.txtSearchBox.TabIndex = 9;
             this.txtSearchBox.TextChanged += new System.EventHandler(this.txtSearchBox_TextChanged);
             // 
@@ -507,9 +463,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnStudentRefresh);
-            this.Controls.Add(this.btnStudentView);
             this.Controls.Add(this.btnStudentEdit);
-            this.Controls.Add(this.btnStudentDelete);
             this.Controls.Add(this.btnStudentAddnew);
             this.Controls.Add(this.panel2);
             this.MaximizeBox = false;
@@ -540,13 +494,9 @@
         private System.Windows.Forms.TextBox txtbDateTime;
         private System.Windows.Forms.Button btnStudentAddnew;
         private System.Windows.Forms.Button btnStudentEdit;
-        private System.Windows.Forms.Button btnStudentDelete;
-        private System.Windows.Forms.Button btnStudentView;
         private System.Windows.Forms.Button btnStudentRefresh;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtbTotalRecords;
         private System.Windows.Forms.Label label2;

@@ -117,4 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="errorProvider.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="errorProvider.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAACMuAAAjLgAAAAAAAAAA
+        AAAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/CgAA/woAAP8AAAD/AAAA/wAAAP8AAAD/AAAA
+        /wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/xsAAP+GAAD/zQAA/+4AAP/uAAD/zQAA/4cAAP8bAAD/AAAA
+        /wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/1wAAP/2AAD//wAA//8AAP//AAD//wAA//8AAP//AAD/9gAA
+        /1wAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/1cAAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA
+        //8AAP//AAD/VwAA/wAAAP8AAAD/AAAA/xUAAP//AAD//wAA//8AAP//AAD//wAA/zAAAP8yAAD//wAA
+        //8AAP//AAD//wAA//8AAP8VAAD/AAAA/wAAAP+LAAD//wAA//8AAP//AAD//wAA//8AAP9UAAD/VQAA
+        //8AAP//AAD//wAA//8AAP//AAD/iwAA/wAAAP8AAAD/2AAA//8AAP//AAD//wAA//8AAP//AAD/3wAA
+        /94AAP//AAD//wAA//8AAP//AAD//wAA/9gAAP8AAAD/CwAA//YAAP//AAD//wAA//8AAP//AAD//wAA
+        /xEAAP8RAAD//wAA//8AAP//AAD//wAA//8AAP/2AAD/CgAA/wsAAP/2AAD//wAA//8AAP//AAD//wAA
+        //8AAP8VAAD/FQAA//8AAP//AAD//wAA//8AAP//AAD/9gAA/woAAP8AAAD/2AAA//8AAP//AAD//wAA
+        //8AAP//AAD/GwAA/xsAAP//AAD//wAA//8AAP//AAD//wAA/9gAAP8AAAD/AAAA/4sAAP//AAD//wAA
+        //8AAP//AAD//wAA/wAAAP8AAAD//wAA//8AAP//AAD//wAA//8AAP+LAAD/AAAA/wAAAP8VAAD//wAA
+        //8AAP//AAD//wAA//8AAP9zAAD/cwAA//8AAP//AAD//wAA//8AAP//AAD/FQAA/wAAAP8AAAD/AAAA
+        /1cAAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD/VwAA/wAAAP8AAAD/AAAA
+        /wAAAP8AAAD/XAAA//YAAP//AAD//wAA//8AAP//AAD//wAA//8AAP/2AAD/XAAA/wAAAP8AAAD/AAAA
+        /wAAAP8AAAD/AAAA/wAAAP8bAAD/hwAA/80AAP/uAAD/7gAA/80AAP+HAAD/GwAA/wAAAP8AAAD/AAAA
+        /wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/CgAA/woAAP8AAAD/AAAA/wAAAP8AAAD/AAAA
+        /wAAAP8A/n8AAPAPAADgBwAAwAMAAIABAACAAQAAgAEAAAAAAAAAAAAAgAEAAIGBAACAAQAAwAMAAOAH
+        AADwDwAA/n8AAA==
+</value>
+  </data>
 </root>

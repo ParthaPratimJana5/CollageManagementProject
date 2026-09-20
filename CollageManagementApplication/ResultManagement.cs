@@ -9,11 +9,77 @@ using System.Windows.Forms;
 
 namespace CollageManagementApplication
 {
-    public partial class ResultManagement : Form
+    public partial class AdminPanelForm : Form
     {
-        public ResultManagement()
+        public AdminPanelForm()
         {
             InitializeComponent();
+        }
+
+        private void btnAddPaymentPurpose_Click(object sender, EventArgs e)
+        {
+            //AddPaymentPurposeForm addPaymentPurposeForm = new AddPaymentPurposeForm();
+            //addPaymentPurposeForm.Show();
+
+            Loadfrom(new AddPaymentPurposeForm());
+        }
+
+        private void btnMakePayment_Click(object sender, EventArgs e)
+        {
+            MainDashboard dashboard = (MainDashboard)this.ParentForm;
+
+            if (dashboard != null)
+            {
+                dashboard.Loadfrom(new FeeManagement());
+            }
+
+            
+
+        }
+
+        private void btnAddPaymentMode_Click(object sender, EventArgs e)
+        {
+            Loadfrom(new AddPaymentModeForm());
+        }
+
+        public void Loadfrom(Form form)
+        {
+            pnlWorkingArea.Controls.Clear();
+
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+
+            pnlWorkingArea.Controls.Add(form);
+            pnlWorkingArea.Tag = form;
+
+            form.Show();
+        }
+
+        private void btnAddDesignationForm_Click(object sender, EventArgs e)
+        {
+            Loadfrom(new AddDesignationForm());
+        }
+
+        private void btnAddFaculty_Click(object sender, EventArgs e)
+        {
+            //Redirect to From
+            MainDashboard dashboard = (MainDashboard)this.ParentForm;
+
+            if (dashboard != null)
+            {
+                dashboard.Loadfrom(new AddFaculty());
+            }
+        }
+
+        private void btnEditFaculty_Click(object sender, EventArgs e)
+        {
+            MainDashboard dashboard = (MainDashboard)this.ParentForm;
+
+            if (dashboard != null)
+            {
+                dashboard.Loadfrom(new EditFaculty());
+            }
         }
     }
 }

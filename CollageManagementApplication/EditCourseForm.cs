@@ -304,6 +304,15 @@ namespace CollageManagementApplication
             
         }
 
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            MainDashboard dashboard = (MainDashboard)this.ParentForm;
+
+            if (dashboard != null)
+            {
+                dashboard.Loadfrom(new CourseManagement());
+            }
+        }
     }
 }
     

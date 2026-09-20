@@ -1,6 +1,6 @@
 ﻿namespace CollageManagementApplication
 {
-    partial class ResultManagement
+    partial class AdminPanelForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,29 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtbDateTime = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBoxProgram = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBoxSemester = new System.Windows.Forms.ComboBox();
+            this.btnAddPaymentPurpose = new System.Windows.Forms.Button();
+            this.btnMakePayment = new System.Windows.Forms.Button();
+            this.btnAddPaymentMode = new System.Windows.Forms.Button();
+            this.pnlWorkingArea = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBoxTerm = new System.Windows.Forms.ComboBox();
-            this.btnLoad = new System.Windows.Forms.Button();
-            this.dgvResult = new System.Windows.Forms.DataGridView();
-            this.RollColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StudentColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubjectColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MarksColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalmarksColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GardeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnAddDesignationForm = new System.Windows.Forms.Button();
+            this.btnAddFaculty = new System.Windows.Forms.Button();
+            this.btnEditFaculty = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvResult)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -78,205 +71,165 @@
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(17, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(209, 24);
+            this.label1.Size = new System.Drawing.Size(76, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Result Management";
+            this.label1.Text = "Admin";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(41, 103);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.label2.Location = new System.Drawing.Point(12, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 20);
+            this.label2.Size = new System.Drawing.Size(107, 25);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Program";
-            // 
-            // comboBoxProgram
-            // 
-            this.comboBoxProgram.FormattingEnabled = true;
-            this.comboBoxProgram.Location = new System.Drawing.Point(135, 106);
-            this.comboBoxProgram.Name = "comboBoxProgram";
-            this.comboBoxProgram.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxProgram.TabIndex = 2;
+            this.label2.Text = "Payments";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(277, 103);
+            this.label3.Location = new System.Drawing.Point(-2, 74);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 20);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Semester";
+            this.label3.Size = new System.Drawing.Size(1129, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "_________________________________________________________________________________" +
+    "________________________________________________________________________________" +
+    "__________________________";
             // 
-            // comboBoxSemester
+            // btnAddPaymentPurpose
             // 
-            this.comboBoxSemester.FormattingEnabled = true;
-            this.comboBoxSemester.Location = new System.Drawing.Point(380, 106);
-            this.comboBoxSemester.Name = "comboBoxSemester";
-            this.comboBoxSemester.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxSemester.TabIndex = 2;
+            this.btnAddPaymentPurpose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnAddPaymentPurpose.Location = new System.Drawing.Point(9, 95);
+            this.btnAddPaymentPurpose.Name = "btnAddPaymentPurpose";
+            this.btnAddPaymentPurpose.Size = new System.Drawing.Size(161, 26);
+            this.btnAddPaymentPurpose.TabIndex = 3;
+            this.btnAddPaymentPurpose.Text = "Add Payment Purpous";
+            this.btnAddPaymentPurpose.UseVisualStyleBackColor = true;
+            this.btnAddPaymentPurpose.Click += new System.EventHandler(this.btnAddPaymentPurpose_Click);
+            // 
+            // btnMakePayment
+            // 
+            this.btnMakePayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.btnMakePayment.Location = new System.Drawing.Point(395, 94);
+            this.btnMakePayment.Name = "btnMakePayment";
+            this.btnMakePayment.Size = new System.Drawing.Size(126, 26);
+            this.btnMakePayment.TabIndex = 3;
+            this.btnMakePayment.Text = "Make Payement";
+            this.btnMakePayment.UseVisualStyleBackColor = true;
+            this.btnMakePayment.Click += new System.EventHandler(this.btnMakePayment_Click);
+            // 
+            // btnAddPaymentMode
+            // 
+            this.btnAddPaymentMode.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.btnAddPaymentMode.Location = new System.Drawing.Point(191, 94);
+            this.btnAddPaymentMode.Name = "btnAddPaymentMode";
+            this.btnAddPaymentMode.Size = new System.Drawing.Size(186, 26);
+            this.btnAddPaymentMode.TabIndex = 3;
+            this.btnAddPaymentMode.Text = "Add Payment Mode";
+            this.btnAddPaymentMode.UseVisualStyleBackColor = true;
+            this.btnAddPaymentMode.Click += new System.EventHandler(this.btnAddPaymentMode_Click);
+            // 
+            // pnlWorkingArea
+            // 
+            this.pnlWorkingArea.BackColor = System.Drawing.Color.Transparent;
+            this.pnlWorkingArea.BackgroundImage = global::CollageManagementApplication.Properties.Resources.Matangini_Institute_Logo_Redesign_png_tuxpi;
+            this.pnlWorkingArea.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pnlWorkingArea.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlWorkingArea.Location = new System.Drawing.Point(682, 95);
+            this.pnlWorkingArea.Name = "pnlWorkingArea";
+            this.pnlWorkingArea.Size = new System.Drawing.Size(369, 408);
+            this.pnlWorkingArea.TabIndex = 4;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label4.Location = new System.Drawing.Point(513, 104);
+            this.label4.Location = new System.Drawing.Point(-2, 190);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 20);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Term";
+            this.label4.Size = new System.Drawing.Size(1129, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "_________________________________________________________________________________" +
+    "________________________________________________________________________________" +
+    "__________________________";
             // 
-            // comboBoxTerm
+            // label5
             // 
-            this.comboBoxTerm.FormattingEnabled = true;
-            this.comboBoxTerm.Location = new System.Drawing.Point(580, 106);
-            this.comboBoxTerm.Name = "comboBoxTerm";
-            this.comboBoxTerm.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxTerm.TabIndex = 2;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.label5.Location = new System.Drawing.Point(12, 174);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(82, 25);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Faculty";
             // 
-            // btnLoad
+            // btnAddDesignationForm
             // 
-            this.btnLoad.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnLoad.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnLoad.ForeColor = System.Drawing.Color.White;
-            this.btnLoad.Location = new System.Drawing.Point(835, 100);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(144, 33);
-            this.btnLoad.TabIndex = 3;
-            this.btnLoad.Text = "Load";
-            this.btnLoad.UseVisualStyleBackColor = false;
+            this.btnAddDesignationForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.btnAddDesignationForm.Location = new System.Drawing.Point(12, 216);
+            this.btnAddDesignationForm.Name = "btnAddDesignationForm";
+            this.btnAddDesignationForm.Size = new System.Drawing.Size(127, 26);
+            this.btnAddDesignationForm.TabIndex = 5;
+            this.btnAddDesignationForm.Text = "Add Designation";
+            this.btnAddDesignationForm.UseVisualStyleBackColor = true;
+            this.btnAddDesignationForm.Click += new System.EventHandler(this.btnAddDesignationForm_Click);
             // 
-            // dgvResult
+            // btnAddFaculty
             // 
-            this.dgvResult.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvResult.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.RollColumn,
-            this.StudentColumn,
-            this.SubjectColumn,
-            this.MarksColumn,
-            this.TotalmarksColumn,
-            this.GardeColumn});
-            this.dgvResult.Location = new System.Drawing.Point(46, 170);
-            this.dgvResult.Name = "dgvResult";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvResult.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvResult.Size = new System.Drawing.Size(934, 442);
-            this.dgvResult.TabIndex = 4;
+            this.btnAddFaculty.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.btnAddFaculty.Location = new System.Drawing.Point(159, 216);
+            this.btnAddFaculty.Name = "btnAddFaculty";
+            this.btnAddFaculty.Size = new System.Drawing.Size(127, 26);
+            this.btnAddFaculty.TabIndex = 6;
+            this.btnAddFaculty.Text = "Add Faculty";
+            this.btnAddFaculty.UseVisualStyleBackColor = true;
+            this.btnAddFaculty.Click += new System.EventHandler(this.btnAddFaculty_Click);
             // 
-            // RollColumn
+            // btnEditFaculty
             // 
-            this.RollColumn.HeaderText = "Roll Number";
-            this.RollColumn.Name = "RollColumn";
-            this.RollColumn.ReadOnly = true;
+            this.btnEditFaculty.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.btnEditFaculty.Location = new System.Drawing.Point(302, 216);
+            this.btnEditFaculty.Name = "btnEditFaculty";
+            this.btnEditFaculty.Size = new System.Drawing.Size(127, 26);
+            this.btnEditFaculty.TabIndex = 7;
+            this.btnEditFaculty.Text = "Edit Faculty";
+            this.btnEditFaculty.UseVisualStyleBackColor = true;
+            this.btnEditFaculty.Click += new System.EventHandler(this.btnEditFaculty_Click);
             // 
-            // StudentColumn
+            // button5
             // 
-            this.StudentColumn.HeaderText = "Student Name";
-            this.StudentColumn.Name = "StudentColumn";
-            this.StudentColumn.ReadOnly = true;
-            this.StudentColumn.Width = 200;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.button5.Location = new System.Drawing.Point(790, 769);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(127, 26);
+            this.button5.TabIndex = 7;
+            this.button5.Text = "button1";
+            this.button5.UseVisualStyleBackColor = true;
             // 
-            // SubjectColumn
-            // 
-            this.SubjectColumn.HeaderText = "Subject";
-            this.SubjectColumn.Name = "SubjectColumn";
-            this.SubjectColumn.ReadOnly = true;
-            this.SubjectColumn.Width = 200;
-            // 
-            // MarksColumn
-            // 
-            this.MarksColumn.HeaderText = "Marks Obtained";
-            this.MarksColumn.Name = "MarksColumn";
-            this.MarksColumn.ReadOnly = true;
-            this.MarksColumn.Width = 200;
-            // 
-            // TotalmarksColumn
-            // 
-            this.TotalmarksColumn.HeaderText = "Total Marks";
-            this.TotalmarksColumn.Name = "TotalmarksColumn";
-            this.TotalmarksColumn.ReadOnly = true;
-            // 
-            // GardeColumn
-            // 
-            this.GardeColumn.HeaderText = "Grade";
-            this.GardeColumn.Name = "GardeColumn";
-            this.GardeColumn.ReadOnly = true;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(160)))), ((int)(((byte)(104)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(46, 662);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(144, 33);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Save Result";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(240, 662);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(144, 33);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Save Result";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(836, 662);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(144, 33);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Publish Result";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // ResultManagement
+            // AdminPanelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1051, 758);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.dgvResult);
-            this.Controls.Add(this.btnLoad);
-            this.Controls.Add(this.comboBoxTerm);
-            this.Controls.Add(this.comboBoxSemester);
-            this.Controls.Add(this.comboBoxProgram);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnEditFaculty);
+            this.Controls.Add(this.btnAddFaculty);
+            this.Controls.Add(this.btnAddDesignationForm);
+            this.Controls.Add(this.pnlWorkingArea);
+            this.Controls.Add(this.btnAddPaymentMode);
+            this.Controls.Add(this.btnMakePayment);
+            this.Controls.Add(this.btnAddPaymentPurpose);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label3);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "ResultManagement";
+            this.Name = "AdminPanelForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ResultManagement";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvResult)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,21 +241,16 @@
         private System.Windows.Forms.TextBox txtbDateTime;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBoxProgram;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBoxSemester;
+        private System.Windows.Forms.Button btnAddPaymentPurpose;
+        private System.Windows.Forms.Button btnMakePayment;
+        private System.Windows.Forms.Button btnAddPaymentMode;
+        private System.Windows.Forms.Panel pnlWorkingArea;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBoxTerm;
-        private System.Windows.Forms.Button btnLoad;
-        private System.Windows.Forms.DataGridView dgvResult;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RollColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StudentColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SubjectColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MarksColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TotalmarksColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GardeColumn;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnAddDesignationForm;
+        private System.Windows.Forms.Button btnAddFaculty;
+        private System.Windows.Forms.Button btnEditFaculty;
+        private System.Windows.Forms.Button button5;
     }
 }

@@ -15,10 +15,43 @@ namespace LogicLayer
         public byte[] Photobyte { get; set; }
         public string PhotoID { get; set; }
 
+        //public string InsertPhoto()
+        //{
+
+
+        //    string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+        //    SqlConnection conn = null;
+
+        //    try
+        //    {
+        //        conn = new SqlConnection(cs);
+        //        SqlCommand cmd = new SqlCommand("spInsertPhoto", conn);
+        //        cmd.CommandType = CommandType.StoredProcedure;
+
+        //        cmd.Parameters.AddWithValue("@Photo", Photobyte);
+
+        //        conn.Open();
+        //        PhotoID= Convert.ToString(cmd.ExecuteScalar());
+
+        //        return PhotoID;
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+
+        //        return PhotoID;
+        //    }
+        //    finally
+        //    {
+        //        if (conn != null)
+        //        {
+        //            conn.Close();
+        //        }
+        //    }
+        //}
+
         public string InsertPhoto()
         {
-            
-            
             string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
             SqlConnection conn = null;
 
@@ -28,18 +61,19 @@ namespace LogicLayer
                 SqlCommand cmd = new SqlCommand("spInsertPhoto", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@Photo", Photobyte);
+                if (Photobyte != null)
+                    cmd.Parameters.Add("@Photo", SqlDbType.VarBinary).Value = Photobyte;
+                else
+                    cmd.Parameters.Add("@Photo", SqlDbType.VarBinary).Value = DBNull.Value;
 
                 conn.Open();
-                PhotoID= Convert.ToString(cmd.ExecuteScalar());
+                PhotoID = Convert.ToString(cmd.ExecuteScalar());
 
                 return PhotoID;
-                
             }
             catch (Exception ex)
             {
-
-                return PhotoID;
+                return PhotoID; // keep your pattern
             }
             finally
             {
@@ -49,6 +83,7 @@ namespace LogicLayer
                 }
             }
         }
+
 
         public int UpdatePhoto()
         {

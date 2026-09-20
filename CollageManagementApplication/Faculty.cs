@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LogicLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -81,7 +82,23 @@ namespace CollageManagementApplication
         private void Faculty_Load(object sender, EventArgs e)
         {
             ShowStaffs();
+            btnDeleteFaculty.Hide();
+
+            Stuff stuff = new Stuff();
+            stuff.GetTotalFaculty();
+            txtTotalRecords.Text = stuff.TotalStaff;
         }
+
+        private void btnRefreshFaculty_Click(object sender, EventArgs e)
+        {
+            ShowStaffs();
+            Stuff stuff = new Stuff();
+            stuff.GetTotalFaculty();
+            txtTotalRecords.Text = stuff.TotalStaff;
+
+        }
+
+       
 
 
 

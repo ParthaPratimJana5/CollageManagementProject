@@ -75,7 +75,6 @@ C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\Co
 C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.MainDashboard.resources
 C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.MarkAttendanceForm.resources
 C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.Properties.Resources.resources
-C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.ResultManagement.resources
 C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.StudentForm.resources
 C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.csproj.GenerateResource.cache
 C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.csproj.CoreCompileInputs.cache
@@ -156,3 +155,7 @@ C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\Co
 C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\bin\Debug\tr\Microsoft.Data.SqlClient.resources.dll
 C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
 C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.AddDesignationForm.resources
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.AddPaymentModeForm.resources
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.AddPaymentPurposeForm.resources
+C:\Users\Partha\Documents\Dot Net C#\Collage Project\CollageManagementProject\CollageManagementApplication\obj\x86\Debug\CollageManagementApplication.AdminPanelForm.resources

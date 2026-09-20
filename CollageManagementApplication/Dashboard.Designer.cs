@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtbDateTime = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -57,7 +58,7 @@
             this.cmbCourse = new System.Windows.Forms.ComboBox();
             this.tblCourseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dbCollageManagementSyatemDataSet = new CollageManagementApplication.dbCollageManagementSyatemDataSet();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblCourse = new System.Windows.Forms.Label();
             this.lblFrom = new System.Windows.Forms.Label();
             this.lblTo = new System.Windows.Forms.Label();
             this.tblCourseTableAdapter = new CollageManagementApplication.dbCollageManagementSyatemDataSetTableAdapters.tblCourseTableAdapter();
@@ -313,6 +314,10 @@
             // 
             // dgvAttendanceReport
             // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Silver;
+            this.dgvAttendanceReport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAttendanceReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAttendanceReport.Location = new System.Drawing.Point(16, 285);
             this.dgvAttendanceReport.Name = "dgvAttendanceReport";
@@ -366,14 +371,14 @@
             this.dbCollageManagementSyatemDataSet.DataSetName = "dbCollageManagementSyatemDataSet";
             this.dbCollageManagementSyatemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // label2
+            // lblCourse
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(695, 250);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Course";
+            this.lblCourse.AutoSize = true;
+            this.lblCourse.Location = new System.Drawing.Point(695, 250);
+            this.lblCourse.Name = "lblCourse";
+            this.lblCourse.Size = new System.Drawing.Size(40, 13);
+            this.lblCourse.TabIndex = 6;
+            this.lblCourse.Text = "Course";
             // 
             // lblFrom
             // 
@@ -416,7 +421,7 @@
             this.ClientSize = new System.Drawing.Size(1051, 758);
             this.Controls.Add(this.lblTo);
             this.Controls.Add(this.lblFrom);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblCourse);
             this.Controls.Add(this.cmbCourse);
             this.Controls.Add(this.dtpEndDate);
             this.Controls.Add(this.dtpStartDate);
@@ -481,7 +486,7 @@
         private System.Windows.Forms.DateTimePicker dtpStartDate;
         private System.Windows.Forms.DateTimePicker dtpEndDate;
         private System.Windows.Forms.ComboBox cmbCourse;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblCourse;
         private System.Windows.Forms.Label lblFrom;
         private System.Windows.Forms.Label lblTo;
         private dbCollageManagementSyatemDataSet dbCollageManagementSyatemDataSet;

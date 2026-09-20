@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddStudentForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -75,12 +77,14 @@
             this.label15 = new System.Windows.Forms.Label();
             this.cmbCourse = new System.Windows.Forms.ComboBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAddStudent)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -90,7 +94,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(893, 50);
+            this.panel1.Size = new System.Drawing.Size(899, 50);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -142,7 +146,7 @@
             this.txtEmailAddress.Multiline = true;
             this.txtEmailAddress.Name = "txtEmailAddress";
             this.txtEmailAddress.Size = new System.Drawing.Size(219, 25);
-            this.txtEmailAddress.TabIndex = 11;
+            this.txtEmailAddress.TabIndex = 7;
             // 
             // label19
             // 
@@ -162,7 +166,7 @@
             this.comboBoxGender.Location = new System.Drawing.Point(158, 145);
             this.comboBoxGender.Name = "comboBoxGender";
             this.comboBoxGender.Size = new System.Drawing.Size(220, 21);
-            this.comboBoxGender.TabIndex = 9;
+            this.comboBoxGender.TabIndex = 3;
             this.comboBoxGender.Text = "Select Gender";
             // 
             // cmbBloodgroup
@@ -171,7 +175,7 @@
             this.cmbBloodgroup.Location = new System.Drawing.Point(158, 180);
             this.cmbBloodgroup.Name = "cmbBloodgroup";
             this.cmbBloodgroup.Size = new System.Drawing.Size(220, 21);
-            this.cmbBloodgroup.TabIndex = 9;
+            this.cmbBloodgroup.TabIndex = 4;
             this.cmbBloodgroup.Text = "Select Blood Group";
             // 
             // dtpDateOfBirth
@@ -179,7 +183,7 @@
             this.dtpDateOfBirth.Location = new System.Drawing.Point(133, 112);
             this.dtpDateOfBirth.Name = "dtpDateOfBirth";
             this.dtpDateOfBirth.Size = new System.Drawing.Size(244, 20);
-            this.dtpDateOfBirth.TabIndex = 3;
+            this.dtpDateOfBirth.TabIndex = 2;
             // 
             // txtAddress
             // 
@@ -187,7 +191,7 @@
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(220, 156);
-            this.txtAddress.TabIndex = 2;
+            this.txtAddress.TabIndex = 10;
             // 
             // txtPostOffice
             // 
@@ -195,7 +199,7 @@
             this.txtPostOffice.Multiline = true;
             this.txtPostOffice.Name = "txtPostOffice";
             this.txtPostOffice.Size = new System.Drawing.Size(219, 25);
-            this.txtPostOffice.TabIndex = 2;
+            this.txtPostOffice.TabIndex = 9;
             // 
             // txtPinCode
             // 
@@ -204,7 +208,7 @@
             this.txtPinCode.Multiline = true;
             this.txtPinCode.Name = "txtPinCode";
             this.txtPinCode.Size = new System.Drawing.Size(219, 25);
-            this.txtPinCode.TabIndex = 2;
+            this.txtPinCode.TabIndex = 8;
             // 
             // txtAadhaar
             // 
@@ -213,7 +217,7 @@
             this.txtAadhaar.Multiline = true;
             this.txtAadhaar.Name = "txtAadhaar";
             this.txtAadhaar.Size = new System.Drawing.Size(219, 25);
-            this.txtAadhaar.TabIndex = 2;
+            this.txtAadhaar.TabIndex = 6;
             // 
             // txtPhoneNumber
             // 
@@ -222,7 +226,7 @@
             this.txtPhoneNumber.Multiline = true;
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(219, 25);
-            this.txtPhoneNumber.TabIndex = 2;
+            this.txtPhoneNumber.TabIndex = 5;
             // 
             // txtFullNme
             // 
@@ -230,7 +234,7 @@
             this.txtFullNme.Multiline = true;
             this.txtFullNme.Name = "txtFullNme";
             this.txtFullNme.Size = new System.Drawing.Size(244, 25);
-            this.txtFullNme.TabIndex = 2;
+            this.txtFullNme.TabIndex = 1;
             // 
             // txtStudentId
             // 
@@ -380,7 +384,7 @@
             this.btnSave.Location = new System.Drawing.Point(663, 658);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(175, 33);
-            this.btnSave.TabIndex = 2;
+            this.btnSave.TabIndex = 17;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -407,7 +411,7 @@
             this.txtGuardianEmail.Multiline = true;
             this.txtGuardianEmail.Name = "txtGuardianEmail";
             this.txtGuardianEmail.Size = new System.Drawing.Size(352, 25);
-            this.txtGuardianEmail.TabIndex = 7;
+            this.txtGuardianEmail.TabIndex = 13;
             // 
             // txtGuardianPhone
             // 
@@ -416,7 +420,7 @@
             this.txtGuardianPhone.Multiline = true;
             this.txtGuardianPhone.Name = "txtGuardianPhone";
             this.txtGuardianPhone.Size = new System.Drawing.Size(352, 25);
-            this.txtGuardianPhone.TabIndex = 6;
+            this.txtGuardianPhone.TabIndex = 12;
             // 
             // txtGuardianName
             // 
@@ -424,7 +428,7 @@
             this.txtGuardianName.Multiline = true;
             this.txtGuardianName.Name = "txtGuardianName";
             this.txtGuardianName.Size = new System.Drawing.Size(346, 24);
-            this.txtGuardianName.TabIndex = 4;
+            this.txtGuardianName.TabIndex = 11;
             // 
             // label14
             // 
@@ -503,7 +507,7 @@
             this.btnBrowseImage.Location = new System.Drawing.Point(21, 83);
             this.btnBrowseImage.Name = "btnBrowseImage";
             this.btnBrowseImage.Size = new System.Drawing.Size(162, 33);
-            this.btnBrowseImage.TabIndex = 2;
+            this.btnBrowseImage.TabIndex = 14;
             this.btnBrowseImage.Text = "Browse Image";
             this.btnBrowseImage.UseVisualStyleBackColor = true;
             this.btnBrowseImage.Click += new System.EventHandler(this.btnBrowseImage_Click);
@@ -565,7 +569,7 @@
             this.dtpAdmission.Location = new System.Drawing.Point(148, 105);
             this.dtpAdmission.Name = "dtpAdmission";
             this.dtpAdmission.Size = new System.Drawing.Size(203, 20);
-            this.dtpAdmission.TabIndex = 3;
+            this.dtpAdmission.TabIndex = 16;
             // 
             // label15
             // 
@@ -584,7 +588,7 @@
             this.cmbCourse.Location = new System.Drawing.Point(45, 71);
             this.cmbCourse.Name = "cmbCourse";
             this.cmbCourse.Size = new System.Drawing.Size(306, 21);
-            this.cmbCourse.TabIndex = 9;
+            this.cmbCourse.TabIndex = 15;
             this.cmbCourse.Text = "SelectCourse";
             // 
             // panel4
@@ -600,12 +604,18 @@
             this.panel4.Size = new System.Drawing.Size(445, 157);
             this.panel4.TabIndex = 3;
             // 
+            // errorProvider
+            // 
+            this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider.ContainerControl = this;
+            this.errorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider.Icon")));
+            // 
             // AddStudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(893, 742);
+            this.ClientSize = new System.Drawing.Size(899, 742);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnSave);
@@ -629,6 +639,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAddStudent)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -682,5 +693,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txtEmailAddress;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }
