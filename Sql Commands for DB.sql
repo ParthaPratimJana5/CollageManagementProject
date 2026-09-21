@@ -74,6 +74,19 @@ create table tblCV (
     CV varbinary(max) null
 );
 
+-- =========================
+-- staff Stataus
+-- =========================
+create table tblStaffStatus (
+    StatusId int primary key identity(1,1),
+    StatusName varchar(20) not null
+);
+
+-- staff Stataus values
+insert into tblStaffStatus (StatusName) values ('Active');
+insert into tblStaffStatus (StatusName) values ('Inactive');
+insert into tblStaffStatus (StatusName) values ('OnLeave');
+insert into tblStaffStatus (StatusName) values ('Retired');
 
 -- =========================
 -- staff table
@@ -85,14 +98,18 @@ create table tblStaff (
     DateOfJoinning date null,
     Salary float null,
     BloodGroup varchar(10) null,
+    StatusId int not null default 1,
     GenderId int not null foreign key references tblGender(GenderId),
     DesignationId int not null foreign key references tblDesignation(DesignationId),
     BankId int not null foreign key references tblBank(BankId),
     AddressId int not null foreign key references tblAddress(AddressId),
     DepartmentId int not null foreign key references tblDepartment(DepartmentId),
     PhotoId int not null foreign key references tblPhotos(PhotoId),
-    CVId int not null foreign key references tblCV(CVId)
+    CVId int not null foreign key references tblCV(CVId),
+    constraint FK_tblStaff_Status foreign key (StatusId) references tblStaffStatus(StatusId)
 );
+
+
 
 -- =========================
 -- hod table
@@ -1352,7 +1369,8 @@ begin
         a.Post,
         a.Pin,
         a.Aadhaar,
-        a.PhoneNumber
+        a.PhoneNumber,
+        ss.StatusName
         --ph.Photo,   -- binary photo data
         --cv.CV       -- binary CV data
     from tblStaff st
@@ -1363,7 +1381,16 @@ begin
     join tblAddress a on st.AddressId = a.AddressId
     join tblPhotos ph on st.PhotoId = ph.PhotoId
     join tblCV cv on st.CVId = cv.CVId
-    order by st.StaffName;
+    join tblStaffStatus ss on st.StatusId = ss.StatusId
+    order by 
+        case ss.StatusName
+            when 'Active' then 1
+            when 'OnLeave' then 2
+            when 'Inactive' then 3
+            when 'Retired' then 4
+            else 5
+        end,
+        st.StaffName;
 end;
 go
 
@@ -1372,7 +1399,7 @@ go
 
 
 -- Procedure to get full information of all students
-alter procedure spGetAllStudentInformation 't'
+alter procedure spGetAllStudentInformation 
     @SearchTerm varchar(max) = null
 as
 begin
@@ -1528,7 +1555,7 @@ select * from tblStaff
 
 
 -- Procedure to search Staff by StaffId and return full info including Photo and CV binary
-create procedure spGetFullInfoByStaffId 
+create procedure spGetFullInfoByStaffId 12
     @StaffId int
 as
 begin
@@ -1552,9 +1579,11 @@ begin
         a.Pin,
         a.Aadhaar,
         a.PhoneNumber,
-
+        ss.StatusName,
+        st.StatusId,-- added status
         ph.Photo,   
         cv.CV
+        
     from tblStaff st
     join tblGender g on st.GenderId = g.GenderId
     join tblDesignation dg on st.DesignationId = dg.DesignationId
@@ -1563,9 +1592,11 @@ begin
     join tblAddress a on st.AddressId = a.AddressId
     join tblPhotos ph on st.PhotoId = ph.PhotoId
     join tblCV cv on st.CVId = cv.CVId
-    where st.StaffId = @StaffId 
-    
-end
+    join tblStaffStatus ss on st.StatusId = ss.StatusId   -- join to status
+    where st.StaffId = @StaffId;
+end;
+go
+
 
 
 
@@ -2194,6 +2225,37 @@ begin
         values (@PayType);
     end
 end
+
+-- Get All Status
+create procedure spGetAllStaffStatus
+as
+begin
+    select 
+        StatusId,
+        StatusName
+    from tblStaffStatus
+    order by 
+        case StatusName
+            when 'Active' then 1
+            when 'OnLeave' then 2
+            when 'Inactive' then 3
+            when 'Retired' then 4
+            else 5
+        end;
+end;
+go
+
+-- Update Staff Status
+create procedure spUpdateStaffStatus
+    @StaffId int,
+    @StatusId int
+as
+begin
+    update tblStaff
+    set StatusId = @StatusId
+    where StaffId = @StaffId;
+end;
+go
 
 
 
